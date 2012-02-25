@@ -1,0 +1,60 @@
+/* custom variables >>> */ 
+$altColor: #900; //red 
+/* <<< custom variables */
+$baseFontFamily: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif; 
+$linkColor: #f60;
+$linkColorHover: #900;
+
+@import "gko_public_all"; 
+@import "gko/elastislide"; 
+
+/*-----------------------------------------
+   SHARED STYLES 
+----------------------------------------- */ 
+.uppercase_font_style {
+	line-height: 24px;
+	font-size: 13px;
+	letter-spacing: 1px; 
+	text-transform: uppercase; 
+}
+
+/*-----------------------------------------
+ TYPOGRAPHY 
+----------------------------------------- */
+
+/*-----------------------------------------
+   OVERWRITTE
+----------------------------------------- */
+
+/*-----------------------------------------
+   STRUCTURE
+----------------------------------------- */ 
+
+/*-----------------------------------------
+ HEADER
+----------------------------------------- */ 
+
+h2#site-title {
+	@include logo(968px, 144px);
+	float: left;
+	margin: 0;
+}
+
+/*-----------------------------------------
+   FOOTER
+----------------------------------------- */ 
+
+/*-----------------------------------------
+   HOME
+----------------------------------------- */ 
+
+/*-----------------------------------------
+ GLOBAL EFFECT
+----------------------------------------- */
+a {
+	@include transition(color .5s linear, background-color .5s linear)
+}
+/*-----------------------------------------
+ RESPONSIVE
+----------------------------------------- */
+@import "gko/responsive";
