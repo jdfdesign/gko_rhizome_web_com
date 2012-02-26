@@ -1,9 +1,14 @@
 /* custom variables >>> */ 
 $altColor: #900; //red 
-/* <<< custom variables */
-$baseFontFamily: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif; 
-$linkColor: #f60;
-$linkColorHover: #900;
+/* <<< custom variables */ 
+$bodyBackgroundColor: white;
+// Navbar
+$navbarBackgroundHighlight: white;
+$navbarBackground: white;
+$baseFontFamily: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
+$textColor: #6b6b6b; 
+$linkColor: #6b6b6b;
+$linkColorHover: #f60;
 
 @import "gko_public_all"; 
 @import "gko/elastislide"; 
@@ -25,21 +30,55 @@ $linkColorHover: #900;
 /*-----------------------------------------
    OVERWRITTE
 ----------------------------------------- */
-
+div.html_text { 
+	h2 {
+		text-align: center;
+		border-top: 1px solid $textColor;
+		border-bottom: 1px solid $textColor;
+		padding: 12px 0;
+	}
+	p {
+		font-weight: 300;
+	}
+}
 /*-----------------------------------------
    STRUCTURE
------------------------------------------ */ 
-
+----------------------------------------- */
+#content-container {
+	background-color: white;
+	border-left: 12px solid black;
+	float: left;
+}
+#main-column { 
+ padding-top: 68px;
+ background-color: #fcfcfc;
+.main-column-inner {
+	padding: 0 24px;
+} 
+} 
+.navbar {
+	height:100%;
+}
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */ 
 
 h2#site-title {
-	@include logo(968px, 144px);
+	@include logo(226px, 66px);
 	float: left;
 	margin: 0;
 }
-
+.header-nav {
+	.nav {
+		@include vertical-nav;
+		margin-left: 24px;
+	} 
+	.nav > li > a {
+	 text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 300;
+	}
+}
 /*-----------------------------------------
    FOOTER
 ----------------------------------------- */ 

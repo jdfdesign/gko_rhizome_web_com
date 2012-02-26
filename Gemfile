@@ -26,6 +26,7 @@ end
 #  gem "gko_documents", :path => File.expand_path('../../gko_cms_rails_3/gko_documents', __FILE__)
 #  gem "gko_albums", :path => File.expand_path('../../gko_cms_rails_3/gko_albums', __FILE__)
 #  gem "gko_inquiries", :path => File.expand_path('../../gko_cms_rails_3/gko_inquiries', __FILE__)
+#  gem "gko_calendar", :path => File.expand_path('../../gko_cms_rails_3/gko_calendar', __FILE__)
 #  gem "gko_features", :path => File.expand_path('../../gko_cms_rails_3/gko_features', __FILE__) 
 #  gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require =>   'rails_development_boost' 
 #end    
