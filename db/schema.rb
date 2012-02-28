@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225154932) do
+ActiveRecord::Schema.define(:version => 20120227202913) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -158,53 +158,6 @@ ActiveRecord::Schema.define(:version => 20120225154932) do
   add_index "documents", ["account_id"], :name => "index_documents_on_account_id"
   add_index "documents", ["author_id"], :name => "index_documents_on_author_id"
   add_index "documents", ["site_id"], :name => "index_documents_on_site_id"
-
-  create_table "event_translations", :force => true do |t|
-    t.integer  "event_id"
-    t.string   "locale"
-    t.string   "slug"
-    t.text     "body"
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "event_translations", ["event_id"], :name => "index_event_translations_on_event_id"
-  add_index "event_translations", ["locale"], :name => "index_event_translations_on_locale"
-
-  create_table "events", :force => true do |t|
-    t.integer  "account_id"
-    t.integer  "author_id"
-    t.integer  "section_id"
-    t.integer  "parent_id"
-    t.integer  "site_id"
-    t.string   "title",            :limit => 120
-    t.text     "body"
-    t.boolean  "all_day",                         :default => false
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.string   "slug"
-    t.datetime "published_at"
-    t.string   "location"
-    t.string   "contact_email"
-    t.string   "more_info_url"
-    t.string   "registration_url"
-    t.string   "image_mime_type"
-    t.string   "image_name"
-    t.integer  "image_size"
-    t.integer  "image_width"
-    t.integer  "image_height"
-    t.string   "image_uid"
-    t.string   "image_ext"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "globalized",                      :default => 0
-  end
-
-  add_index "events", ["account_id"], :name => "index_events_on_account_id"
-  add_index "events", ["section_id"], :name => "index_events_on_section_id"
-  add_index "events", ["site_id"], :name => "index_events_on_site_id"
-  add_index "events", ["slug"], :name => "index_events_on_slug"
 
   create_table "feature_translations", :force => true do |t|
     t.integer  "feature_id"
@@ -530,6 +483,24 @@ ActiveRecord::Schema.define(:version => 20120225154932) do
 
   add_index "sites", ["account_id"], :name => "index_sites_on_account_id"
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
+
+  create_table "spectacle_events", :force => true do |t|
+    t.integer  "spectacle_id"
+    t.integer  "section_id"
+    t.integer  "site_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string   "location"
+    t.string   "more_info_url"
+    t.string   "registration_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "place"
+  end
+
+  add_index "spectacle_events", ["section_id"], :name => "index_spectacle_events_on_section_id"
+  add_index "spectacle_events", ["site_id"], :name => "index_spectacle_events_on_site_id"
+  add_index "spectacle_events", ["spectacle_id"], :name => "index_spectacle_events_on_spectacle_id"
 
   create_table "states", :force => true do |t|
     t.string  "name"

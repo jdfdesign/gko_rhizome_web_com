@@ -1,19 +1,24 @@
 <%
-@sale_section ||= site.sections.with_translations(I18n.locale).published.named("sale_properties")
-@rent_section ||= site.sections.with_translations(I18n.locale).published.named("rental_properties")
-@rental_properties ||= rent_section.rental_properties.with_translations(I18n.locale).published.in_homepage if @rent_section
-@sale_properties ||= sale_section.sale_properties.with_translations(I18n.locale).published.in_homepage if @sale_section
+@spectacle_events ||= @site.spectacle_events.upcoming
+@features ||= @site.features.visibles
+@program_section ||= @site.sections.find_by_name("program")
 %>
 <% content_for :page_content do %>
+  <% if @features.any? %>
   <div class="row-fluid home-orbit">
     <div class="span12">
-      <%= render 'shared/features', :features => @site.features.visibles %>
+      <%= render 'shared/features', :features => @features %>
     </div>
   </div> 
-
+  <% end %>
   <div class="row-fluid">
-    <section class="span12"> 
-      <%= resource.body.html_safe  if resource.body %>  				
+    <section class="span6">
+      <h3><%= "Prochainement".html_safe %></h3>
+      <%= render "spectacle_events/records", :records => @spectacle_events %>
+      <%= link_to("Voir toutes les dates", url_for([@program_section])) if @program_section %>				
     </section>  
+    <section class="span6"> 
+      <%= resource.body.html_safe  if resource.body %>  				
+    </section>   
   </div>  
 <% end %>

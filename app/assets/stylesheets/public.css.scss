@@ -1,15 +1,15 @@
 /* custom variables >>> */ 
 $altColor: #900; //red 
 /* <<< custom variables */ 
-$bodyBackgroundColor: #fefefe;
+$bodyBackgroundColor: #fcfcfc;
 // Navbar
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
 $baseFontFamily: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
 $textColor: #6b6b6b; 
 $linkColor: #6b6b6b;
-$linkColorHover: #f60;
-
+$linkColorHover: #da5d26;
+@import "zurb/foundation/orbit";
 @import "gko_public_all"; 
 @import "gko/elastislide"; 
 
@@ -35,43 +35,76 @@ div.html_text {
 		text-align: center;
 		border-top: 1px solid $textColor;
 		border-bottom: 1px solid $textColor;
-		padding: 12px 0;
+		padding: $baseLineHeight * .5 0;
+		margin: $baseLineHeight 0;
 	}
-	p {
+	p, ul {
 		font-weight: 300;
 	}
 }
 /*-----------------------------------------
    STRUCTURE
------------------------------------------ */
+----------------------------------------- */ 
+html, body {
+	height:100%; /* needed for container min-height */
+}
+body {
+display: block;
+
+}
+.row-fluid {
+	margin: 0;
+}
+
+#wrapper-wide-body {
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+	min-height:100%; /* real browsers */
+}
 #content-container {
 	background-color: white;
 	border-left: 12px solid black;
-	float: left;
+	padding-left: 8px; 
+}
+#content {
+ background-color: white;
 }
 #main-column { 
- padding-top: 68px;
- background-color: #fcfcfc;
-.main-column-inner {
-	padding: 0 24px;
+	min-height: 395px;
+	padding-top: 68px;
+	background-color: #f8f8f8; 
+	.main-column-inner {
+		padding: 0 24px;
+	} 
 } 
-} 
-.navbar {
-	height:100%;
+#header {
+	height: 100%;
+
+	font-size: 10px;
+	line-height: 28px;
+	color: #ADADAD;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	z-index: 10;
+	display:block;
+	height:auto !important; /* real browsers */
+	height:100%; /* IE6: treaded as min-height*/
+	min-height:100%; /* real browsers */ 
 }
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */ 
-
-h2#site-title {
+.btn-navbar {
+	@include buttonBackground(#e1e1e1, #e4e4e4);
+}
+.navbar .brand {
 	@include logo(226px, 66px);
-	float: left;
-	margin: 0;
+	margin: 16px 0;
 }
 .header-nav {
 	.nav {
 		@include vertical-nav;
-		margin-left: 24px;
+
 	} 
 	.nav > li > a {
 	 text-transform: uppercase;
@@ -86,7 +119,12 @@ h2#site-title {
 /*-----------------------------------------
    HOME
 ----------------------------------------- */ 
-
+.home-orbit {
+	margin-bottom: $baseLineHeight * 3;
+}
+#home h3 {
+	color: #da5d26;
+}
 /*-----------------------------------------
  GLOBAL EFFECT
 ----------------------------------------- */
@@ -96,4 +134,39 @@ a {
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "gko/responsive";
+@import "gko/responsive"; 
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media (max-width: 980px) { 
+  // GRID & CONTAINERS
+  // -----------------
+  // Remove width from containers
+  .container-fluid {
+    width: auto;
+    padding: 0;
+  }
+	#content-container {
+		border-top: 12px solid black;
+		border-left: none;
+		float: none;
+		width: auto;
+	}
+  // Fluid rows
+  .row-fluid {
+    width: 100%;
+  }
+  // Undo negative margin on rows
+  .row {
+    margin-left: 0;
+  }
+  // Make all columns even
+  .row > [class*="span"],
+  .row-fluid > [class*="span"] {
+    float: none;
+    display: block;
+    width: auto;
+    margin: 0;
+  }
+}

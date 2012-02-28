@@ -1,37 +1,8 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms_rails_3.git
-  revision: 132b1a5c0381beec9f690668c54486bb6e48da14
+  revision: bdf636783a46c9442bf4e647a5d11b79caf053ce
   specs:
-    gko_albums (0.1.38)
-      gko_core
-      gko_images
-    gko_auth (0.1.38)
-      cancan (= 1.6.5)
-      devise (= 1.5.1)
-      gko_core
-    gko_documents (0.1.38)
-      dragonfly (~> 0.9.8)
-      gko_core
-      mime-types
-      rack-cache (>= 0.5.3)
-    gko_features (0.1.38)
-      dragonfly (~> 0.9.8)
-      gko_core
-      gko_images
-    gko_images (0.1.38)
-      dragonfly (~> 0.9.10)
-      gko_core
-      mime-types
-      rack-cache (>= 0.5.3)
-    gko_inquiries (0.1.38)
-      filters_spam (~> 0.2)
-      gko_core
-
-GIT
-  remote: git@github.com:jdfdesign/gko_cms_rails_3.git
-  revision: 132b1a5c0381beec9f690668c54486bb6e48da14
-  specs:
-    gko_core (0.1.38)
+    gko_core (0.1.39)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.6)
       bundler (= 1.1.pre.4)
@@ -60,6 +31,42 @@ GIT
       uglifier (>= 1.0.3)
       uuid (= 2.3.1)
       will_paginate (~> 3.0.pre4)
+
+GIT
+  remote: git@github.com:jdfdesign/gko_cms_rails_3.git
+  revision: bdf636783a46c9442bf4e647a5d11b79caf053ce
+  specs:
+    gko_albums (0.1.39)
+      gko_core
+      gko_images
+    gko_auth (0.1.39)
+      cancan (= 1.6.5)
+      devise (= 1.5.1)
+      gko_core
+    gko_documents (0.1.39)
+      dragonfly (~> 0.9.8)
+      gko_core
+      mime-types
+      rack-cache (>= 0.5.3)
+    gko_features (0.1.39)
+      dragonfly (~> 0.9.8)
+      gko_core
+      gko_images
+    gko_images (0.1.39)
+      dragonfly (~> 0.9.10)
+      gko_core
+      mime-types
+      rack-cache (>= 0.5.3)
+    gko_inquiries (0.1.39)
+      filters_spam (~> 0.2)
+      gko_core
+
+GIT
+  remote: git@github.com:jdfdesign/gko_spectacles.git
+  revision: c66dfc0424b7c847e9277f16e34c179adb616834
+  specs:
+    gko_spectacles (0.0.01)
+      gko_core
 
 GEM
   remote: http://rubygems.org/
@@ -239,11 +246,12 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   gko_albums!
   gko_auth!
-  gko_core (= 0.1.38)!
+  gko_core (= 0.1.39)!
   gko_documents!
   gko_features!
   gko_images!
   gko_inquiries!
+  gko_spectacles (= 0.0.01)!
   iconv
   sass-rails (~> 3.1.5.rc1)
   uglifier (>= 1.0.3)
