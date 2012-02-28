@@ -42,6 +42,23 @@ div.html_text {
 		font-weight: 300;
 	}
 }
+.block-grid h2 {
+	font-size: $baseFontSize;
+}
+.block-grid .entry-thumb {
+	background-color: white;
+	border-bottom: 4px solid white;
+	a {
+		background-color: white;
+		display:block;
+	}
+	img {
+		@include transition(opacity .5s linear);
+		&:hover {
+			opacity: .7;
+		}; 
+	}
+}
 /*-----------------------------------------
    STRUCTURE
 ----------------------------------------- */ 
@@ -107,10 +124,14 @@ display: block;
 
 	} 
 	.nav > li > a {
-	 text-transform: uppercase;
-	font-size: 12px;
-	font-weight: 300;
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 300;
 	}
+
+}
+.navbar .nav .nav {
+	margin-left:8px;
 }
 /*-----------------------------------------
    FOOTER

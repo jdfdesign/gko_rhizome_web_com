@@ -1,8 +1,8 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms_rails_3.git
-  revision: bdf636783a46c9442bf4e647a5d11b79caf053ce
+  revision: 752ec457d110f9ef08d698e51a7501681d267118
   specs:
-    gko_core (0.1.39)
+    gko_core (0.1.40)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.6)
       bundler (= 1.1.pre.4)
@@ -34,38 +34,38 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms_rails_3.git
-  revision: bdf636783a46c9442bf4e647a5d11b79caf053ce
+  revision: 752ec457d110f9ef08d698e51a7501681d267118
   specs:
-    gko_albums (0.1.39)
+    gko_albums (0.1.40)
       gko_core
       gko_images
-    gko_auth (0.1.39)
+    gko_auth (0.1.40)
       cancan (= 1.6.5)
       devise (= 1.5.1)
       gko_core
-    gko_documents (0.1.39)
+    gko_documents (0.1.40)
       dragonfly (~> 0.9.8)
       gko_core
       mime-types
       rack-cache (>= 0.5.3)
-    gko_features (0.1.39)
+    gko_features (0.1.40)
       dragonfly (~> 0.9.8)
       gko_core
       gko_images
-    gko_images (0.1.39)
+    gko_images (0.1.40)
       dragonfly (~> 0.9.10)
       gko_core
       mime-types
       rack-cache (>= 0.5.3)
-    gko_inquiries (0.1.39)
+    gko_inquiries (0.1.40)
       filters_spam (~> 0.2)
       gko_core
 
 GIT
   remote: git@github.com:jdfdesign/gko_spectacles.git
-  revision: c66dfc0424b7c847e9277f16e34c179adb616834
+  revision: 55fc38c0552ca9c63c65d9b0043de4bf6a4bc98c
   specs:
-    gko_spectacles (0.0.01)
+    gko_spectacles (0.0.02)
       gko_core
 
 GEM
@@ -246,12 +246,12 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   gko_albums!
   gko_auth!
-  gko_core (= 0.1.39)!
+  gko_core (= 0.1.40)!
   gko_documents!
   gko_features!
   gko_images!
   gko_inquiries!
-  gko_spectacles (= 0.0.01)!
+  gko_spectacles (= 0.0.02)!
   iconv
   sass-rails (~> 3.1.5.rc1)
   uglifier (>= 1.0.3)
