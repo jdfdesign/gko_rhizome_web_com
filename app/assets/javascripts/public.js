@@ -22,8 +22,12 @@ $(document).ready(function() {
 		} 
 		$("body").fadeIn(3000).css("display", "block");
 		$(window).bind('resize', resizeContent); 
-		$('.carousel').carousel(); 
-		
+		$('.carousel').each(function(index) {
+			var _self = $(this);
+			if(_self.find('item').length > 1) {
+				_self.carousel();
+			}
+		}); 
 	}
 
 	init(); 
