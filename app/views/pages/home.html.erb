@@ -1,13 +1,28 @@
 <%
-@spectacle_events ||= @site.spectacle_events.upcoming
+@spectacle_events ||= @site.spectacle_events.upcoming.limit(10)
 @features ||= @site.features.visibles
 @program_section ||= @site.sections.find_by_name("program")
+unless @spectacle_events.any?
+  @spectacles = site.spectacles.with_translations(I18n.locale).published
+end
 %>
 <% content_for :page_content do %>
   <% if @features.any? %>
-  <div class="row-fluid home-orbit">
+  <div class="row-fluid">
     <div class="span12">
-      <%= render 'shared/features', :features => @features %>
+      <%= render 'shared/carousel', :features => @features %>
+    </div>
+  </div>
+  <% elsif @spectacle_events.any? %>
+  <div class="row-fluid">
+    <div class="span12">
+      <%= render 'spectacle_events/carousel', :events => @spectacle_events %>
+    </div>
+  </div>
+  <% elsif @spectacles.try(:any?)  %>
+  <div class="row-fluid">
+    <div class="span12">
+      <%= render 'spectacles/carousel', :spectacles => @spectacles %>
     </div>
   </div> 
   <% end %>
