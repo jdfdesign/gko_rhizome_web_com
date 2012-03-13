@@ -11,6 +11,10 @@ $baseFontFamily: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", Helvetica
 $textColor: #6b6b6b; 
 $linkColor: #6b6b6b;
 $linkColorHover: #da5d26;
+
+// Icon
+$pdfIcon: 'gko/icon_pdf_grey_light_x110.png';
+
 @import "zurb/foundation/orbit";
 @import "gko_public_all"; 
 @import "gko/elastislide"; 
