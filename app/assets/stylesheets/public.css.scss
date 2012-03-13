@@ -114,7 +114,7 @@ body {
 	.nav {
 		@include vertical-nav;
 	} 
-	.nav > li > a {
+	.nav > li a {
 		text-transform: uppercase;
 		font-size: 12px;
 		font-weight: 300;
