@@ -10,6 +10,12 @@ class CreateLanguagesTable < ActiveRecord::Migration
       t.boolean :default, :default => false
       t.timestamps
     end
+    
+    unless column_exists?(:languages, :position)
+      add_column :languages, :position, :integer, :default => 1
+      add_index :languages, [:position, :site_id]
+    end
+    
     add_index :languages, :site_id
 
     add_column :sites, :languages_count, :integer, :default => 0
