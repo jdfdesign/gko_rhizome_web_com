@@ -217,6 +217,10 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 @import "gko/mixin.1.0.0";
 @import "gko/default";
 @import "galleria";
+
+.next-previous {
+	display:none;
+}
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
@@ -316,7 +320,6 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 	}
 }
 @media (min-width: 980px) {
-	ul.subnav > li > a,
 	.navbar ul.nav > li > a {
 		text-transform: uppercase;
 		text-align: left;
@@ -328,5 +331,35 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 	    &:hover {
 	      color: $navbarLinkColorHover;
 	    }
+	}
+	
+
+	.navbar .dropdown-menu a {
+		color: $navbarLinkColor;
+	}
+	.navbar .dropdown-menu li > a:hover, 
+	.navbar .dropdown-menu .active > a, 
+	.navbar .dropdown-menu .active > a:hover {
+		color: $navbarLinkColorHover;
+		background-color: $navbarLinkBackgroundHover;
+	}
+	.navbar li.dropdown .caret {
+		display: none;
+		border: none;
+	}
+	.navbar ul.dropdown-menu {
+		position: relative;
+		top: auto;
+		left: auto;
+		float: none;
+		display: block;
+		max-width: none;
+		margin: 0 0 0 15px;
+		padding: 0;
+		background-color: transparent;
+		border: none;
+		@include border-radius(0);
+		@include box-shadow(none);
+		
 	}
 }

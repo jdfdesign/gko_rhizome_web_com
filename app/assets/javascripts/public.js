@@ -6,7 +6,7 @@ var Site = {
 	init: function() {
 		Carousel.addTheme();
 		Carousel.init();
-		Album.init();
+		//Album.init();
 	}
 }
 
