@@ -1,10 +1,16 @@
-cd ~/developer/workspace/gko_rhizome_web_com
+cd ~/Github/gko_rhizome_web_com
+tail -f log/development.log
+
+cd ~/Github/gko_rhizome_web_com
 bundle install
 rails s
 
 bundle exec rake assets:precompile
 
+cd ~/Github/gko_rhizome_web_com
 bundle exec rake railties:install:migrations
+bundle exec rake db:migrate
+
 bundle exec rake db:bootstrap
 
  

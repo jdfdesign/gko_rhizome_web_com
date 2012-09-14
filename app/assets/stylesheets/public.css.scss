@@ -1,204 +1,332 @@
-/* custom variables >>> */ 
-$altColor: #900; //red 
-/* <<< custom variables */ 
-$bodyBackgroundColor: #fcfcfc;
+
+
+//
+// Specific Theme Variables
+// --------------------------------------------------
+
+$navbarWidth: 256px;
+$gridContainerMaxWidth: 684px;
+$themeColor: #DA5D26;
+
+
+// Variables.less
+// Variables to customize the look and feel of Bootstrap
+// -----------------------------------------------------
+// GLOBAL VALUES
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+$black:                 #000;// !default
+$grayDarker:            #222;// !default
+$grayDark:              #333;// !default
+$gray:                  #555;// !default
+$grayLight:             #999;// !default
+$grayLighter:           #F8F8F8;// !default
+$white:                 #fff;// !default
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb;// !default
+$blueDark:              #0064cd;// !default
+$green:                 #46a546;// !default
+$red:                   #9d261d;// !default
+$yellow:                #ffc40d;// !default
+$orange:                #f89406;// !default
+$pink:                  #c3325f;// !default
+$purple:                #7a43b6;// !default
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        #FCFCFC;//$grayLighter;// !default
+$textColor:             #6B6B6B;// !default
+
+
+// Links
+// -------------------------
+$linkColor:             $themeColor;// !default
+$linkColorHover:        darken($linkColor, 15%);// !default
+
+
+// Typography
+// -------------------------
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;// !default
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif;// !default
+$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;// !default
+
+$baseFontSize:          13px;// !default
+$baseFontFamily:        $sansFontFamily;// !default
+$baseLineHeight:        18px;// !default
+$altFontFamily:         $serifFontFamily;// !default
+
+$headingsFontFamily:    inherit;// !default // empty to use BS default, @baseFontFamily
+$headingsFontWeight:    bold;// !default    // instead of browser default, bold
+$headingsColor:         inherit;// !default // empty to use BS default, @textColor
+
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent;// !default // overall background-color
+$tableBackgroundAccent:             #f9f9f9;// !default // for striping
+$tableBackgroundHover:              #f5f5f5;// !default // for hover
+$tableBorder:                       #ddd;// !default // table and cell border
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $white;// !default
+$btnBackgroundHighlight:            darken($white, 10%);// !default
+$btnBorder:                         #ccc;// !default
+
+$btnPrimaryBackground:              $linkColor;// !default
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);// !default
+
+$btnInfoBackground:                 #5bc0de;// !default
+$btnInfoBackgroundHighlight:        #2f96b4;// !default
+
+$btnSuccessBackground:              #62c462;// !default
+$btnSuccessBackgroundHighlight:     #51a351;// !default
+
+$btnWarningBackground:              lighten($orange, 15%);// !default
+$btnWarningBackgroundHighlight:     $orange;// !default
+
+$btnDangerBackground:               #ee5f5b;// !default
+$btnDangerBackgroundHighlight:      #bd362f;// !default
+
+$btnInverseBackground:              $gray;// !default
+$btnInverseBackgroundHighlight:     $grayDarker;// !default
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white;// !default
+$inputBorder:                   #ccc;// !default
+$inputBorderRadius:             3px;// !default
+$inputDisabledBackground:       $grayLighter;// !default
+
+$formActionsBackground:         #f5f5f5;// !default
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white;// !default
+$dropdownBorder:                rgba(0,0,0,.2);// !default
+$dropdownLinkColor:             $grayDark;// !default
+$dropdownLinkColorHover:        $white;// !default
+$dropdownLinkBackgroundHover:   $linkColor;// !default
+$dropdownDividerTop:            #e5e5e5;// !default
+$dropdownDividerBottom:         $white;// !default
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:        1000;// !default
+$zindexPopover:         1010;// !default
+$zindexTooltip:         1020;// !default
+$zindexFixedNavbar:     1030;// !default
+$zindexModalBackdrop:   1040;// !default
+$zindexModal:           1050;// !default
+
+
+// Sprite icons path
+// -------------------------
+$iconSpritePath:        "twitter/bootstrap/glyphicons-halflings.png";// !default
+$iconWhiteSpritePath:   "twitter/bootstrap/glyphicons-halflings-white.png";// !default
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:       $grayLight;// !default
+
+
+// Hr border color
+// -------------------------
+$hrBorder:              $grayLighter;// !default
+
+
 // Navbar
-$navbarButtonBackgroundHighlight: #e1e1e1; 
-$navbarButtonBackground: #e4e4e4; 
-$navbarButtonIconBarColor: black;
+// -------------------------
+$navbarHeight:                    40px;// !default
+$navbarBackground:                #FCFCFC;//#212121;// !default
+$navbarBackgroundHighlight:       #FCFCFC;//#212121;// !default
 
-$baseFontFamily: "proxima-nova-1", "proxima-nova-2", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Lucida Grande", sans-serif;
-$textColor: #6b6b6b; 
-$linkColor: #6b6b6b;
-$linkColorHover: #da5d26;
+$navbarText:                      $textColor;// !default
+$navbarLinkColor:                 $textColor;// !default
+$navbarLinkColorHover:            $themeColor;// !default
+$navbarLinkColorActive:           darken($navbarLinkColorHover, 15%);// !default
+$navbarLinkBackgroundHover:       transparent;// !default
+$navbarLinkBackgroundActive:      $navbarBackground;// !default
 
-// Icon
-$pdfIcon: 'gko/icon_pdf_grey_light_x110.png';
+$navbarSearchBackground:          lighten($navbarBackground, 25%);// !default
+$navbarSearchBackgroundFocus:     $white;// !default
+$navbarSearchBorder:              darken($navbarSearchBackground, 30%);// !default
+$navbarSearchPlaceholderColor:    #ccc;// !default
+$navbarBrandColor:                $navbarLinkColor;// !default
 
-@import "zurb/foundation/orbit";
-@import "gko_public_all"; 
-@import "gko/elastislide"; 
 
-/*-----------------------------------------
-   SHARED STYLES 
------------------------------------------ */ 
-.uppercase_font_style {
-	line-height: 24px;
-	font-size: 13px;
-	letter-spacing: 1px; 
-	text-transform: uppercase; 
-}
+// Hero unit
+// -------------------------
+$heroUnitBackground:              $grayLighter;// !default
+$heroUnitHeadingColor:            inherit;// !default
+$heroUnitLeadColor:               inherit;// !default
 
-/*-----------------------------------------
- TYPOGRAPHY 
------------------------------------------ */
 
-/*-----------------------------------------
-   OVERWRITTE
------------------------------------------ */
-div.html_text { 
-	h2 {
-		text-align: center;
-		border-top: 1px solid $textColor;
-		border-bottom: 1px solid $textColor;
-		padding: $baseLineHeight * .5 0;
-		margin: $baseLineHeight 0;
-	}
-	p, ul {
-		font-weight: 300;
-	}
-}
-.block-grid h2 {
-	font-size: $baseFontSize;
-}
-.block-grid .entry-thumb {
-	background-color: white;
-	border-bottom: 4px solid white;
-	a {
-		background-color: white;
-		display:block;
-	}
-	img {
-		@include transition(opacity .5s linear);
-		&:hover {
-			opacity: .7;
-		}; 
-	}
-}
-/*-----------------------------------------
-   STRUCTURE
------------------------------------------ */ 
-body {
-	display: none;
-}
-.row-fluid {
-	margin: 0;
-}
-#content-container {
-	border-left: 12px solid $linkColorHover;
-	padding-left: 0; 
-}
-#main-column { 
-	//margin-left: 230px;
-	background-color: #FFFFFF; 
-	.main-column-inner {
-		padding: 0 24px;
-	} 
-}
-#footer {
-	position: absolute;
-	bottom: 34px;
-	left: 0 auto;
-	right: 0 auto;
-} 
-#copyright {
-	position: absolute;
-	bottom: 12px;
-	left: 0 auto;
-	right: 0 auto;
-	text-align: center;
-}
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;// !default
+$warningBackground:       #fcf8e3;// !default
+$warningBorder:           darken(adjust_hue($warningBackground, -10deg), 3%);// !default
+
+$errorText:               #b94a48;// !default
+$errorBackground:         #f2dede;// !default
+$errorBorder:             darken(adjust_hue($errorBackground, -10deg), 3%);// !default
+
+$successText:             #468847;// !default
+$successBackground:       #dff0d8;// !default
+$successBorder:           darken(adjust_hue($successBackground, -10deg), 5%);// !default
+
+$infoText:                #3a87ad;// !default
+$infoBackground:          #d9edf7;// !default
+$infoBorder:              darken(adjust_hue($infoBackground, -10deg), 7%);// !default
+
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+$gridColumns:             12;// !default
+$gridColumnWidth:         60px;// !default
+$gridGutterWidth:         20px;// !default
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));// !default
+
+// Fluid grid
+// -------------------------
+$fluidGridColumnWidth:    6.382978723%;// !default
+$fluidGridGutterWidth:    2.127659574%;// !default
+
+@import "twitter/bootstrap";
+@import "gko/mixin.1.0.0";
+@import "gko/default";
+@import "galleria";
 /*-----------------------------------------
  HEADER
------------------------------------------ */ 
-#header {
-	position:relative;
-	.row-fluid {
-		float: none;
-		clear: both;
-		display: block;
-	}
-}
+----------------------------------------- */
 
 .navbar .brand {
-	@include logo(226px, 66px);
-	margin: 16px 0;
-}
-.header-nav { 
-	.nav {
-		@include vertical-nav;
-	} 
-	.nav > li a {
-		text-transform: uppercase;
-		font-size: 12px;
-		font-weight: 300;
+	margin: 0;
+	padding: 0;
+	a {
+		padding: 0;
+		margin: 0 auto;
+		background: transparent asset-url("logo.png", 'image') center center no-repeat;
+		background-size: contain;
+		cursor: pointer;
+		text-decoration: none;
+		display: block;
+		width: 226px;
+		height: 66px;
+		@include hide-text;
 	}
 }
-.navbar .nav .nav {
-	margin-left:8px;
+#primary-menu .nav > li a {
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 300;
 }
 /*-----------------------------------------
-   FOOTER
------------------------------------------ */ 
-/*-----------------------------------------
-   SLIDESHOW
------------------------------------------ */ 
-.carousel,
-.diaporama {
-	margin: 0 -24px $baseLineHeight -24px;
-}
-
-.images-thumbnails-container{
-	padding: 2px 37px;
-}
-.images-thumbnails{
-	a{
-		border:none;
-	}
-}
-
-
-/*-----------------------------------------
-   HOME
------------------------------------------ */ 
-.home-orbit {
-	margin-bottom: $baseLineHeight * 3;
-}
-#home h3 {
-	color: #da5d26;
-}
-/*-----------------------------------------
- GLOBAL EFFECT
+ FOOTER
 ----------------------------------------- */
-a {
-	@include transition(color .5s linear, background-color .5s linear)
+/*-----------------------------------------
+ CONTENT
+----------------------------------------- */
+#main-container {
+	background-color: $white;
+}
+
+#main {
+	padding: $baseLineHeight;
+	
+}
+.page-title {
+	margin-bottom: $baseLineHeight;
+}
+/*-----------------------------------------
+ GRID
+----------------------------------------- */
+.grid > li {
+	.thumbnail { 
+		margin-bottom: $baseLineHeight * 2;
+		box-shadow: none;
+		border: none;
+		padding: 0;
+		.caption { 
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.image {
+			background-color: none;
+			@include transition("all 0.3s ease-in-out");
+			&:hover {
+				opacity: .7;
+			};
+		}
+		.title {
+			text-transform:capitalize;
+			font-size: $baseFontSize;
+			line-height: $baseLineHeight;
+			margin-bottom: 0;
+			a {
+				color: $headingsColor;
+			}
+			
+		}
+	} 
+}
+.grid > li.spectacle_event {
+	border-bottom: 1px solid $grayLight;
+	margin: 0;
+	.thumbnail {
+		margin-bottom: 0;
+	}
 }
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "gko/responsive"; 
-
-// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
-// --------------------------------------------------
-
-@media (max-width: 980px) { 
-  // GRID & CONTAINERS
-  // -----------------
-  // Remove width from containers
-  .container-fluid {
-    width: auto;
-    padding: 0;
-  }
-	#content-container {
-		border-top: 12px solid black;
-		border-left: none;
-		float: none;
-		width: auto;
+@import "twitter/bootstrap/responsive";
+@import "layout";
+@media (max-width: 979px) {
+	body {
+		border-top: 12px solid $themeColor;
 	}
-  // Fluid rows
-  .row-fluid {
-    width: 100%;
-  }
-  // Undo negative margin on rows
-  .row {
-    margin-left: 0;
-  }
-  // Make all columns even
-  .row > [class*="span"],
-  .row-fluid > [class*="span"] {
-    float: none;
-    display: block;
-    width: auto;
-    margin: 0;
-  }
+	.navbar {
+		margin-top: 12px;
+	}
+	.navbar .brand {
+		float: none;
+		@include center-block();
+	}
+}
+@media (min-width: 980px) {
+	ul.subnav > li > a,
+	.navbar ul.nav > li > a {
+		text-transform: uppercase;
+		text-align: left;
+		font-size: $baseFontSize - 3;
+		letter-spacing: 2px;
+		text-shadow: none;
+		padding: 3px 15px;
+		color: $navbarLinkColor;
+	    &:hover {
+	      color: $navbarLinkColorHover;
+	    }
+	}
 }

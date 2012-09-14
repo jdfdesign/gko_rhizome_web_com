@@ -1,0 +1,43 @@
+@media (min-width: 980px) {
+	#main-container {
+		position: absolute;
+		z-index: 1;
+		width: $gridContainerMaxWidth;
+		left: $navbarWidth;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+	}
+	
+	/*-- HEADER
+	----------------------------------------- */
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		z-index: 10;
+		min-width: $navbarWidth;
+		width: $navbarWidth;
+		z-index: 3;
+		background-color: $navbarBackground;
+		border-left: 12px solid $themeColor;
+	}
+	.navbar-inner {
+	  	@include border-radius(0);
+	  	@include box-shadow(none);
+		padding: 0 22px;
+	}
+	#locales-menu {
+		float: none;
+		text-align: center;
+		ul.nav {
+			@include center-nav();
+		}
+	}
+	#primary-menu ul.nav > li {
+		float: none;
+	}
+}
