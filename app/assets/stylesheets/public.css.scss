@@ -302,6 +302,10 @@ float: left;
 .page-title {
 	margin-bottom: $baseLineHeight;
 }
+.parent-categories .nav li {
+	float:left;
+	padding: 0 6px;
+}
 /*-----------------------------------------
  GRID
 ----------------------------------------- */

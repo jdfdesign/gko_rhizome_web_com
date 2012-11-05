@@ -1,29 +1,12 @@
-PATH
-  remote: /Users/regisbruggheman/Github/gko/gko_spectacles
-  specs:
-    gko_spectacles (0.0.08)
-      gko_core
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_albums
+GIT
+  remote: git@github.com:jdfdesign/gko_cms3.git
+  revision: 73c4216ae8435f317da91aae953dbad439305d77
   specs:
     gko_albums (0.4.31)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_auth
-  specs:
     gko_auth (0.4.31)
       cancan (= 1.6.8)
       devise (= 2.1.2)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_categories
-  specs:
     gko_categories (0.4.31)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_core
-  specs:
     gko_core (0.4.31)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
@@ -64,34 +47,21 @@ PATH
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.2)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_documents
-  specs:
     gko_documents (0.4.31)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_features
-  specs:
     gko_features (0.4.31)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_image_bank
-  specs:
     gko_image_bank (0.4.31)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_images
-  specs:
     gko_images (0.4.31)
-
-PATH
-  remote: /Users/regisbruggheman/Github/gko_cms3/gko_inquiries
-  specs:
     gko_inquiries (0.4.31)
       filters_spam (~> 0.2)
+
+GIT
+  remote: git@github.com:jdfdesign/gko_spectacles.git
+  revision: a2bd39e42c5cd4bfb0b6d9b6c53daba62d5b9815
+  specs:
+    gko_spectacles (0.0.08)
+      gko_core
 
 GEM
   remote: http://rubygems.org/
@@ -298,16 +268,16 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  gko_albums!
-  gko_auth!
-  gko_categories!
-  gko_core!
-  gko_documents!
-  gko_features!
-  gko_image_bank!
-  gko_images!
-  gko_inquiries!
-  gko_spectacles!
+  gko_albums (= 0.4.31)!
+  gko_auth (= 0.4.31)!
+  gko_categories (= 0.4.31)!
+  gko_core (= 0.4.31)!
+  gko_documents (= 0.4.31)!
+  gko_features (= 0.4.31)!
+  gko_image_bank (= 0.4.31)!
+  gko_images (= 0.4.31)!
+  gko_inquiries (= 0.4.31)!
+  gko_spectacles (= 0.0.08)!
   iconv
   sass-rails (~> 3.2.5)
   uglifier (>= 1.2.6)
