@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120910211642) do
+ActiveRecord::Schema.define(:version => 20121031140613) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -36,6 +36,49 @@ ActiveRecord::Schema.define(:version => 20120910211642) do
   end
 
   add_index "assets", ["site_id"], :name => "index_assets_on_site_id"
+
+  create_table "categories", :force => true do |t|
+    t.integer "site_id"
+    t.integer "section_id"
+    t.integer "parent_id"
+    t.integer "lft",              :default => 0, :null => false
+    t.integer "rgt",              :default => 0, :null => false
+    t.string  "name"
+    t.string  "slug"
+    t.string  "path"
+    t.string  "title"
+    t.text    "body"
+    t.string  "meta_title"
+    t.text    "meta_description"
+  end
+
+  add_index "categories", ["parent_id"], :name => "index_categories_on_parent_id"
+  add_index "categories", ["section_id"], :name => "index_categories_on_section_id"
+
+  create_table "categorizations", :force => true do |t|
+    t.integer "categorizable_id"
+    t.string  "categorizable_type"
+    t.integer "category_id"
+  end
+
+  add_index "categorizations", ["categorizable_id", "categorizable_type"], :name => "index_categorizations_on_categorizable_id_and_categorizable_type"
+  add_index "categorizations", ["category_id"], :name => "index_categorizations_on_category_id"
+
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.text     "body"
+    t.string   "path"
+    t.string   "slug"
+    t.text     "meta_description"
+    t.string   "title"
+    t.string   "meta_title"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
 
   create_table "configurations", :force => true do |t|
     t.integer  "site_id"
@@ -262,6 +305,26 @@ ActiveRecord::Schema.define(:version => 20120910211642) do
   add_index "image_assignments", ["attachable_id", "attachable_type"], :name => "index_image_assignments_on_attachable_id_and_attachable_type"
   add_index "image_assignments", ["image_id"], :name => "index_image_assignments_on_image_id"
 
+  create_table "image_bank_photos", :force => true do |t|
+    t.integer  "site_id"
+    t.integer  "section_id"
+    t.string   "title"
+    t.string   "caption"
+    t.string   "content_type"
+    t.integer  "width"
+    t.integer  "height"
+    t.integer  "size"
+    t.string   "source"
+    t.string   "source_filename"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.string   "author"
+    t.integer  "position",        :default => 1
+  end
+
+  add_index "image_bank_photos", ["section_id"], :name => "index_image_bank_photos_on_section_id"
+  add_index "image_bank_photos", ["site_id"], :name => "index_image_bank_photos_on_site_id"
+
   create_table "image_folders", :force => true do |t|
     t.string   "name"
     t.integer  "site_id"
@@ -446,8 +509,8 @@ ActiveRecord::Schema.define(:version => 20120910211642) do
     t.boolean  "shallow_permalink", :default => true
     t.boolean  "robot_index",       :default => true
     t.boolean  "robot_follow",      :default => true
-    t.boolean  "locked",            :default => false
-    t.integer  "locked_by"
+    t.string   "password"
+    t.boolean  "restricted",        :default => false
   end
 
   add_index "sections", ["link_id", "link_type"], :name => "index_sections_on_link_id_and_link_type"
@@ -498,6 +561,7 @@ ActiveRecord::Schema.define(:version => 20120910211642) do
     t.string   "default_image_uid"
     t.integer  "languages_count",          :default => 0
     t.datetime "liquid_models_updated_at"
+    t.text     "page_types"
   end
 
   add_index "sites", ["account_id"], :name => "index_sites_on_account_id"

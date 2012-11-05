@@ -53,8 +53,13 @@ var Carousel = {
 				thumbMargin: 10,
 				showCounter: false,
 				showInfo: false,
-				thumbnails: true
+				thumbnails: $(".galleria").children().length > 1
 			})
+			
+			if($(".galleria").children().length == 1) {
+				$(".galleria").addClass('no-navigation');	
+			}
+			
 		}
 	},
 	addTheme: function() {

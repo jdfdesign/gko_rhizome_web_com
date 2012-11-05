@@ -1,5 +1,5 @@
 <%
-@spectacle_events ||= site.spectacle_events.upcoming.limit(10)
+@spectacle_events ||= site.spectacle_events.upcoming.limit(3)
 @features ||= site.features.live
 @program ||= site.program
 @spectacles ||= site.spectacles.live

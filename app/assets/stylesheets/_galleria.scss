@@ -1,5 +1,6 @@
 $thumbnailHeight: 84px;
 $thumbnailContainerHeight: 100px;
+
 .galleria-container {
     position: relative;
     overflow: hidden;
@@ -19,6 +20,11 @@ $thumbnailContainerHeight: 100px;
     overflow:hidden;
 	padding: 0px;
 	background: rgba(255, 255, 255, .6);	
+}
+.galleria-thumbnails {
+margin-left: auto;
+margin-right: auto;
+width: 50%;
 }
 .galleria-thumbnails-container {
     height: $thumbnailContainerHeight;
@@ -247,4 +253,16 @@ $thumbnailContainerHeight: 100px;
 .galleria-carousel .galleria-thumb-nav-left,
 .galleria-carousel .galleria-thumb-nav-right {
     display: block;
+}
+
+
+.galleria.no-navigation {
+	.galleria-thumbnails-container,
+	.galleria-thumbnails .galleria-image,
+	.galleria-image-nav {
+		display: none;
+		height: 0;
+		
+	}
+	
 }
