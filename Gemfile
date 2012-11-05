@@ -21,7 +21,7 @@ group :production do
   gem "gko_features", prod_version, :git => prod_location
   gem "gko_albums", prod_version, :git => prod_location
   gem 'gko_image_bank', prod_version, :git => prod_location
-  gem 'gko_spectacles', '= 0.0.08',  :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
+  gem 'gko_spectacles', '= 0.0.09',  :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
   gem 'gko_categories', prod_version, :git => prod_location
 end
 #group :development do

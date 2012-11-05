@@ -4,10 +4,14 @@ $.ajaxSettings.dataType = "html";
 
 var Site = {
 	init: function() {
+		$('img').live('contextmenu', function(e){
+		    return false;
+		});
 		Carousel.addTheme();
 		Carousel.init();
 		//Album.init();
 	}
+	
 }
 
 var Album = {
@@ -56,9 +60,9 @@ var Carousel = {
 				thumbnails: $(".galleria").children().length > 1
 			})
 			
-			if($(".galleria").children().length == 1) {
-				$(".galleria").addClass('no-navigation');	
-			}
+			//if($(".galleria").children().length == 1) {
+			//	$(".galleria").addClass('no-navigation');	
+			//}
 			
 		}
 	},
