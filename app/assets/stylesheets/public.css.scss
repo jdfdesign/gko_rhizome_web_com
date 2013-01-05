@@ -220,6 +220,11 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 .next-previous {
 	display:none;
 }
+
+a:focus,
+.btn:focus {
+  outline: 0;
+}
 /*-----------------------------------------
  HEADER
 ----------------------------------------- */
@@ -243,7 +248,7 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 	}
 	.btn-navbar {
 		text-shadow: none;
-		@include buttonBackground(lighten($themeColor, 10%), $themeColor);
+		@include button_background(lighten($themeColor, 10%), $themeColor);
 		color: $white;
 		&:hover {
 			color: $white;
@@ -251,6 +256,11 @@ $fluidGridGutterWidth:    2.127659574%;// !default
 	}
 }
 
+.navbar-inner {
+  	@include border-radius(0);
+  	@include box-shadow(none);
+	border: none;
+}
 .header-top {
 	position: absolute;
 	right: 24px;
@@ -376,7 +386,7 @@ float: left;
 		}
 	}
 	.nav-collapse .nav > li > a,
-	.nav-collapse .dropdown-menu li + li a {
+	.nav-collapse .dropdown-menu li a {
 		margin-bottom: 0;
 		font-weight: normal;
 		@include border-radius(0);
@@ -384,6 +394,7 @@ float: left;
 		text-shadow: none;
 		&:hover {
 			color: $navbarLinkColorHover;
+			background: none;
 		};
 	}
 	.dropdown-menu li > a:hover, 
@@ -429,15 +440,17 @@ float: left;
 			color: $navbarLinkColor;
 		    &:hover {
 		      color: $navbarLinkColorHover;
+		background: none;
 		    }
 		}
 		.dropdown-menu a {
 			color: $navbarLinkColor;
 		}
-		li.dropdown .caret {
-			display: none;
-			border: none;
+		.nav li.dropdown ul.dropdown-menu:before, 
+		.nav li.dropdown ul.dropdown-menu:after {
+		  display: none;
 		}
+
 		 ul.dropdown-menu {
 			position: relative;
 			top: auto;
@@ -457,12 +470,10 @@ float: left;
 		.dropdown-menu .active > a, 
 		.dropdown-menu .active > a:hover {
 			color: $navbarLinkColorHover;
-			background-color: $navbarLinkBackgroundHover;
+			background: none;
 		}
 	}
 	.navbar-inner {
-	  	@include border-radius(0);
-	  	@include box-shadow(none);
 		padding: 0 22px;
 	}
 	#primary-menu ul.nav > li {

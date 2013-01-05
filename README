@@ -7,9 +7,8 @@ rails s
 
 bundle exec rake assets:precompile
 
-cd ~/Github/gko_rhizome_web_com
-bundle exec rake railties:install:migrations
-bundle exec rake db:migrate
+
+
 
 bundle exec rake db:bootstrap
 
