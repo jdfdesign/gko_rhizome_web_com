@@ -5,6 +5,12 @@ cd ~/Github/gko_rhizome_web_com
 bundle install
 rails s
 
+cd ~/Github/gko_rhizome_web_com
+bundle exec rake railties:install:migrations
+rake db:migrate
+
+
+cd ~/Github/gko_rhizome_web_com
 bundle exec rake assets:precompile
 
 

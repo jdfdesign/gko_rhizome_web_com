@@ -69,12 +69,12 @@ ActiveRecord::Schema.define(:version => 20130105113534) do
   create_table "category_translations", :force => true do |t|
     t.integer  "category_id"
     t.string   "locale"
+    t.string   "slug"
     t.text     "body"
-    t.text     "meta_description"
-    t.string   "meta_title"
     t.string   "title"
     t.string   "path"
-    t.string   "slug"
+    t.text     "meta_description"
+    t.string   "meta_title"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

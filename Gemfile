@@ -5,13 +5,13 @@ gem 'iconv'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
- gem 'sass-rails', '~> 3.2.5'
+ gem 'sass-rails', '~> 3.2.6'
  gem 'coffee-rails', '~> 3.2.2'
  gem 'uglifier', '>= 1.2.6'
 end
 
 prod_location = 'git@github.com:jdfdesign/gko_cms3.git'
-prod_version = "= 0.5.54"
+prod_version = "= 0.6.15"
 group :production do
   gem 'gko_core', prod_version, :git => prod_location
   gem 'gko_auth', prod_version, :git => prod_location
@@ -21,7 +21,7 @@ group :production do
   gem "gko_features", prod_version, :git => prod_location
   gem "gko_albums", prod_version, :git => prod_location
   gem 'gko_image_bank', prod_version, :git => prod_location
-  gem 'gko_spectacles', '= 0.0.10',  :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
+  gem 'gko_spectacles', '= 0.0.11',  :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
   gem 'gko_categories', prod_version, :git => prod_location
 end
 #group :development do
