@@ -213,7 +213,7 @@ $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth 
 $fluidGridColumnWidth:    6.382978723%;// !default
 $fluidGridGutterWidth:    2.127659574%;// !default
 
-@import "twitter/bootstrap";
+@import "twitter.bootstrap.2.2.1/bootstrap-responsive";
 @import "gko/public/base";
 @import "galleria";
 
@@ -358,7 +358,7 @@ float: left;
 /*-----------------------------------------
  RESPONSIVE
 ----------------------------------------- */
-@import "twitter/bootstrap/responsive";
+@import "twitter.bootstrap.2.2.1/bootstrap-responsive";
 
 @media (max-width: 979px) {
 	body {
