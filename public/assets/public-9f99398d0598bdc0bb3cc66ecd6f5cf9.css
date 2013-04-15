@@ -6553,7 +6553,7 @@ aside > section {
 
 /* line 68, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-35e5e0c4d5f1/gko_core/app/assets/stylesheets/gko/public/_default.scss */
 .missing-document-preview {
-  background: transparent url(/assets/gko/icon_pdf_grey_light_x110.png) left center no-repeat;
+  background: transparent url(/assets/gko/icon_pdf_grey_light_x110-d825c44fddb67d9997a6c30644ec1433.png) left center no-repeat;
   min-height: 110px;
 }
 
@@ -7140,7 +7140,7 @@ a:focus,
 .navbar .brand a {
   padding: 0;
   margin: 0 auto;
-  background: transparent url(/assets/logo.png) center center no-repeat;
+  background: transparent url(/assets/logo-e8b9a4363c69bbee9c2b337aa7050236.png) center center no-repeat;
   background-size: contain;
   cursor: pointer;
   text-decoration: none;

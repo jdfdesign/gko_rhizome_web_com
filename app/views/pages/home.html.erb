@@ -1,4 +1,4 @@
-<% resource_cache(resource) do %>
+<%# resource_cache(resource) do %>
 	<%
 	@spectacle_events ||= site.spectacle_events.upcoming.limit(3)
 	@features ||= site.features.live
@@ -30,10 +30,10 @@
 	    <%= grid_tag do %>
 	        <%= render @spectacle_events %>
 	    <% end %>
-	    <%= link_to(t(:"spectacles.see_all_dates"), site.spectacle_lists.first.public_url) if @program %>				
+	    <%= link_to(t(:"spectacles.see_all_dates"), site.spectacle_event_lists.first.public_url) %>				
 	  </section>  
 	  <section class="span6"> 
-	    <%= resource.body.html_safe  if resource.body %>  				
+	    <%= resource.body.html_safe if resource.body %>  				
 	  </section>   
 	</div>  
-<% end %>
+<%# end %>
