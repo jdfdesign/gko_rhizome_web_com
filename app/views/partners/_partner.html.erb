@@ -1,0 +1,19 @@
+<li>
+    <% if partner.image.present? %>
+          <% if partner.thumbnail -%>
+              <%= link_to(image_tag(partner.thumbnail.url), partner.link, :target => :blank, :rel => 'external') %>
+          <% else -%>
+              <%= image_tag(partner.thumbnail.url) %>
+          <% end -%>
+    <% end -%>
+    <caption>
+        <h3 class="thumbnail-title">
+          <% if partner.link.present? -%>
+              <%= link_to(partner.title, partner.link, :target => :blank, :rel => 'external') %>
+          <% else -%>
+              <%= partner.title %>
+          <% end -%>
+        </h3>
+        <%= render_html_text(partner.body) %>
+    </caption>
+</li>

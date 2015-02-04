@@ -2,14 +2,13 @@
 -------------------------------------------------- */
 @import "theme/variables";
 @import "bootstrap/bootstrap";
-
+@import "theme/form";
 //
 // Global
 // --------------------------------------------------
 html, body, .main-container {
     //height: 100%;
     min-height: 100%;
-    
 }
 
 .container {
@@ -17,6 +16,7 @@ html, body, .main-container {
     width:100% !important;
     max-width: none !important;
 }
+
 .main-content {
     background-color: $body-bg;
     min-height: 100%;
@@ -39,7 +39,6 @@ img {
     margin: 0 auto;
 }
 
-
 blockquote {
     font-size: $font-size-base;
     font-style: italic;
@@ -47,6 +46,7 @@ blockquote {
     padding-bottom: 0;
     margin: 0 0 12.5px 30px;
 }
+
 //
 // Carousel
 // --------------------------------------------------
@@ -73,41 +73,47 @@ blockquote {
 }
 
 .navbar-brand {
-    display: block;
-    margin-bottom: $line-height-computed;
-    margin-top: $line-height-computed;
-    float: right;
+    //display: block;
+    //margin-bottom: $line-height-computed;
+    //margin-top: $line-height-computed;
+    > img,
+    > .img-responsive {
+        height: 100%;
+    }
 }
 
 .navbar-nav {
-    //float: none;
+    font-family: $headings-font-family;
     text-transform: uppercase;
-}
-.navbar-nav > li {
+    > li {
     float: none;
-    > a {
-        //display: block;
-        //padding: 10px 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
 
-    ul {
+    > a {
+        @include transition(all 0.5s ease);
+    }
+    > ul {
         list-style: none;
         margin-left: 0 !important;
-        //float: left !important;
-        //padding-left: 0 !important;
-        //display: block;
+        padding-left: 0 !important;
     }
 
-    ul > li {
+    > ul > li {
         //float: none;
     }
 
-    ul > li > a {
-        //display: block;
-        padding: 0;
+    > ul > li > a {
+        display: block;
+        padding: 10px 0 10px 32px;
+        position: relative;
+        color: $navbar-default-link-color;
+        @include transition(all 0.5s ease);
+        &:hover,
+        &:focus {
+            color: $navbar-default-link-hover-color;
+            text-decoration: none;
+        }
     }
+}
 }
 
 @media (min-width: $grid-float-breakpoint) {
@@ -122,6 +128,43 @@ blockquote {
         top: 0;
         left: 0;
         z-index: 1;
+
+        > .container .navbar-brand, 
+        > .container-fluid .navbar-brand {
+            margin-left: 0;
+            margin-bottom: $line-height-computed;
+            height: auto;
+            max-width: 220px;
+            margin-bottom: $line-height-computed;
+            margin-top: $line-height-computed;
+            
+            margin-left: auto;
+            margin-right: auto;
+            float: none;
+            display: block;
+            > img,
+            > .img-responsive {
+                height: auto;
+            }
+        }
+    }
+
+    .navbar-header {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        float: right;
+         > li > a {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+        > li > ul > li > a {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
     .main-container {
         padding-left: 380px;
@@ -133,6 +176,10 @@ blockquote {
         padding-bottom: 60px;
         //@include center-block;
         //display: block;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+        float: right;
     }
 }
 //
@@ -148,7 +195,7 @@ blockquote {
     background-size: contain !important;
     z-index: 0;
     background-repeat: no-repeat;
-    background-position: center !important;
+    background-position: left top !important;
     //background-attachment: fixed;
 
 }
@@ -195,7 +242,7 @@ blockquote {
     //color: #fff;
     //border-bottom: 6px solid #fff;
 }
-
+.list-calendar,
 .spectacle-events {
 
     > li {

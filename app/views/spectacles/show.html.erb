@@ -12,13 +12,13 @@
 				<%= page_title(resource.title) %>
 				<p class="spectacle-links">
 					<%= link_to resource.file_press.url do %>
-						<% "<i class='fa fa-file'></i><span class='label'>Presse</span>".html_safe %>
+						<% "<i class='fa fa-file'></i><span class='label'>Dossier de presse</span>".html_safe %>
 					<% end if resource.file_press? %>
 					<%= link_to resource.file_doc.url do %>
-						<% "<i class='fa fa-file'></i><span class='label'>Présentation</span>".html_safe %>
+						<% "<i class='fa fa-file'></i><span class='label'>Fiche de présentation</span>".html_safe %>
 					<% end if resource.file_doc? %>
 					<%= link_to resource.file_tech.url do %>
-						<% "<i class='fa fa-file'></i><span class='label'>Technique</span>".html_safe %>
+						<% "<i class='fa fa-file'></i><span class='label'>Fiche technique</span>".html_safe %>
 					<% end if resource.file_tech? %>
 					<%= link_to "#myModal", :data => { :local => "#myCarousel", :toggle => "modal"} do %>
 						<% "<i class='fa fa-file'></i><span class='label'>Images</span>".html_safe %>					
