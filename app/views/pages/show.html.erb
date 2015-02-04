@@ -1,0 +1,7 @@
+<% content_for :header do %>
+<div class="background-image-holder">
+<%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
+</div>
+<% end if resource.images.any? %>
+<h1><%= resource.title %></h1>
+<%= render_html_text(resource.body) %>
