@@ -3,19 +3,24 @@
   <div class='container'>
     <div class='row'>
       <div class="col-sm-6">
-        <h5>A propos</h5>
+        <h5>À propos</h5>
         <hr>
         <p><%#= "Tel. +590 590 29 78 20".html_safe %>
-          <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") unless site.preferred_contact_email.blank? %>      <div class="spectacle-team">
+          <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") unless site.preferred_contact_email.blank? %>      
+          <div class="spectacle-team">
           <p>Chloé Moglia est artiste associée aux :&#160;</p>
           <ul class="list-unstyled">
-            <li>CENTQUATRE - Paris&#160;</li>
-            <li>Manège de Reims, scène nationale</li>
-            <li>Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne</li>
+            <li><%= link_to "CENTQUATRE - Paris", 
+              :href => "http://www.104.fr/", :target => "_blank" %></li>
+            <li><%= link_to "Manège de Reims, scène nationale", 
+              :href => "http://www.manegedereims.com/", :target => "_blank" %></li>
+            <li><%= link_to "Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne", 
+              :href => "http://www.theatreagora.com/", :target => "_blank" %></li>
           </ul>
         </div>
-</p>
+        </p>
       </div>
+
 
 
       <!-- Add the extra clearfix for only the required viewport -->

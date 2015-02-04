@@ -134,10 +134,11 @@ namespace :deploy do
     run "ln -nsf #{shared_path}/system #{release_path}/public/system"
     run "ln -nsf #{shared_path}/uploads #{release_path}/public/uploads"
     run "chmod 755 #{release_path}/public"
-    run "mv /home/#{user}/public_html /home/#{user}/public_html.moved"
-    run "ln -nsf #{release_path}/public /home/#{user}/public_html"
-    
-    #run "ln -nsf #{release_path}/public /home/#{user}/public_html/staging"
+    #run "mv /home/#{user}/public_html /home/#{user}/public_html.moved"
+    #run "ln -nsf #{release_path}/public /home/#{user}/public_html"
+
+    run "rm -rf /home/#{user}/public_html/staging"
+    run "ln -nsf #{release_path}/public /home/#{user}/public_html/staging"
   end
 
   desc <<-DESC

@@ -21,7 +21,7 @@
   <% if has_contents %>
     <ul>
     <% contents.each do |content| %>
-      <li><%= link_to(content.title, content.public_url) %></li>
+      <li><%= link_to("_ #{content.title}", content.public_url) %></li>
     <% end %>
   </ul>
   <% end %>

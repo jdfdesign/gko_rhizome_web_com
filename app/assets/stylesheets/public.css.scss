@@ -23,10 +23,13 @@ html, body, .main-container {
     position: relative;
 }
 
-.newsletter,
 .footer {
     background-color: #e6e6e6;
     padding: 32px 0;
+    font-size: 14px;
+    a {
+        border-bottom: 1px dotted $text-color;
+    }
 }
 
 //
@@ -218,14 +221,14 @@ blockquote {
 // --------------------------------------------------
 
 .spectacle-team {
-    font-size: 14px;
+    //font-size: 14px;
     //padding: 32px;
     //background-color: lighten(#c1c1c1, 10%);
     //margin-top: 24px;
 
     h5 {
         margin-bottom: 0;
-        font-size: 14px;
+        font-size: 18px;
         text-transform: uppercase;
         font-weight: 700;
     }
@@ -240,13 +243,13 @@ blockquote {
 .spectacle-events-title {
     //letter-spacing: 1px;
     //color: #fff;
-    //border-bottom: 6px solid #fff;
+    border-bottom: 20px solid $text-color;
 }
 .list-calendar,
 .spectacle-events {
 
     > li {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px dotted $text-color;
         padding: 12px 0;
     }
     .date {

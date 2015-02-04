@@ -7344,19 +7344,23 @@ html, body, .main-container {
   position: relative;
 }
 
-/* line 28, ../../app/assets/stylesheets/public.css.scss */
-.newsletter,
+/* line 27, ../../app/assets/stylesheets/public.css.scss */
 .footer {
   background-color: #e6e6e6;
   padding: 32px 0;
+  font-size: 14px;
+}
+/* line 31, ../../app/assets/stylesheets/public.css.scss */
+.footer a {
+  border-bottom: 1px dotted #242424;
 }
 
-/* line 38, ../../app/assets/stylesheets/public.css.scss */
+/* line 41, ../../app/assets/stylesheets/public.css.scss */
 img {
   margin: 0 auto;
 }
 
-/* line 43, ../../app/assets/stylesheets/public.css.scss */
+/* line 46, ../../app/assets/stylesheets/public.css.scss */
 blockquote {
   font-size: 18px;
   font-style: italic;
@@ -7365,48 +7369,48 @@ blockquote {
   margin: 0 0 12.5px 30px;
 }
 
-/* line 55, ../../app/assets/stylesheets/public.css.scss */
+/* line 58, ../../app/assets/stylesheets/public.css.scss */
 .owl-item img {
   display: inline-block;
   max-width: auto;
   height: auto;
 }
 
-/* line 71, ../../app/assets/stylesheets/public.css.scss */
+/* line 74, ../../app/assets/stylesheets/public.css.scss */
 .navbar {
   font-size: 16px;
   background-color: #f6f6f6;
 }
 
-/* line 81, ../../app/assets/stylesheets/public.css.scss */
+/* line 84, ../../app/assets/stylesheets/public.css.scss */
 .navbar-brand > img,
 .navbar-brand > .img-responsive,
 .navbar-brand > img {
   height: 100%;
 }
 
-/* line 86, ../../app/assets/stylesheets/public.css.scss */
+/* line 89, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
-/* line 89, ../../app/assets/stylesheets/public.css.scss */
+/* line 92, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li {
   float: none;
 }
-/* line 92, ../../app/assets/stylesheets/public.css.scss */
+/* line 95, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > a {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 95, ../../app/assets/stylesheets/public.css.scss */
+/* line 98, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > ul {
   list-style: none;
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
-/* line 105, ../../app/assets/stylesheets/public.css.scss */
+/* line 108, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > ul > li > a {
   display: block;
   padding: 10px 0 10px 32px;
@@ -7416,14 +7420,14 @@ blockquote {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 112, ../../app/assets/stylesheets/public.css.scss */
+/* line 115, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > ul > li > a:hover, .navbar-nav > li > ul > li > a:focus {
   color: #333333;
   text-decoration: none;
 }
 
 @media (min-width: 992px) {
-  /* line 121, ../../app/assets/stylesheets/public.css.scss */
+  /* line 124, ../../app/assets/stylesheets/public.css.scss */
   .navbar {
     width: 380px;
     min-height: 100%;
@@ -7436,7 +7440,7 @@ blockquote {
     left: 0;
     z-index: 1;
   }
-  /* line 134, ../../app/assets/stylesheets/public.css.scss */
+  /* line 137, ../../app/assets/stylesheets/public.css.scss */
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand,
   .navbar > .container .navbar-brand {
@@ -7451,7 +7455,7 @@ blockquote {
     float: none;
     display: block;
   }
-  /* line 147, ../../app/assets/stylesheets/public.css.scss */
+  /* line 150, ../../app/assets/stylesheets/public.css.scss */
   .navbar > .container .navbar-brand > img,
   .navbar > .container .navbar-brand > .img-responsive,
   .navbar > .container .navbar-brand > img,
@@ -7464,33 +7468,33 @@ blockquote {
     height: auto;
   }
 
-  /* line 153, ../../app/assets/stylesheets/public.css.scss */
+  /* line 156, ../../app/assets/stylesheets/public.css.scss */
   .navbar-header {
     width: 100%;
   }
 
-  /* line 157, ../../app/assets/stylesheets/public.css.scss */
+  /* line 160, ../../app/assets/stylesheets/public.css.scss */
   .navbar-nav {
     float: right;
   }
-  /* line 159, ../../app/assets/stylesheets/public.css.scss */
+  /* line 162, ../../app/assets/stylesheets/public.css.scss */
   .navbar-nav > li > a {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 165, ../../app/assets/stylesheets/public.css.scss */
+  /* line 168, ../../app/assets/stylesheets/public.css.scss */
   .navbar-nav > li > ul > li > a {
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  /* line 170, ../../app/assets/stylesheets/public.css.scss */
+  /* line 173, ../../app/assets/stylesheets/public.css.scss */
   .main-container {
     padding-left: 380px;
     background-color: #cfcfcf;
   }
 
-  /* line 174, ../../app/assets/stylesheets/public.css.scss */
+  /* line 177, ../../app/assets/stylesheets/public.css.scss */
   .main-content {
     max-width: 800px;
     padding-bottom: 60px;
@@ -7499,7 +7503,7 @@ blockquote {
 @media (min-width: 992px) and (min-width: 992px) {
   float: right;
 }
-/* line 190, ../../app/assets/stylesheets/public.css.scss */
+/* line 193, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   bottom: 0px;
   left: 0px;
@@ -7511,7 +7515,7 @@ blockquote {
   background-position: left top !important;
 }
 
-/* line 204, ../../app/assets/stylesheets/public.css.scss */
+/* line 207, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder-cover {
   bottom: 0px;
   left: 0px;
@@ -7523,38 +7527,39 @@ blockquote {
   background-position: center !important;
 }
 
-/* line 221, ../../app/assets/stylesheets/public.css.scss */
-.spectacle-team {
-  font-size: 14px;
-}
-/* line 227, ../../app/assets/stylesheets/public.css.scss */
+/* line 230, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-team h5 {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-/* line 234, ../../app/assets/stylesheets/public.css.scss */
+/* line 237, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 249, ../../app/assets/stylesheets/public.css.scss */
+/* line 244, ../../app/assets/stylesheets/public.css.scss */
+.spectacle-events-title {
+  border-bottom: 20px solid #242424;
+}
+
+/* line 252, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar > li,
 .spectacle-events > li {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 253, ../../app/assets/stylesheets/public.css.scss */
+/* line 256, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
   text-transform: uppercase;
 }
 
-/* line 260, ../../app/assets/stylesheets/public.css.scss */
+/* line 263, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit {
   position: relative;
   /* When sliding, use the maximum height we have */
@@ -7563,36 +7568,36 @@ blockquote {
   /* Maximize the captions in the wrapper */
 }
 
-/* line 267, ../../app/assets/stylesheets/public.css.scss */
+/* line 270, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit.slide {
   /* Hide the content outside the carousel when sliding */
   overflow: hidden;
 }
 
-/* line 272, ../../app/assets/stylesheets/public.css.scss */
+/* line 275, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .next,
 .carousel.carousel-fit .carousel-inner > .prev {
   bottom: 0;
 }
 
-/* line 275, ../../app/assets/stylesheets/public.css.scss */
+/* line 278, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .item {
   text-align: center;
 }
 
-/* line 278, ../../app/assets/stylesheets/public.css.scss */
+/* line 281, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .item > img {
   display: inline-block;
 }
 
-/* line 281, ../../app/assets/stylesheets/public.css.scss */
+/* line 284, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .item > .carousel-caption {
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-/* line 287, ../../app/assets/stylesheets/public.css.scss */
+/* line 290, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen {
   /* Maximize the main wrappers on the screen */
   /* Make the parent wrapper of the modal box a full-width block */
@@ -7604,7 +7609,7 @@ blockquote {
      */
 }
 
-/* line 298, ../../app/assets/stylesheets/public.css.scss */
+/* line 301, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen .modal-dialog,
 .modal.modal-fullscreen .modal-content {
   bottom: 0;
@@ -7614,13 +7619,13 @@ blockquote {
   top: 0;
 }
 
-/* line 305, ../../app/assets/stylesheets/public.css.scss */
+/* line 308, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen .modal-dialog {
   margin: 0;
   width: 100%;
 }
 
-/* line 309, ../../app/assets/stylesheets/public.css.scss */
+/* line 312, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen .modal-content {
   border: none;
   -moz-border-radius: 0;
@@ -7631,17 +7636,17 @@ blockquote {
   box-shadow: inherit;
 }
 
-/* line 318, ../../app/assets/stylesheets/public.css.scss */
+/* line 321, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen {
   /* Remove the padding inside the body */
 }
 
-/* line 321, ../../app/assets/stylesheets/public.css.scss */
+/* line 324, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-body {
   padding: 0;
 }
 
-/* line 325, ../../app/assets/stylesheets/public.css.scss */
+/* line 328, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-header,
 .modal.modal-fullscreen.force-fullscreen .modal-footer {
   left: 0;
@@ -7649,12 +7654,12 @@ blockquote {
   right: 0;
 }
 
-/* line 330, ../../app/assets/stylesheets/public.css.scss */
+/* line 333, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-header {
   top: 0;
 }
 
-/* line 333, ../../app/assets/stylesheets/public.css.scss */
+/* line 336, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-footer {
   bottom: 0;
 }
