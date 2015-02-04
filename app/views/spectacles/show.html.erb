@@ -35,16 +35,6 @@
 				</div>
 				<% end %>
 
-
-				<% if parent.display_events_in_spectacle && resource.spectacle_events.upcoming.try(:any?) %>
-				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
-					<ul class="list-unstyled spectacle-events">
-						<% resource.spectacle_events.upcoming.each do |e| %>
-				  			<%= render "event", :spectacle_event => e %>
-				  		<% end %>
-					</ul>
-				<% end %>
-
 				<% if resource.team? %>
 				<div class="spectacle-team">
 					<h5>Distribution</h5>
@@ -74,14 +64,15 @@
 						</div>
 					<% end %>
 				<% end %>
-				<div class="spectacle-team">
-					<p>Chloé Moglia est artiste associée aux :&#160;</p>
-					<ul class="list-unstyled">
-						<li>CENTQUATRE - Paris&#160;</li>
-						<li>Manège de Reims, scène nationale</li>
-						<li>Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne</li>
+	
+				<% if parent.display_events_in_spectacle && resource.spectacle_events.upcoming.try(:any?) %>
+				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
+					<ul class="list-unstyled spectacle-events">
+						<% resource.spectacle_events.upcoming.each do |e| %>
+				  			<%= render "event", :spectacle_event => e %>
+				  		<% end %>
 					</ul>
-				</div>
+				<% end %>
 			</div>
 		</div>
 	</article>

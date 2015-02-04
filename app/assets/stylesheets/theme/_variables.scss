@@ -31,7 +31,7 @@ $brand-danger:          #d9534f;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #e6e6e6;//#fff;
+$body-bg:               #cfcfcf;//#fff;
 //** Global text color on `<body>`.
 $text-color:            #242424;//$gray-dark;
 
@@ -325,7 +325,7 @@ $grid-columns:              12;
 $grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-$grid-float-breakpoint:     $screen-sm-min;
+$grid-float-breakpoint:     $screen-md-min;//$screen-sm-min;
 //** Point at which the navbar begins collapsing.
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 

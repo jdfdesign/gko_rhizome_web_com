@@ -397,7 +397,7 @@ body {
   font-size: 18px;
   line-height: 1.42857;
   color: #242424;
-  background-color: #e6e6e6;
+  background-color: #cfcfcf;
 }
 
 /* line 39, ../../app/assets/stylesheets/bootstrap/_scaffolding.scss */
@@ -453,7 +453,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #e6e6e6;
+  background-color: #cfcfcf;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -850,7 +850,7 @@ dd {
 .dl-horizontal dd:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 211, ../../app/assets/stylesheets/bootstrap/_type.scss */
   .dl-horizontal dt {
     float: left;
@@ -2182,7 +2182,7 @@ th {
 }
 /* line 62, ../../app/assets/stylesheets/bootstrap/_tables.scss */
 .table .table {
-  background-color: #e6e6e6;
+  background-color: #cfcfcf;
 }
 
 /* line 76, ../../app/assets/stylesheets/bootstrap/_tables.scss */
@@ -3535,7 +3535,7 @@ tbody.collapse.in {
   margin-bottom: 1px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 204, ../../app/assets/stylesheets/bootstrap/_dropdowns.scss */
   .navbar-right .dropdown-menu {
     right: 0;
@@ -4035,7 +4035,7 @@ tbody.collapse.in {
 /* line 98, ../../app/assets/stylesheets/bootstrap/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #e6e6e6;
+  background-color: #cfcfcf;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4128,7 +4128,7 @@ tbody.collapse.in {
   .nav-tabs.nav-justified > .active > a:hover,
   .nav-tabs-justified > .active > a:focus,
   .nav-tabs.nav-justified > .active > a:focus {
-    border-bottom-color: #e6e6e6;
+    border-bottom-color: #cfcfcf;
   }
 }
 
@@ -4166,7 +4166,7 @@ tbody.collapse.in {
 .navbar:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 11, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar {
     border-radius: 0;
@@ -4182,7 +4182,7 @@ tbody.collapse.in {
 .navbar-header:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 31, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-header {
     float: left;
@@ -4211,7 +4211,7 @@ tbody.collapse.in {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 50, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-collapse {
     width: auto;
@@ -4260,7 +4260,7 @@ tbody.collapse.in {
   margin-right: -15px;
   margin-left: -15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 110, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .container > .navbar-header,
   .container > .navbar-collapse,
@@ -4278,7 +4278,7 @@ tbody.collapse.in {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 129, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-static-top {
     border-radius: 0;
@@ -4293,7 +4293,7 @@ tbody.collapse.in {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 140, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-fixed-top,
   .navbar-fixed-bottom {
@@ -4330,7 +4330,7 @@ tbody.collapse.in {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 182, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand, .navbar > .container .navbar-brand {
     margin-left: -15px;
@@ -4365,7 +4365,7 @@ tbody.collapse.in {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 194, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-toggle {
     display: none;
@@ -4382,7 +4382,7 @@ tbody.collapse.in {
   padding-bottom: 10px;
   line-height: 25px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* line 244, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -4407,7 +4407,7 @@ tbody.collapse.in {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 233, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav {
     float: left;
@@ -4497,7 +4497,7 @@ tbody.collapse.in {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* line 299, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-form .form-group {
     margin-bottom: 5px;
@@ -4507,7 +4507,7 @@ tbody.collapse.in {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 287, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-form {
     width: auto;
@@ -4557,7 +4557,7 @@ tbody.collapse.in {
   margin-top: 12.5px;
   margin-bottom: 12.5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 359, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-text {
     float: left;
@@ -4566,7 +4566,7 @@ tbody.collapse.in {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   /* line 379, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-left {
     float: left !important;
@@ -4641,7 +4641,7 @@ tbody.collapse.in {
   background-color: #d5d5d5;
   color: #555555;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* line 473, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777777;
@@ -4742,7 +4742,7 @@ tbody.collapse.in {
   background-color: #090909;
   color: white;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   /* line 607, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #090909;
@@ -5168,7 +5168,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 25px;
   line-height: 1.42857;
-  background-color: #e6e6e6;
+  background-color: #cfcfcf;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -7239,34 +7239,46 @@ html, body, .main-container {
 
 /* line 21, ../../app/assets/stylesheets/public.css.scss */
 .main-content {
-  background-color: #c1c1c1;
+  background-color: #cfcfcf;
   min-height: 100%;
   position: relative;
 }
 
-/* line 32, ../../app/assets/stylesheets/public.css.scss */
+/* line 28, ../../app/assets/stylesheets/public.css.scss */
+.newsletter,
+.footer {
+  background-color: #e6e6e6;
+  padding: 32px 0;
+}
+
+/* line 38, ../../app/assets/stylesheets/public.css.scss */
 img {
   margin: 0 auto;
 }
 
-/* line 41, ../../app/assets/stylesheets/public.css.scss */
+/* line 44, ../../app/assets/stylesheets/public.css.scss */
+blockquote {
+  font-size: 18px;
+  font-style: italic;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 0 12.5px 30px;
+}
+
+/* line 55, ../../app/assets/stylesheets/public.css.scss */
 .owl-item img {
   display: inline-block;
   max-width: auto;
   height: auto;
 }
 
-/* line 51, ../../app/assets/stylesheets/public.css.scss */
-p:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* line 59, ../../app/assets/stylesheets/public.css.scss */
+/* line 71, ../../app/assets/stylesheets/public.css.scss */
 .navbar {
   font-size: 16px;
+  background-color: #f6f6f6;
 }
 
-/* line 64, ../../app/assets/stylesheets/public.css.scss */
+/* line 76, ../../app/assets/stylesheets/public.css.scss */
 .navbar-brand {
   display: block;
   margin-bottom: 25px;
@@ -7274,32 +7286,32 @@ p:last-child {
   float: right;
 }
 
-/* line 71, ../../app/assets/stylesheets/public.css.scss */
+/* line 83, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav {
   text-transform: uppercase;
 }
 
-/* line 75, ../../app/assets/stylesheets/public.css.scss */
+/* line 87, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li {
   float: none;
 }
-/* line 77, ../../app/assets/stylesheets/public.css.scss */
+/* line 89, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > a {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 84, ../../app/assets/stylesheets/public.css.scss */
+/* line 96, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li ul {
   list-style: none;
   margin-left: 0 !important;
 }
-/* line 96, ../../app/assets/stylesheets/public.css.scss */
+/* line 108, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li ul > li > a {
   padding: 0;
 }
 
-@media (min-width: 768px) {
-  /* line 103, ../../app/assets/stylesheets/public.css.scss */
+@media (min-width: 992px) {
+  /* line 115, ../../app/assets/stylesheets/public.css.scss */
   .navbar {
     width: 380px;
     min-height: 100%;
@@ -7313,14 +7325,32 @@ p:last-child {
     z-index: 1;
   }
 
-  /* line 115, ../../app/assets/stylesheets/public.css.scss */
+  /* line 127, ../../app/assets/stylesheets/public.css.scss */
   .main-container {
     padding-left: 380px;
-    background-color: #c1c1c1;
+    background-color: #cfcfcf;
+  }
+
+  /* line 131, ../../app/assets/stylesheets/public.css.scss */
+  .main-content {
+    max-width: 800px;
+    padding-bottom: 60px;
   }
 }
-/* line 130, ../../app/assets/stylesheets/public.css.scss */
+/* line 143, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: contain !important;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center !important;
+}
+
+/* line 157, ../../app/assets/stylesheets/public.css.scss */
+.background-image-holder-cover {
   bottom: 0px;
   left: 0px;
   width: 100%;
@@ -7328,37 +7358,39 @@ p:last-child {
   background-size: cover !important;
   z-index: 0;
   background-repeat: no-repeat;
-  background-position: 50% 50% !important;
+  background-position: center !important;
 }
 
-/* line 147, ../../app/assets/stylesheets/public.css.scss */
+/* line 174, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-team {
   font-size: 14px;
-  padding: 32px;
-  background-color: #dbdbdb;
-  margin-top: 24px;
+}
+/* line 180, ../../app/assets/stylesheets/public.css.scss */
+.spectacle-team h5 {
+  margin-bottom: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-/* line 153, ../../app/assets/stylesheets/public.css.scss */
+/* line 187, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 160, ../../app/assets/stylesheets/public.css.scss */
-.spectacle-events-title {
-  letter-spacing: 1px;
-  color: #fff;
-  border-bottom: 6px solid #fff;
+/* line 202, ../../app/assets/stylesheets/public.css.scss */
+.spectacle-events > li {
+  border-bottom: 1px solid #fff;
+  padding: 12px 0;
 }
-
-/* line 167, ../../app/assets/stylesheets/public.css.scss */
+/* line 206, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-events .date {
   text-transform: uppercase;
 }
 
-/* line 174, ../../app/assets/stylesheets/public.css.scss */
+/* line 213, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit {
   position: relative;
   /* When sliding, use the maximum height we have */
@@ -7367,36 +7399,36 @@ p:last-child {
   /* Maximize the captions in the wrapper */
 }
 
-/* line 181, ../../app/assets/stylesheets/public.css.scss */
+/* line 220, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit.slide {
   /* Hide the content outside the carousel when sliding */
   overflow: hidden;
 }
 
-/* line 186, ../../app/assets/stylesheets/public.css.scss */
+/* line 225, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .next,
 .carousel.carousel-fit .carousel-inner > .prev {
   bottom: 0;
 }
 
-/* line 189, ../../app/assets/stylesheets/public.css.scss */
+/* line 228, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .item {
   text-align: center;
 }
 
-/* line 192, ../../app/assets/stylesheets/public.css.scss */
+/* line 231, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .item > img {
   display: inline-block;
 }
 
-/* line 195, ../../app/assets/stylesheets/public.css.scss */
+/* line 234, ../../app/assets/stylesheets/public.css.scss */
 .carousel.carousel-fit .carousel-inner > .item > .carousel-caption {
   bottom: 0;
   left: 0;
   right: 0;
 }
 
-/* line 201, ../../app/assets/stylesheets/public.css.scss */
+/* line 240, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen {
   /* Maximize the main wrappers on the screen */
   /* Make the parent wrapper of the modal box a full-width block */
@@ -7408,7 +7440,7 @@ p:last-child {
      */
 }
 
-/* line 212, ../../app/assets/stylesheets/public.css.scss */
+/* line 251, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen .modal-dialog,
 .modal.modal-fullscreen .modal-content {
   bottom: 0;
@@ -7418,13 +7450,13 @@ p:last-child {
   top: 0;
 }
 
-/* line 219, ../../app/assets/stylesheets/public.css.scss */
+/* line 258, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen .modal-dialog {
   margin: 0;
   width: 100%;
 }
 
-/* line 223, ../../app/assets/stylesheets/public.css.scss */
+/* line 262, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen .modal-content {
   border: none;
   -moz-border-radius: 0;
@@ -7435,17 +7467,17 @@ p:last-child {
   box-shadow: inherit;
 }
 
-/* line 232, ../../app/assets/stylesheets/public.css.scss */
+/* line 271, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen {
   /* Remove the padding inside the body */
 }
 
-/* line 235, ../../app/assets/stylesheets/public.css.scss */
+/* line 274, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-body {
   padding: 0;
 }
 
-/* line 239, ../../app/assets/stylesheets/public.css.scss */
+/* line 278, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-header,
 .modal.modal-fullscreen.force-fullscreen .modal-footer {
   left: 0;
@@ -7453,12 +7485,12 @@ p:last-child {
   right: 0;
 }
 
-/* line 244, ../../app/assets/stylesheets/public.css.scss */
+/* line 283, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-header {
   top: 0;
 }
 
-/* line 247, ../../app/assets/stylesheets/public.css.scss */
+/* line 286, ../../app/assets/stylesheets/public.css.scss */
 .modal.modal-fullscreen.force-fullscreen .modal-footer {
   bottom: 0;
 }

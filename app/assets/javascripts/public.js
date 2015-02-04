@@ -53,6 +53,16 @@ $(document).ready(function($) {
         });
     });
 
+    jQuery(function ($) {
+        $('.background-image-holder-cover').each(function(){
+            var imgSrc= $(this).children('img').attr('src');
+            $(this).css('background-image', 'url("' + imgSrc + '")');
+            $(this).children('img').hide();
+            $(this).css('background-position', '50% 0%');
+            $(this).css('height', $(window).height());
+        });
+    });
+
     // Home hero fade effect
     jQuery(function ($) {
         

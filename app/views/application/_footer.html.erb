@@ -1,49 +1,56 @@
 <%# cache([site, I18n.locale, 'footer']) do %>
-<footer id='footer'>
+<footer id='footer' class="footer">
   <div class='container'>
     <div class='row'>
-      <div class="col-sm-6 col-md-4">
-        <h5>Contact</h5>
+      <div class="col-sm-6">
+        <h5>A propos</h5>
         <hr>
         <p><%#= "Tel. +590 590 29 78 20".html_safe %>
-          <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") unless site.preferred_contact_email.blank? %></p>
+          <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") unless site.preferred_contact_email.blank? %>      <div class="spectacle-team">
+          <p>Chloé Moglia est artiste associée aux :&#160;</p>
+          <ul class="list-unstyled">
+            <li>CENTQUATRE - Paris&#160;</li>
+            <li>Manège de Reims, scène nationale</li>
+            <li>Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne</li>
+          </ul>
+        </div>
+</p>
       </div>
-      <div class="col-sm-6 col-md-2">
-        <h5>Follow us</h5>
-        <hr>
-        <ul class="nav list-unstyled">
-          <li><%= link_to("https://www.facebook.com/remax.stbarths", :target => "_blank") do %>
-            <i class="fa fa-facebook"></i> Facebook
-          <% end %></li>
-          <li><%= link_to("https://twitter.com/remaxstbarths", :target => "_blank") do %>
-            <i class="fa fa-twitter"></i> Twitter
-          <% end %></li>
-          <li><%= link_to("https://plus.google.com/116637192740846764053/posts", :target => "_blank") do %>
-            <i class="fa fa-google-plus"></i> Google plus
-          <% end %></li>
-      </ul>
-      </div>
+
 
       <!-- Add the extra clearfix for only the required viewport -->
       <div class="clearfix visible-sm-block"></div>
       
-      <div class="col-sm-6 col-md-3">
-        <h5>Partners</h5>
+      <div class="col-sm-6">
+        <h5>Newsletter</h5>
         <hr>
-        <p><%= t('footer_remaxislandproperties').html_safe %></p>
-      </div> 
-
-      <div class="col-sm-6 col-md-3">
-        <h5>NAVIGATION</h5>
-        <hr>
-        <%= render_menu("footer-nav") %>
-      </div>   
+        <p><%#= t('footer_remaxislandproperties').html_safe %></p>
+         <div class="row">
+      <form class="form-newsletter" role="form" action="http://account.stbarth-emailing.com/t/j/s/ntyilt/" method="post">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="sr-only" for="fieldName">Nom</label>
+            <input type="text" class="form-control" name="cm-name" id="fieldName" placeholder="Name" required>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="sr-only" for="fieldEmail">Email</label>
+            <input class="form-control" id="fieldEmail" name="cm-ntyilt-ntyilt" placeholder="Enter email" type="email" required >
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-inverse"><i class="fa fa-paper-plane"></i> Envoyer</button>
+        </div>
+      </form>
+    </div><!--end of row-->
+      </div>  
     </div>
     <div class='row'>
       <div class="col-md-12">
         <p class="copyright pull-right"><span><%= t(:'copyright', :year => Time.now.year, :copyright_name => site.copyright_name) if site.copyright_name %></span>
         <a href='http://www.joufdesign.com' class="copyright-author" target='_blank'>
-          <%= t(:'site_by', :name => "Jouf Design").html_safe %>
+          <%#= t(:'site_by', :name => "Jouf Design").html_safe %>
         </a></p>
       </div>
     </div>
