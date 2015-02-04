@@ -5,18 +5,16 @@
   <%#= link_to(image_tag("international-property-awards.jpg"), "http://www.propertyawards.net", 
     :target => "_blank", :class => "visible-md visible-lg", :style => "position:absolute;top:0;right:0;z-index:1001;")%>
 
-  
+  <%= render 'navbar' %>
   <!-- WRAPPER
   ================================================== -->
+  <%= yield :header %>
+  <%= yield :home %>
   <div class="main-container">
     <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <%= render 'navbar' %>
-          </div>
-
-          <div class="col-md-8 main-content">
-            <%= yield :header %>
+          <div class="col-md-12 main-content">
+            
             <%= yield %>
           </div>
         </div>

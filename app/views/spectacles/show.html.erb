@@ -20,9 +20,10 @@
 					<%= link_to resource.file_tech.url do %>
 						<% "<i class='fa fa-file'></i><span class='label'>Technique</span>".html_safe %>
 					<% end if resource.file_tech? %>
-					<%= link_to "#" do %>
-						<% "<i class='fa fa-file'></i><span class='label'>Images</span>".html_safe %>
+					<%= link_to "#myModal", :data => { :local => "#myCarousel", :toggle => "modal"} do %>
+						<% "<i class='fa fa-file'></i><span class='label'>Images</span>".html_safe %>					
 					<% end if resource.images.any? %>
+					
 				</p>
 
 				<%= render_html_text(resource.body) %>
@@ -52,38 +53,38 @@
 				<% end %>
 
 				<% if resource.co_prod? || resource.sponsor? %>
-						<% if resource.prod? %>
-						<div class="spectacle-team">
-							<h5>Production</h5>
-							<%= render_html_text(resource.prod) %>
-						</div>
-						<% end %>
+					<% if resource.prod? %>
+					<div class="spectacle-team">
+						<h5>Production</h5>
+						<%= render_html_text(resource.prod) %>
+					</div>
+					<% end %>
 
-						<% if resource.co_prod? %>
+					<% if resource.co_prod? %>
+					<div class="spectacle-team">
+						<h5>Coproduction</h5>
+						<%= render_html_text(resource.co_prod) %>
+					</div>
+					<% end %>
+					
+					<% if resource.sponsor? %>
 						<div class="spectacle-team">
-							<h5>Coproductions</h5>
-							<%= render_html_text(resource.co_prod) %>
+							<h5>Soutiens</h5>
+							<%= render_html_text(resource.sponsor) %>
 						</div>
-						<% end %>
-						
-						<% if resource.sponsor? %>
-							<div class="spectacle-team">
-								<h5>Soutiens</h5>
-								<%= render_html_text(resource.sponsor) %>
-							</div>
-						<% end %>
-				
+					<% end %>
 				<% end %>
 				<div class="spectacle-team">
 					<p>Chloé Moglia est artiste associée aux :&#160;</p>
-
-						<ul class="list-unstyled">
-							<li>CENTQUATRE - Paris&#160;</li>
-							<li>Manège de Reims, scène nationale</li>
-							<li>Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne</li>
-						</ul>
+					<ul class="list-unstyled">
+						<li>CENTQUATRE - Paris&#160;</li>
+						<li>Manège de Reims, scène nationale</li>
+						<li>Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</article>
+
+	<%= render "spectacles/modal", :images => resource.images if resource.images.any? %>
 <%# end %>

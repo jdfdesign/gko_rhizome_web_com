@@ -1,4 +1,4 @@
-
+//= require bootstrap-modal-carousel.js
 
 
 $(document).ready(function($) {

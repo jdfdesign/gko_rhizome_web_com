@@ -1,7 +1,0 @@
-$(document).ready(function(t){"use strict";/*!
-     * IE10 viewport hack for Surface/desktop Windows 8 bug
-     * Copyright 2014 Twitter, Inc.
-     * Licensed under the Creative Commons Attribution 3.0 Unported License. For
-     * details, see http://creativecommons.org/licenses/by/3.0/.
-     */
-if(navigator.userAgent.match(/IEMobile\/10\.0/)){var e=document.createElement("style");e.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}")),document.querySelector("head").appendChild(e)}t("body"),t(window),t(document),t(".th-offcanvas:first"),t(".th-offcanvas-container:first"),t(".th-offcanvas-toggle:first");jQuery(window).load(function(){jQuery(".loadstack").fadeOut(),jQuery(".preloader").delay(1e3).fadeOut("slow")}),jQuery(function(t){t(".background-image-holder").each(function(){var e=t(this).children("img").attr("src");t(this).css("background-image",'url("'+e+'")'),t(this).children("img").hide(),t(this).css("background-position","50% 0%"),t(this).css("height",.8*t(window).height())})}),jQuery(function(t){var e=t(".th-herofade");t(window).height()>e.height()&&t(window).on("scroll",function(){var o=t(this).scrollTop();e.css({"margin-top":-(o/0)+"px",opacity:1-o/600})})})});
