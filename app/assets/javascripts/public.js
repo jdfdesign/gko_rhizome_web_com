@@ -1,163 +1,74 @@
-//= require jquery
-//= require jquery_ujs
-//= require gko/public/jquery.grid.responsive.js
-//= require gko/public/jquery.bootstrap.navbarhover.js
-//= require twitter.bootstrap.2.2.1/bootstrap/transition.js
-//= require twitter.bootstrap.2.2.1/bootstrap/alert.js
-//= require twitter.bootstrap.2.2.1/bootstrap/button.js
-//= require twitter.bootstrap.2.2.1/bootstrap/collapse.js
-//= require twitter.bootstrap.2.2.1/bootstrap/dropdown.js
-//= require twitter.bootstrap.2.2.1/bootstrap/modal.js
-//= require gko/gko.galleria
-$.ajaxSettings.dataType = "html";
 
 
-var Site = {
-	init: function() {
-		$('img').live('contextmenu', function(e){
-		    return false;
-		});
-		Carousel.addTheme();
-		Carousel.init();
-		//Album.init();
-	}
-	
-}
 
-var Album = {
-	init: function() {
-		$("<div id='modal-album' class='modal hide fade'><div class='modal-header'><a class='close' data-dismiss='modal'>&times;</a><h3 class='modal-title'></h3></div><div class='modal-body'></div><div class='modal-footer'></div></div>").appendTo("body");
-		
-		$("#grid-albums a").attr('data-remote', true)
-		//.attr('data-toggle', "modal")
-		//.attr('data-target', "#modal-album")
-		.on('ajax:beforeSend', function(event, xhr, settings) {
-			console.log('beforeSend')
-		})
-		.on('ajax:success', function(evt, xhr, status) {
-			console.log(eval(xhr));
-			//Album.show();
-	    })
-		.on('ajax:error', function(xhr, status, error) {
-			console.log(error);
-			//Album.show();
-	    })
-	},
-	close: function() {
-		$("#modal-album").modal('hide')
-	},
-	show: function() {
-		$('#modal-album').modal({
-			show: true,
-			keyboard: true
-		})
-	}
-}
+$(document).ready(function($) {
 
-var Carousel = {
-	init: function() {
-		if($(".galleria").length > 0) {
-			$(".galleria").galleria({
-				debug: false,
-				autoplay: true,
-				responsive: true,
-				height: .85,
-				imageCrop: 'landscape',
-				transition: 'flash',
-				thumbMargin: 10,
-				showCounter: false,
-				showInfo: false,
-				thumbnails: $(".galleria").children().length > 1
-			})
-			
-			//if($(".galleria").children().length == 1) {
-			//	$(".galleria").addClass('no-navigation');	
-			//}
-			
-		}
-	},
-	addTheme: function() {
+    "use strict";
 
-		 Galleria.addTheme({
-		        name:'classic',
-		        author:'Galleria',
-		        css:'galleria.classic.css',
-		        defaults:{
-		            transition:'slide',
-		            thumbCrop:'height',
+    /*!
+     * IE10 viewport hack for Surface/desktop Windows 8 bug
+     * Copyright 2014 Twitter, Inc.
+     * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+     * details, see http://creativecommons.org/licenses/by/3.0/.
+     */
+    // See the Getting Started docs for more information:
+    // http://getbootstrap.com/getting-started/#support-ie10-width
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style');
+        msViewportStyle.appendChild(
+            document.createTextNode(
+                '@-ms-viewport{width:auto!important}'
+            )
+        );
+        document.querySelector('head').appendChild(msViewportStyle);
+    }
 
-		            // set this to false if you want to show the caption all the time:
-		            _toggleInfo:false
-		        },
-		        init:function (options) {
 
-		            // add some elements
-		            this.addElement('info-link', 'info-close');
-		            this.append({
-		                'info':['info-link', 'info-close']
-		            });
 
-		            // cache some stuff
-		            var info = this.$('info-link,info-close,info-text'),
-		                touch = Galleria.TOUCH,
-		                click = touch ? 'touchstart' : 'click';
+    var $body = $("body"),
+        $window = $(window),
+        $document = $(document),
+        $offcanvas = $(".th-offcanvas:first"),
+        $offcanvas_container = $(".th-offcanvas-container:first"),
+        $sidebar_toggle = $(".th-offcanvas-toggle:first");
 
-		            // show loader & counter with opacity
-		            this.$('loader,counter').show().css('opacity', 0.4);
 
-		            // some stuff for non-touch browsers
-		            if (!touch) {
-		                this.addIdleState(this.get('image-nav-left'), { left:-50 });
-		                this.addIdleState(this.get('image-nav-right'), { right:-50 });
-		                this.addIdleState(this.get('counter'), { opacity:0 });
-		            }
+    jQuery(window).load(function () {
 
-		            // toggle info
-		            if (options._toggleInfo === true) {
-		                info.bind(click, function () {
-		                    info.toggle();
-		                });
-		            } else {
-		                info.show();
-		                this.$('info-link, info-close').hide();
-		            }
+        // Page Loading Gif
+        jQuery(".loadstack").fadeOut();
+        jQuery(".preloader").delay(1000).fadeOut("slow");
 
-		            // bind some stuff
-		            this.bind('thumbnail', function (e) {
 
-		                if (!touch) {
-		                    // fade thumbnails
-		                    $(e.thumbTarget).css('opacity', 0.6).parent().hover(function () {
-		                        $(this).not('.active').children().stop().fadeTo(100, 1);
-		                    }, function () {
-		                        $(this).not('.active').children().stop().fadeTo(400, 0.6);
-		                    });
+    });
 
-		                    if (e.index === this.getIndex()) {
-		                        $(e.thumbTarget).css('opacity', 1);
-		                    }
-		                } else {
-		                    $(e.thumbTarget).css('opacity', this.getIndex() ? 1 : 0.6);
-		                }
-		            });
+    // Append .background-image-holder <img>'s as CSS backgrounds
+    jQuery(function ($) {
+        $('.background-image-holder').each(function(){
+            var imgSrc= $(this).children('img').attr('src');
+            $(this).css('background-image', 'url("' + imgSrc + '")');
+            $(this).children('img').hide();
+            $(this).css('background-position', '50% 0%');
+            $(this).css('height', $(window).height()*.8);
+        });
+    });
 
-		            this.bind('loadstart', function (e) {
-		                if (!e.cached) {
-		                    this.$('loader').show().fadeTo(200, 0.4);
-		                }
+    // Home hero fade effect
+    jQuery(function ($) {
+        
+        var divs = $('.th-herofade');
 
-		                this.$('info').toggle(this.hasInfo());
+        if($(window).height() > divs.height()) {
+            $(window).on('scroll', function () {
+                var st = $(this).scrollTop();
+                divs.css({
+                    'margin-top': -(st / 0) + "px",
+                    'opacity': 1 - st / 600
+                });
+            });
+        }
+        
+    });
 
-		                $(e.thumbTarget).css('opacity', 1).parent().siblings().children().css('opacity', 0.6);
-		            });
 
-		            this.bind('loadfinish', function (e) {
-		                this.$('loader').fadeOut(200);
-		            });
-		        }
-		    });
-	} 
-}
-$(document).ready(function() {
-	Site.init();
 });

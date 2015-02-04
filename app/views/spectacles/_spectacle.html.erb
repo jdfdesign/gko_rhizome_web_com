@@ -1,0 +1,10 @@
+<%# collection_row_cache(spectacle) do %>
+<article class="col-md-12">
+<a class="thumbnail" href="<%= spectacle.public_url -%>">
+    <%= image_fu(spectacle.thumbnail, site.preferred_image_grid_size) if spectacle.thumbnail %>
+	<div class="caption">
+        <h3><%= spectacle.title %></h3>
+	</div>
+</a>
+</article>
+<%# end if spectacle %>

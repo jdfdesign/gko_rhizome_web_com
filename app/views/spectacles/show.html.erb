@@ -1,0 +1,89 @@
+<% content_for :header do %>
+<div class="background-image-holder">
+<%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
+</div>
+<% end if resource.images.any? %>
+<%# resource_cache(resource) do %>
+	<article class="article-spectacle">
+		
+		<div class="row">
+			<div class="col-xs-12">
+				
+				<%= page_title(resource.title) %>
+				<p class="spectacle-links">
+					<%= link_to resource.file_press.url do %>
+						<% "<i class='fa fa-file'></i><span class='label'>Presse</span>".html_safe %>
+					<% end if resource.file_press? %>
+					<%= link_to resource.file_doc.url do %>
+						<% "<i class='fa fa-file'></i><span class='label'>Présentation</span>".html_safe %>
+					<% end if resource.file_doc? %>
+					<%= link_to resource.file_tech.url do %>
+						<% "<i class='fa fa-file'></i><span class='label'>Technique</span>".html_safe %>
+					<% end if resource.file_tech? %>
+					<%= link_to "#" do %>
+						<% "<i class='fa fa-file'></i><span class='label'>Images</span>".html_safe %>
+					<% end if resource.images.any? %>
+				</p>
+
+				<%= render_html_text(resource.body) %>
+
+
+				<% if resource.intro? %>
+				<div class="spectacle-intro">
+					<%= render_html_text(resource.intro) %>
+				</div>
+				<% end %>
+
+
+				<% if parent.display_events_in_spectacle && resource.spectacle_events.upcoming.try(:any?) %>
+				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
+					<ul class="list-unstyled spectacle-events">
+						<% resource.spectacle_events.upcoming.each do |e| %>
+				  			<%= render "event", :spectacle_event => e %>
+				  		<% end %>
+					</ul>
+				<% end %>
+
+				<% if resource.team? %>
+				<div class="spectacle-team">
+					<h5>Distribution</h5>
+					<%= render_html_text(resource.team) %>
+				</div>
+				<% end %>
+
+				<% if resource.co_prod? || resource.sponsor? %>
+						<% if resource.prod? %>
+						<div class="spectacle-team">
+							<h5>Production</h5>
+							<%= render_html_text(resource.prod) %>
+						</div>
+						<% end %>
+
+						<% if resource.co_prod? %>
+						<div class="spectacle-team">
+							<h5>Coproductions</h5>
+							<%= render_html_text(resource.co_prod) %>
+						</div>
+						<% end %>
+						
+						<% if resource.sponsor? %>
+							<div class="spectacle-team">
+								<h5>Soutiens</h5>
+								<%= render_html_text(resource.sponsor) %>
+							</div>
+						<% end %>
+				
+				<% end %>
+				<div class="spectacle-team">
+					<p>Chloé Moglia est artiste associée aux :&#160;</p>
+
+						<ul class="list-unstyled">
+							<li>CENTQUATRE - Paris&#160;</li>
+							<li>Manège de Reims, scène nationale</li>
+							<li>Théâtre de l’Agora, scène nationale d’Evry et de l’Essonne</li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	</article>
+<%# end %>

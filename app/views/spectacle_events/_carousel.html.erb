@@ -1,0 +1,29 @@
+<% rand_id = "carousel_#{rand(10000)}" %>
+<div class="carousel" id="<%= rand_id %>">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+  <% events.each_with_index do |event, index| %>
+    <% if image = event.spectacle.thumbnail %>
+    <div class="item <%= 'active' if index == 0 %>">
+      <%= image_tag(image.thumbnail(site.preferred_features_image_size).url) %> 
+      <div class="carousel-caption"><p>
+        <% if event.end_date.present? %>
+           <%= "Prochaine représentation: #{t(:from)} ".html_safe %><span class="date"><%= l Date.new(event.start_date.year, event.start_date.month, event.start_date.day), :format => :long %></span><%= " #{t(:to)} ".html_safe %><span class="date"><%= l Date.new(event.end_date.year, event.end_date.month, event.end_date.day), :format => :long %></span>
+        <% else %> 
+          <span class="date"><%= l Date.new(event.start_date.year, event.start_date.month, event.start_date.day), :format => :long %></span>
+        <% end %>
+        <strong class="entry-title"><%= event.spectacle.title %></strong>
+        <% if event.location %>
+         <span class="location"><%= " (#{event.location})" %></span>
+        <% end %>
+          <%= link_to(t("features.view_more"), event.spectacle.public_url, :class => 'btn inline features') %>
+</p>
+      </div> 
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#<%= rand_id %>" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#<%= rand_id %>" data-slide="next">&rsaquo;</a>
+</div>

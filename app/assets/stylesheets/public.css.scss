@@ -1,487 +1,124 @@
-
+/* IMPORTS
+-------------------------------------------------- */
+@import "theme/variables";
+@import "bootstrap/bootstrap";
 
 //
-// Specific Theme Variables
+// Global
+// --------------------------------------------------
+html, body, .main-container {
+    //height: 100%;
+    min-height: 100%;
+    
+}
+
+.container {
+    @extend .container-fluid;
+    width:100% !important;
+    max-width: none !important;
+}
+.main-content {
+    background-color: #c1c1c1;
+    min-height: 100%;
+    position: relative;
+}
+
+//
+// Image
 // --------------------------------------------------
 
-$navbarWidth: 256px;
-$gridContainerMaxWidth: 684px;
-$themeColor: #DA5D26;
+// Make all images responsive by default
+img {
+    @extend .img-responsive;
+    margin: 0 auto;
+}
 
-
-// Variables.less
-// Variables to customize the look and feel of Bootstrap
-// -----------------------------------------------------
-// GLOBAL VALUES
+//
+// Carousel
 // --------------------------------------------------
 
-// Grays
-// -------------------------
-$black:                 #000;// !default
-$grayDarker:            #222;// !default
-$grayDark:              #333;// !default
-$gray:                  #555;// !default
-$grayLight:             #999;// !default
-$grayLighter:           #F8F8F8;// !default
-$white:                 #fff;// !default
+.owl-item img {
+  display: inline-block;
+  max-width: auto; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+}
 
-
-// Accent colors
-// -------------------------
-$blue:                  #049cdb;// !default
-$blueDark:              #0064cd;// !default
-$green:                 #46a546;// !default
-$red:                   #9d261d;// !default
-$yellow:                #ffc40d;// !default
-$orange:                #f89406;// !default
-$pink:                  #c3325f;// !default
-$purple:                #7a43b6;// !default
-
-
-// Scaffolding
-// -------------------------
-$bodyBackground:        #FCFCFC;//$grayLighter;// !default
-$textColor:             #6B6B6B;// !default
-
-
-// Links
-// -------------------------
-$linkColor:             $themeColor;// !default
-$linkColorHover:        darken($linkColor, 15%);// !default
-
-
-// Typography
-// -------------------------
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;// !default
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif;// !default
-$monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;// !default
-
-$baseFontSize:          13px;// !default
-$baseFontFamily:        $sansFontFamily;// !default
-$baseLineHeight:        18px;// !default
-$altFontFamily:         $serifFontFamily;// !default
-
-$headingsFontFamily:    inherit;// !default // empty to use BS default, @baseFontFamily
-$headingsFontWeight:    bold;// !default    // instead of browser default, bold
-$headingsColor:         inherit;// !default // empty to use BS default, @textColor
-
-
-// Tables
-// -------------------------
-$tableBackground:                   transparent;// !default // overall background-color
-$tableBackgroundAccent:             #f9f9f9;// !default // for striping
-$tableBackgroundHover:              #f5f5f5;// !default // for hover
-$tableBorder:                       #ddd;// !default // table and cell border
-
-
-// Buttons
-// -------------------------
-$btnBackground:                     $white;// !default
-$btnBackgroundHighlight:            darken($white, 10%);// !default
-$btnBorder:                         #ccc;// !default
-
-$btnPrimaryBackground:              $linkColor;// !default
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 15%);// !default
-
-$btnInfoBackground:                 #5bc0de;// !default
-$btnInfoBackgroundHighlight:        #2f96b4;// !default
-
-$btnSuccessBackground:              #62c462;// !default
-$btnSuccessBackgroundHighlight:     #51a351;// !default
-
-$btnWarningBackground:              lighten($orange, 15%);// !default
-$btnWarningBackgroundHighlight:     $orange;// !default
-
-$btnDangerBackground:               #ee5f5b;// !default
-$btnDangerBackgroundHighlight:      #bd362f;// !default
-
-$btnInverseBackground:              $gray;// !default
-$btnInverseBackgroundHighlight:     $grayDarker;// !default
-
-
-// Forms
-// -------------------------
-$inputBackground:               $white;// !default
-$inputBorder:                   #ccc;// !default
-$inputBorderRadius:             3px;// !default
-$inputDisabledBackground:       $grayLighter;// !default
-
-$formActionsBackground:         #f5f5f5;// !default
-
-// Dropdowns
-// -------------------------
-$dropdownBackground:            $white;// !default
-$dropdownBorder:                rgba(0,0,0,.2);// !default
-$dropdownLinkColor:             $grayDark;// !default
-$dropdownLinkColorHover:        $white;// !default
-$dropdownLinkBackgroundHover:   $linkColor;// !default
-$dropdownDividerTop:            #e5e5e5;// !default
-$dropdownDividerBottom:         $white;// !default
-
-
-
-// COMPONENT VARIABLES
+//
+// Type
 // --------------------------------------------------
 
-// Z-index master list
-// -------------------------
-// Used for a bird's eye view of components dependent on the z-axis
-// Try to avoid customizing these :)
-$zindexDropdown:        1000;// !default
-$zindexPopover:         1010;// !default
-$zindexTooltip:         1020;// !default
-$zindexFixedNavbar:     1030;// !default
-$zindexModalBackdrop:   1040;// !default
-$zindexModal:           1050;// !default
+p:last-child {
+    margin-bottom: 0 !important;
+}
 
-
-// Sprite icons path
-// -------------------------
-$iconSpritePath:        "twitter/bootstrap/glyphicons-halflings.png";// !default
-$iconWhiteSpritePath:   "twitter/bootstrap/glyphicons-halflings-white.png";// !default
-
-
-// Input placeholder text color
-// -------------------------
-$placeholderText:       $grayLight;// !default
-
-
-// Hr border color
-// -------------------------
-$hrBorder:              $grayLighter;// !default
-
-
+//
 // Navbar
-// -------------------------
-$navbarHeight:                    40px;// !default
-$navbarBackground:                #FCFCFC;//#212121;// !default
-$navbarBackgroundHighlight:       #FCFCFC;//#212121;// !default
-
-$navbarText:                      $textColor;// !default
-$navbarLinkColor:                 $textColor;// !default
-$navbarLinkColorHover:            $themeColor;// !default
-$navbarLinkColorActive:           darken($navbarLinkColorHover, 15%);// !default
-$navbarLinkBackgroundHover:       transparent;// !default
-$navbarLinkBackgroundActive:      $navbarBackground;// !default
-
-$navbarSearchBackground:          lighten($navbarBackground, 25%);// !default
-$navbarSearchBackgroundFocus:     $white;// !default
-$navbarSearchBorder:              darken($navbarSearchBackground, 30%);// !default
-$navbarSearchPlaceholderColor:    #ccc;// !default
-$navbarBrandColor:                $navbarLinkColor;// !default
-
-
-// Hero unit
-// -------------------------
-$heroUnitBackground:              $grayLighter;// !default
-$heroUnitHeadingColor:            inherit;// !default
-$heroUnitLeadColor:               inherit;// !default
-
-
-// Form states and alerts
-// -------------------------
-$warningText:             #c09853;// !default
-$warningBackground:       #fcf8e3;// !default
-$warningBorder:           darken(adjust_hue($warningBackground, -10deg), 3%);// !default
-
-$errorText:               #b94a48;// !default
-$errorBackground:         #f2dede;// !default
-$errorBorder:             darken(adjust_hue($errorBackground, -10deg), 3%);// !default
-
-$successText:             #468847;// !default
-$successBackground:       #dff0d8;// !default
-$successBorder:           darken(adjust_hue($successBackground, -10deg), 5%);// !default
-
-$infoText:                #3a87ad;// !default
-$infoBackground:          #d9edf7;// !default
-$infoBorder:              darken(adjust_hue($infoBackground, -10deg), 7%);// !default
-
-
-
-// GRID
 // --------------------------------------------------
-
-// Default 940px grid
-// -------------------------
-$gridColumns:             12;// !default
-$gridColumnWidth:         60px;// !default
-$gridGutterWidth:         20px;// !default
-$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));// !default
-
-// Fluid grid
-// -------------------------
-$fluidGridColumnWidth:    6.382978723%;// !default
-$fluidGridGutterWidth:    2.127659574%;// !default
-
-@import "twitter.bootstrap.2.2.1/bootstrap/bootstrap";
-@import "gko/public/base";
-@import "galleria";
-
-.next-previous {
-	display:none;
-}
-
-a:focus,
-.btn:focus {
-  outline: 0;
-}
-/*-----------------------------------------
- HEADER
------------------------------------------ */
 
 .navbar {
-	.brand {
-		margin: 0;
-		padding: 0;
-		a {
-			padding: 0;
-			margin: 0 auto;
-			background: transparent asset-url("logo.png", 'image') center center no-repeat;
-			background-size: contain;
-			cursor: pointer;
-			text-decoration: none;
-			display: block;
-			width: 226px;
-			height: 66px;
-			@include hide-text;
-		}
-	}
-	.btn-navbar {
-		text-shadow: none;
-		@include button_background(lighten($themeColor, 10%), $themeColor);
-		color: $white;
-		&:hover {
-			color: $white;
-		}
-	}
+    max-width: 340px;
+    float: right;
+    font-size: 16px;
+}
+.navbar-brand {
+    display: block;
+    margin-bottom: $line-height-computed;
+    float: right;
+}
+.navbar-nav > li {
+    float: none;
+    text-transform: uppercase;
+    > a {
+        display: block;
+    }
+
+    ul {
+        list-style: none;
+    }
 }
 
-.navbar-inner {
-  	@include border-radius(0);
-  	@include box-shadow(none);
-	border: none;
-}
-.header-top {
-	position: absolute;
-	right: 24px;
-	top: 40px;
-	width: auto;
-}
-#locales-menu ul.nav {
-text-align: left;
+//
+// Header
+// --------------------------------------------------
 
-}
-#locales-menu ul.nav > li {
-text-align: left;
-float: left;
-}
-#locales-menu ul.nav li > a {
-	padding: 0;
-	margin: 0;
-	color:$themeColor;
-	text-shadow: none;
-}
-#primary-menu .nav > li a {
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: 300;
-}
-.missing-document-preview {
-	display:none;
-}
-/*-----------------------------------------
- FOOTER
------------------------------------------ */
-#copyright-container {
-	text-align: center;
-}
-#site-by {
-	font-size: 9px;
-}
-/*-----------------------------------------
- CONTENT
------------------------------------------ */
-#main-container {
-	background-color: $white;
+.background-image-holder {
+    //position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50% !important;
+    //background-attachment: fixed;
 }
 
-#main {
-	padding: $baseLineHeight;
-	
-}
-.page-title {
-	margin-bottom: $baseLineHeight;
-}
-.parent-categories .nav li {
-	float:left;
-	padding: 0 6px;
-}
-/*-----------------------------------------
- GRID
------------------------------------------ */
-.grid > li {
-	.thumbnail { 
-		margin-bottom: $baseLineHeight * 2;
-		box-shadow: none;
-		border: none;
-		padding: 0;
-		.caption { 
-			padding-left: 0;
-			padding-right: 0;
-		}
-		.image {
-			background-color: none;
-			@include transition("all 0.3s ease-in-out");
-			&:hover {
-				opacity: .7;
-			};
-		}
-		.title {
-			text-transform:capitalize;
-			font-size: $baseFontSize;
-			line-height: $baseLineHeight;
-			margin-bottom: 0;
-			a {
-				color: $headingsColor;
-			}
-			
-		}
-	} 
-}
-.grid > li.spectacle_event {
-	border-bottom: 1px solid $grayLight;
-	margin: 0;
-	.thumbnail {
-		margin-bottom: 0;
-	}
-}
-/*-----------------------------------------
- RESPONSIVE
------------------------------------------ */
-@import "twitter.bootstrap.2.2.1/bootstrap-responsive";
+//
+// Spectacle
+// --------------------------------------------------
 
-@media (max-width: 979px) {
-	body {
-		border-top: 12px solid $themeColor;
-	}
-	.navbar {
-		margin-top: 12px;
-	}
-	.navbar .brand {
-		float: none;
-		@include center-block();
-	}
-	
-	.nav-collapse .nav > li,
-	.nav-collapse .dropdown-menu li {
-		border-bottom: 1px solid $grayLight;
-	}
-	
-	.nav-collapse .dropdown-menu {
-		li:first-child {
-			border-top: 1px solid $grayLight;
-		}
-		li:last-child {
-			border-bottom: none;
-		}
-	}
-	.nav-collapse .nav > li > a,
-	.nav-collapse .dropdown-menu li a {
-		margin-bottom: 0;
-		font-weight: normal;
-		@include border-radius(0);
-		color: $navbarLinkColor;
-		text-shadow: none;
-		&:hover {
-			color: $navbarLinkColorHover;
-			background: none;
-		};
-	}
-	.dropdown-menu li > a:hover, 
-	.dropdown-menu .active > a, 
-	.dropdown-menu .active > a:hover {
-		color: $navbarLinkColorHover;
-	}
-
+.spectacle-team {
+    font-size: 14px;
+    padding: 32px;
+    background-color: lighten(#c1c1c1, 10%);
+    margin-top: 24px;
 }
-@media (min-width: 980px) {
-	#main-container {
-		position: absolute;
-		z-index: 1;
-		width: $gridContainerMaxWidth;
-		left: $navbarWidth;
-		min-height: 100%;
-		height: auto !important;
-		height: 100%;
-	}
+.spectacle-links > a {
+    @extend .btn;
+    @extend .btn-primary;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.spectacle-events-title {
+    letter-spacing: 1px;
+    color: #fff;
+    border-bottom: 6px solid #fff;
+}
 
-	/*-- HEADER
-	----------------------------------------- */
-	.navbar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		min-height: 100%;
-		height: auto !important;
-		height: 100%;
-		z-index: 10;
-		min-width: $navbarWidth;
-		width: $navbarWidth;
-		z-index: 3;
-		background-color: $navbarBackground;
-		border-left: 12px solid $themeColor;
-		ul.nav > li > a {
-			text-transform: uppercase;
-			text-align: left;
-			font-size: $baseFontSize - 3;
-			letter-spacing: 2px;
-			text-shadow: none;
-			padding: 3px 15px;
-			color: $navbarLinkColor;
-		    &:hover {
-		      color: $navbarLinkColorHover;
-		background: none;
-		    }
-		}
-		.dropdown-menu a {
-			color: $navbarLinkColor;
-		}
-		.nav li.dropdown ul.dropdown-menu:before, 
-		.nav li.dropdown ul.dropdown-menu:after {
-		  display: none;
-		}
-
-		 ul.dropdown-menu {
-			position: relative;
-			top: auto;
-			left: auto;
-			float: none;
-			display: block;
-			max-width: none;
-			margin: 0 0 0 15px;
-			padding: 0;
-			background-color: transparent;
-			border: none;
-			@include border-radius(0);
-			@include box-shadow(none);
-
-		}
-		.dropdown-menu li > a:hover, 
-		.dropdown-menu .active > a, 
-		.dropdown-menu .active > a:hover {
-			color: $navbarLinkColorHover;
-			background: none;
-		}
-	}
-	.navbar-inner {
-		padding: 0 22px;
-	}
-	#primary-menu ul.nav > li {
-		float: none;
-	}
-	.header-top {
-		left: 24px;
-		top: 40px;
-		right: auto;
-	}
+.spectacle-events {
+    .date {
+        text-transform: uppercase;
+    }
 }

@@ -1,0 +1,10 @@
+<% rand_id = "slider_#{rand(10000)}" %>
+<section class="hero-slider" id="<%= rand_id %>">
+  <ul class="slides">
+    <% images.each do |img| %>
+    <li><div class="background-image-holder parallax-background "><%= image_fu(img, "1550x700#") %></div></li>
+    <% end %>
+  </ul>
+  <a href="prev" class="nav-slide prev" data-target="#<%= rand_id %>"><span class="fa fa-angle-left fa-3x"></span></a>
+<a href="next" class="nav-slide next" data-target="#<%= rand_id %>"><span class="fa fa-angle-right fa-3x"></span></a>
+</section><!--end of image slider-->

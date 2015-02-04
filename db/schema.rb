@@ -10,18 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130718071845) do
-
-  create_table "accounts", :force => true do |t|
-    t.string   "reference",  :limit => 40
-    t.string   "nickname"
-    t.string   "status",     :limit => 40
-    t.string   "type",       :limit => 40
-    t.datetime "deleted_at"
-    t.datetime "expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20150204072854) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -100,7 +89,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
   create_table "contents", :force => true do |t|
     t.integer  "site_id"
     t.integer  "section_id"
-    t.integer  "account_id"
     t.string   "type"
     t.string   "title"
     t.string   "slug"
@@ -123,18 +111,8 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
   add_index "contents", ["site_id"], :name => "index_contents_on_site_id"
   add_index "contents", ["slug"], :name => "index_contents_on_slug"
 
-  create_table "countries", :force => true do |t|
-    t.string   "iso_name"
-    t.string   "iso3",       :limit => 3
-    t.string   "iso",        :limit => 2
-    t.string   "name"
-    t.integer  "numcode"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "document_assignments", :force => true do |t|
-    t.integer  "position",                      :default => 1, :null => false
+    t.integer  "position",                      :default => 1
     t.integer  "document_id",                                  :null => false
     t.integer  "attachable_id",                                :null => false
     t.string   "attachable_type", :limit => 40,                :null => false
@@ -165,11 +143,10 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.string   "image_ext"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "country_id"
     t.string   "language",           :limit => 5
+    t.string   "country"
   end
 
-  add_index "document_items", ["country_id"], :name => "index_press_articles_on_country_id"
   add_index "document_items", ["section_id"], :name => "index_press_articles_on_section_id"
   add_index "document_items", ["site_id"], :name => "index_press_articles_on_site_id"
 
@@ -189,7 +166,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.string   "title",                      :limit => 100
     t.string   "lang",                       :limit => 4
     t.string   "alt"
-    t.integer  "account_id"
     t.integer  "site_id"
     t.integer  "document_assignments_count",                :default => 0
     t.datetime "created_at"
@@ -201,7 +177,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.string   "document_ext"
   end
 
-  add_index "documents", ["account_id"], :name => "index_documents_on_account_id"
   add_index "documents", ["site_id"], :name => "index_documents_on_site_id"
 
   create_table "feature_translations", :force => true do |t|
@@ -245,7 +220,7 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
   add_index "features", ["site_id"], :name => "index_features_on_site_id"
 
   create_table "image_assignments", :force => true do |t|
-    t.integer  "position",                      :default => 1, :null => false
+    t.integer  "position",                      :default => 1
     t.integer  "image_id",                                     :null => false
     t.integer  "attachable_id",                                :null => false
     t.string   "attachable_type", :limit => 40,                :null => false
@@ -311,6 +286,7 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.integer  "image_width"
     t.integer  "image_height"
     t.string   "image_uid"
+    t.string   "video_url"
   end
 
   add_index "images", ["site_id"], :name => "index_images_on_site_id"
@@ -348,18 +324,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
 
   add_index "languages", ["position", "site_id"], :name => "index_languages_on_position_and_site_id"
   add_index "languages", ["site_id"], :name => "index_languages_on_site_id"
-
-  create_table "liquid_models", :force => true do |t|
-    t.integer  "site_id"
-    t.text     "body"
-    t.string   "path"
-    t.string   "format"
-    t.string   "locale"
-    t.string   "handler"
-    t.boolean  "partial",    :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
 
   create_table "mail_methods", :force => true do |t|
     t.integer  "site_id",                                                       :null => false
@@ -490,13 +454,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
   add_index "sections", ["parent_id"], :name => "index_sections_on_parent_id"
   add_index "sections", ["site_id"], :name => "index_sections_on_site_id"
 
-  create_table "site_registrations", :force => true do |t|
-    t.integer "user_id"
-    t.integer "site_id"
-  end
-
-  add_index "site_registrations", ["user_id", "site_id"], :name => "index_site_registrations_on_user_id_and_site_id"
-
   create_table "site_translations", :force => true do |t|
     t.integer  "site_id"
     t.string   "locale"
@@ -511,7 +468,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
   add_index "site_translations", ["site_id"], :name => "index_site_translations_on_site_id"
 
   create_table "sites", :force => true do |t|
-    t.integer  "account_id"
     t.string   "host"
     t.string   "title"
     t.string   "meta_title"
@@ -522,14 +478,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "plugins"
-    t.integer  "site_registrations_count", :default => 0
-    t.string   "logo_mime_type"
-    t.string   "logo_name"
-    t.integer  "logo_size"
-    t.integer  "logo_width"
-    t.integer  "logo_height"
-    t.string   "logo_uid"
-    t.string   "logo_ext"
     t.string   "default_image_uid"
     t.integer  "languages_count",          :default => 0
     t.datetime "liquid_models_updated_at"
@@ -539,11 +487,10 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.text     "javascript"
   end
 
-  add_index "sites", ["account_id"], :name => "index_sites_on_account_id"
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
 
   create_table "spectacle_events", :force => true do |t|
-    t.integer  "spectacle_id"
+    t.integer  "attachable_id"
     t.integer  "section_id"
     t.integer  "site_id"
     t.datetime "start_date"
@@ -554,19 +501,66 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "place"
+    t.string   "attachable_type"
   end
 
+  add_index "spectacle_events", ["attachable_id", "attachable_type"], :name => "index_spectacle_events_on_attachable_id_and_attachable_type"
   add_index "spectacle_events", ["section_id"], :name => "index_spectacle_events_on_section_id"
   add_index "spectacle_events", ["site_id"], :name => "index_spectacle_events_on_site_id"
-  add_index "spectacle_events", ["spectacle_id"], :name => "index_spectacle_events_on_spectacle_id"
 
-  create_table "states", :force => true do |t|
-    t.string  "name"
-    t.string  "abbr"
-    t.integer "country_id"
+  create_table "spectacle_option_translations", :force => true do |t|
+    t.integer  "spectacle_option_id"
+    t.string   "locale",              :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.text     "team"
+    t.text     "prod"
+    t.text     "intro"
+    t.text     "co_prod"
+    t.text     "sponsor"
+    t.text     "subtitle"
   end
 
-  add_index "states", ["country_id"], :name => "index_states_on_country_id"
+  add_index "spectacle_option_translations", ["locale"], :name => "index_spectacle_option_translations_on_locale"
+  add_index "spectacle_option_translations", ["spectacle_option_id"], :name => "index_spectacle_option_translations_on_spectacle_option_id"
+
+  create_table "spectacle_options", :force => true do |t|
+    t.integer  "spectacle_id"
+    t.string   "file_doc_uid"
+    t.string   "file_tech_uid"
+    t.string   "file_press_uid"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.text     "subtitle"
+    t.text     "team"
+    t.text     "prod"
+    t.text     "intro"
+    t.text     "co_prod"
+    t.text     "sponsor"
+  end
+
+  add_index "spectacle_options", ["spectacle_id"], :name => "index_spectacle_options_on_spectacle_id"
+
+  create_table "text_element_translations", :force => true do |t|
+    t.integer  "text_element_id"
+    t.string   "locale"
+    t.text     "value"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "text_element_translations", ["locale", "text_element_id"], :name => "index_text_element_translations_on_locale_and_text_element_id"
+
+  create_table "text_elements", :force => true do |t|
+    t.integer "section_id"
+    t.string  "key"
+    t.text    "value"
+    t.integer "position",   :default => 1
+    t.string  "value_type"
+  end
+
+  add_index "text_elements", ["key"], :name => "index_text_elements_on_name"
+  add_index "text_elements", ["section_id"], :name => "index_text_elements_on_section_id"
 
   create_table "tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"
@@ -579,7 +573,6 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
   add_index "tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
 
   create_table "users", :force => true do |t|
-    t.integer  "account_id"
     t.string   "email",                                   :default => "", :null => false
     t.string   "encrypted_password",       :limit => 128, :default => "", :null => false
     t.string   "confirmation_token"
@@ -610,9 +603,10 @@ ActiveRecord::Schema.define(:version => 20130718071845) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "reset_password_sent_at"
+    t.integer  "site_id"
   end
 
-  add_index "users", ["account_id"], :name => "index_users_on_account_id"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
+  add_index "users", ["site_id"], :name => "index_users_on_site_id"
 
 end

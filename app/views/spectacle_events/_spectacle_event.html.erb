@@ -1,0 +1,16 @@
+<%# collection_row_cache(spectacle_event) do %>
+	<li>
+
+			<%= format_spectacle_event_date(spectacle_event) %>
+	     	<br><strong class="title"><%= link_to spectacle_event.attachable.title, spectacle_event.attachable.public_url %></strong>
+	     	<% if spectacle_event.location %>
+	      	<br><span class="location"><%= spectacle_event.location %></span>
+	     	<% end %>
+	     	<% if spectacle_event.place %>
+	       	<br><span class="place">
+	        <%= spectacle_event.more_info_url.present? ? link_to(spectacle_event.place, spectacle_event.more_info_url, :target => :blank) : spectacle_event.place %>
+			</span>
+			<% end %>
+
+	</li>
+<%# end if spectacle_event %>

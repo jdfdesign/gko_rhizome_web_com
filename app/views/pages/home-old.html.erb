@@ -1,0 +1,39 @@
+<%# resource_cache(resource) do %>
+	<%
+	@spectacle_events ||= site.spectacle_events.upcoming.limit(3)
+	@features ||= site.features.live
+	@program ||= site.program
+	@spectacles ||= site.spectacles.live
+	%>
+	<% if @features.any? %>
+	<div class="row-fluid">
+	  <div class="span12">
+	    <%= render 'shared/carousel', :features => @features %>
+	  </div>
+	</div>
+	<% elsif @spectacle_events.any? %>
+	<div class="row-fluid">
+	  <div class="span12">
+	    <%= render 'spectacle_events/carousel', :events => @spectacle_events %>
+	  </div>
+	</div>
+	<% elsif @spectacles.try(:any?)  %>
+	<div class="row-fluid">
+	  <div class="span12">
+	    <%= render 'spectacles/carousel', :spectacles => @spectacles %>
+	  </div>
+	</div> 
+	<% end %>
+	<div class="row-fluid">
+	  <section class="span6">
+	    <h3><%= t(:"spectacles.upcoming_dates") %></h3>
+	    <%= grid_tag do %>
+	        <%= render @spectacle_events %>
+	    <% end %>
+	    <%= link_to(t(:"spectacles.see_all_dates"), site.spectacle_event_lists.first.public_url) %>				
+	  </section>  
+	  <section class="span6"> 
+	    <%= resource.body.html_safe if resource.body %>  				
+	  </section>   
+	</div>  
+<%# end %>

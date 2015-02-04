@@ -1,0 +1,52 @@
+<%# cache([site, I18n.locale, 'footer']) do %>
+<footer id='footer'>
+  <div class='container'>
+    <div class='row'>
+      <div class="col-sm-6 col-md-4">
+        <h5>Contact</h5>
+        <hr>
+        <p><%#= "Tel. +590 590 29 78 20".html_safe %>
+          <%= mail_to(site.preferred_contact_email, site.preferred_contact_email, :encode => "javascript") unless site.preferred_contact_email.blank? %></p>
+      </div>
+      <div class="col-sm-6 col-md-2">
+        <h5>Follow us</h5>
+        <hr>
+        <ul class="nav list-unstyled">
+          <li><%= link_to("https://www.facebook.com/remax.stbarths", :target => "_blank") do %>
+            <i class="fa fa-facebook"></i> Facebook
+          <% end %></li>
+          <li><%= link_to("https://twitter.com/remaxstbarths", :target => "_blank") do %>
+            <i class="fa fa-twitter"></i> Twitter
+          <% end %></li>
+          <li><%= link_to("https://plus.google.com/116637192740846764053/posts", :target => "_blank") do %>
+            <i class="fa fa-google-plus"></i> Google plus
+          <% end %></li>
+      </ul>
+      </div>
+
+      <!-- Add the extra clearfix for only the required viewport -->
+      <div class="clearfix visible-sm-block"></div>
+      
+      <div class="col-sm-6 col-md-3">
+        <h5>Partners</h5>
+        <hr>
+        <p><%= t('footer_remaxislandproperties').html_safe %></p>
+      </div> 
+
+      <div class="col-sm-6 col-md-3">
+        <h5>NAVIGATION</h5>
+        <hr>
+        <%= render_menu("footer-nav") %>
+      </div>   
+    </div>
+    <div class='row'>
+      <div class="col-md-12">
+        <p class="copyright pull-right"><span><%= t(:'copyright', :year => Time.now.year, :copyright_name => site.copyright_name) if site.copyright_name %></span>
+        <a href='http://www.joufdesign.com' class="copyright-author" target='_blank'>
+          <%= t(:'site_by', :name => "Jouf Design").html_safe %>
+        </a></p>
+      </div>
+    </div>
+  </div> 
+</footer>
+<%# end %>
