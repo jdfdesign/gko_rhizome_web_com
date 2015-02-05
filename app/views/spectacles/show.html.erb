@@ -20,7 +20,7 @@
 					<%= link_to resource.file_tech.url do %>
 						<% "<i class='fa fa-file'></i><span class='label'>Fiche technique</span>".html_safe %>
 					<% end if resource.file_tech? %>
-					<%= link_to "#myModal", :data => { :local => "#myCarousel", :toggle => "modal"} do %>
+					<%= link_to "#gallery", :class => "open-gallery-link" do %>
 						<% "<i class='fa fa-file'></i><span class='label'>Images</span>".html_safe %>					
 					<% end if resource.images.any? %>
 					

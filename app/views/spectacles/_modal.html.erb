@@ -1,17 +1,8 @@
-<div class="modal fade modal-fullscreen force-fullscreen" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title"><%= images.count %></h4>
-      </div>
-      <div class="modal-body">
-        <% images.each_with_index do |img, index| %>
-        <div class="item <%= 'active' if index == 0 %>">
-          <%= image_fu(img, "1400x900#") %>
-        </div>
-        <% end %>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+
+<div id="gallery" class="mfp-hide">
+  <% images.each_with_index do |img, index| %>
+  <div class="slide">
+    <%= image_fu(img, "1400x900#") %>
+  </div>
+  <% end %>
+</div>

@@ -1,4 +1,4 @@
-//= require bootstrap-modal-carousel.js
+//= require jquery.magnific-popup.js
 
 
 $(document).ready(function($) {
@@ -32,6 +32,25 @@ $(document).ready(function($) {
         $offcanvas_container = $(".th-offcanvas-container:first"),
         $sidebar_toggle = $(".th-offcanvas-toggle:first");
 
+    
+
+
+    $('.open-gallery-link').click(function() {
+        
+  var items = [];
+  $( $(this).attr('href') ).find('.slide').each(function() {
+    items.push( {
+      src: $(this) 
+    } );
+  });
+  
+  $.magnificPopup.open({
+    items:items,
+    gallery: {
+      enabled: true 
+    }
+  });
+});   
 
     jQuery(window).load(function () {
 
