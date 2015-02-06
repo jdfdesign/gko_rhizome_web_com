@@ -4586,16 +4586,16 @@ tbody.collapse.in {
 }
 /* line 397, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default {
-  background-color: #e6e6e6;
+  background-color: #f6f6f6;
   border-color: #e6e6e6;
 }
 /* line 401, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand {
-  color: #ef662f;
+  color: #888888;
 }
 /* line 404, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #da4a11;
+  color: #6f6f6f;
   background-color: transparent;
 }
 /* line 410, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4604,17 +4604,17 @@ tbody.collapse.in {
 }
 /* line 415, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
-  color: #ef662f;
+  color: #888888;
 }
 /* line 419, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  color: #ef662f;
   background-color: transparent;
 }
 /* line 427, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #d5d5d5;
+  color: #ef662f;
+  background-color: #e5e5e5;
 }
 /* line 435, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -4640,23 +4640,23 @@ tbody.collapse.in {
 }
 /* line 464, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #d5d5d5;
-  color: #555555;
+  background-color: #e5e5e5;
+  color: #ef662f;
 }
 @media (max-width: 991px) {
   /* line 473, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #ef662f;
+    color: #888888;
   }
   /* line 476, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
+    color: #ef662f;
     background-color: transparent;
   }
   /* line 484, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
-    background-color: #d5d5d5;
+    color: #ef662f;
+    background-color: #e5e5e5;
   }
   /* line 492, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -4666,19 +4666,19 @@ tbody.collapse.in {
 }
 /* line 506, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link {
-  color: #ef662f;
+  color: #888888;
 }
 /* line 508, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  color: #ef662f;
 }
 /* line 513, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link {
-  color: #ef662f;
+  color: #888888;
 }
 /* line 516, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
-  color: #333333;
+  color: #ef662f;
 }
 /* line 522, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
@@ -7882,13 +7882,21 @@ html, body, .main-container {
 .footer a {
   border-bottom: 1px dotted #242424;
 }
+/* line 35, ../../app/assets/stylesheets/public.css.scss */
+.footer .footer-col-title {
+  text-transform: uppercase;
+  color: #ef662f;
+  border-bottom: 8px solid #ef662f;
+  display: inline-block;
+  padding-right: 12px;
+}
 
-/* line 42, ../../app/assets/stylesheets/public.css.scss */
+/* line 49, ../../app/assets/stylesheets/public.css.scss */
 img {
   margin: 0 auto;
 }
 
-/* line 47, ../../app/assets/stylesheets/public.css.scss */
+/* line 54, ../../app/assets/stylesheets/public.css.scss */
 blockquote {
   font-size: 16px;
   font-style: italic;
@@ -7897,65 +7905,78 @@ blockquote {
   margin: 0 0 22px 30px;
 }
 
-/* line 59, ../../app/assets/stylesheets/public.css.scss */
+/* line 66, ../../app/assets/stylesheets/public.css.scss */
 .owl-item img {
   display: inline-block;
   max-width: auto;
   height: auto;
 }
 
-/* line 75, ../../app/assets/stylesheets/public.css.scss */
+/* line 82, ../../app/assets/stylesheets/public.css.scss */
 .navbar {
   font-size: 16px;
-  background-color: #f6f6f6;
 }
 
-/* line 85, ../../app/assets/stylesheets/public.css.scss */
+/* line 86, ../../app/assets/stylesheets/public.css.scss */
+.navbar-brand {
+  max-height: 42px;
+  margin-top: 4px;
+}
+/* line 93, ../../app/assets/stylesheets/public.css.scss */
 .navbar-brand > img,
 .navbar-brand > .img-responsive,
 .navbar-brand > img {
   height: 100%;
 }
 
-/* line 90, ../../app/assets/stylesheets/public.css.scss */
+/* line 98, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  margin: 22px 0;
 }
-/* line 93, ../../app/assets/stylesheets/public.css.scss */
+/* line 102, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li {
   float: none;
+  margin-bottom: 6px;
 }
-/* line 96, ../../app/assets/stylesheets/public.css.scss */
+/* line 105, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > a {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  position: relative;
+  padding: 0;
 }
-/* line 99, ../../app/assets/stylesheets/public.css.scss */
+/* line 125, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > ul {
   list-style: none;
+  margin-top: 6px;
   margin-left: 0 !important;
   padding-left: 0 !important;
 }
-/* line 109, ../../app/assets/stylesheets/public.css.scss */
+/* line 132, ../../app/assets/stylesheets/public.css.scss */
+.navbar-nav > li > ul > li {
+  margin-bottom: 6px;
+}
+/* line 135, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > ul > li > a {
   display: block;
-  padding: 10px 0 10px 32px;
+  padding-left: 32px;
   position: relative;
-  color: #ef662f;
+  color: #888888;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 116, ../../app/assets/stylesheets/public.css.scss */
+/* line 143, ../../app/assets/stylesheets/public.css.scss */
 .navbar-nav > li > ul > li > a:hover, .navbar-nav > li > ul > li > a:focus {
-  color: #333333;
+  color: #ef662f;
   text-decoration: none;
 }
 
 @media (min-width: 992px) {
-  /* line 125, ../../app/assets/stylesheets/public.css.scss */
+  /* line 152, ../../app/assets/stylesheets/public.css.scss */
   .navbar {
     width: 380px;
     min-height: 100%;
@@ -7968,7 +7989,7 @@ blockquote {
     left: 0;
     z-index: 1;
   }
-  /* line 138, ../../app/assets/stylesheets/public.css.scss */
+  /* line 165, ../../app/assets/stylesheets/public.css.scss */
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand,
   .navbar > .container .navbar-brand {
@@ -7983,7 +8004,7 @@ blockquote {
     float: none;
     display: block;
   }
-  /* line 151, ../../app/assets/stylesheets/public.css.scss */
+  /* line 178, ../../app/assets/stylesheets/public.css.scss */
   .navbar > .container .navbar-brand > img,
   .navbar > .container .navbar-brand > .img-responsive,
   .navbar > .container .navbar-brand > img,
@@ -7996,33 +8017,23 @@ blockquote {
     height: auto;
   }
 
-  /* line 157, ../../app/assets/stylesheets/public.css.scss */
+  /* line 184, ../../app/assets/stylesheets/public.css.scss */
   .navbar-header {
     width: 100%;
   }
 
-  /* line 161, ../../app/assets/stylesheets/public.css.scss */
+  /* line 188, ../../app/assets/stylesheets/public.css.scss */
   .navbar-nav {
     float: right;
   }
-  /* line 163, ../../app/assets/stylesheets/public.css.scss */
-  .navbar-nav > li > a {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* line 169, ../../app/assets/stylesheets/public.css.scss */
-  .navbar-nav > li > ul > li > a {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
 
-  /* line 174, ../../app/assets/stylesheets/public.css.scss */
+  /* line 199, ../../app/assets/stylesheets/public.css.scss */
   .main-container {
     padding-left: 380px;
     background-color: #cfcfcf;
   }
 
-  /* line 178, ../../app/assets/stylesheets/public.css.scss */
+  /* line 203, ../../app/assets/stylesheets/public.css.scss */
   .main-content {
     max-width: 800px;
     padding-bottom: 60px;
@@ -8031,7 +8042,7 @@ blockquote {
 @media (min-width: 992px) and (min-width: 992px) {
   float: right;
 }
-/* line 194, ../../app/assets/stylesheets/public.css.scss */
+/* line 219, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder {
   bottom: 0px;
   left: 0px;
@@ -8043,7 +8054,7 @@ blockquote {
   background-position: center !important;
 }
 
-/* line 208, ../../app/assets/stylesheets/public.css.scss */
+/* line 233, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder-home {
   bottom: 0px;
   left: 0px;
@@ -8056,22 +8067,23 @@ blockquote {
   background-color: #fff;
 }
 
-/* line 225, ../../app/assets/stylesheets/public.css.scss */
+/* line 250, ../../app/assets/stylesheets/public.css.scss */
 .page-header {
   position: relative;
   padding: 0;
   margin: 0 0 22px;
   border: none;
 }
-/* line 230, ../../app/assets/stylesheets/public.css.scss */
+/* line 255, ../../app/assets/stylesheets/public.css.scss */
 .page-header .page-title {
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 0;
+  padding-right: 24px;
 }
 
-/* line 238, ../../app/assets/stylesheets/public.css.scss */
+/* line 264, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   text-transform: uppercase;
   color: #ef662f;
@@ -8080,23 +8092,23 @@ blockquote {
   border-bottom: 20px solid #ef662f;
 }
 
-/* line 246, ../../app/assets/stylesheets/public.css.scss */
+/* line 272, ../../app/assets/stylesheets/public.css.scss */
 .page-lead {
   font-size: 27px;
   line-height: 1.2;
   margin-bottom: 22px;
 }
 
-/* line 254, ../../app/assets/stylesheets/public.css.scss */
+/* line 280, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links {
   margin-bottom: 22px;
 }
 
-/* line 257, ../../app/assets/stylesheets/public.css.scss */
+/* line 283, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-team {
   margin: 22px 0 22px 30px;
 }
-/* line 263, ../../app/assets/stylesheets/public.css.scss */
+/* line 289, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-team h5 {
   margin-bottom: 0;
   font-size: 16px;
@@ -8104,26 +8116,27 @@ blockquote {
   color: #ef662f;
 }
 
-/* line 271, ../../app/assets/stylesheets/public.css.scss */
+/* line 297, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 278, ../../app/assets/stylesheets/public.css.scss */
+/* line 304, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-events-title {
+  color: #ef662f;
   text-transform: uppercase;
-  border-bottom: 20px solid #242424;
+  border-bottom: 20px solid #ef662f;
 }
 
-/* line 287, ../../app/assets/stylesheets/public.css.scss */
+/* line 313, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar > li,
 .spectacle-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 291, ../../app/assets/stylesheets/public.css.scss */
+/* line 317, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
   text-transform: uppercase;

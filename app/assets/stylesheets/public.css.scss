@@ -31,6 +31,13 @@ html, body, .main-container {
     a {
         border-bottom: 1px dotted $text-color;
     }
+    .footer-col-title {
+        text-transform: uppercase;
+        color: $brand-primary;
+        border-bottom: 8px solid $brand-primary;
+        display: inline-block;
+        padding-right: 12px;
+    }
 }
 
 //
@@ -73,13 +80,14 @@ blockquote {
 
 .navbar {
     font-size: 16px;
-    background-color: #f6f6f6;
 }
 
 .navbar-brand {
     //display: block;
     //margin-bottom: $line-height-computed;
     //margin-top: $line-height-computed;
+    max-height: $navbar-height - 8px;
+    margin-top: 4px;
     > img,
     > .img-responsive {
         height: 100%;
@@ -89,35 +97,54 @@ blockquote {
 .navbar-nav {
     font-family: $headings-font-family;
     text-transform: uppercase;
+    margin: $line-height-computed 0;
     > li {
-    float: none;
+        float: none;
+        margin-bottom: 6px;
+        > a {
+            @include transition(all 0.5s ease);
+            position: relative;
+            //padding: 0 0 0 56px;
+            padding: 0;
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     top: 2px;
+            //     bottom: 2px;
+            //     left: 0;
+            //     width: 50px;
+            //     background-color: $navbar-default-bg;
+            // }
+            // &:hover {
+            //     &:before {
+            //         background-color: $brand-primary;
+            //     }
+            // }
+        }
+        > ul {
+            list-style: none;
+            margin-top: 6px;
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+        }
 
-    > a {
-        @include transition(all 0.5s ease);
-    }
-    > ul {
-        list-style: none;
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-    }
-
-    > ul > li {
-        //float: none;
-    }
-
-    > ul > li > a {
-        display: block;
-        padding: 10px 0 10px 32px;
-        position: relative;
-        color: $navbar-default-link-color;
-        @include transition(all 0.5s ease);
-        &:hover,
-        &:focus {
-            color: $navbar-default-link-hover-color;
-            text-decoration: none;
+        > ul > li {
+            margin-bottom: 6px;
+        }
+        > ul > li > a {
+            display: block;
+            //padding: 0 0 0 60px;
+            padding-left: 32px;
+            position: relative;
+            color: #888888;
+            @include transition(all 0.5s ease);
+            &:hover,
+            &:focus {
+                color: $brand-primary;
+                text-decoration: none;
+            }
         }
     }
-}
 }
 
 @media (min-width: $grid-float-breakpoint) {
@@ -159,16 +186,14 @@ blockquote {
 
     .navbar-nav {
         float: right;
-         > li > a {
-            padding-left: 0;
-            padding-right: 0;
+        > li > a {
+            //padding-left: 0;
+            //padding-right: 0;
+
         }
 
 
-        > li > ul > li > a {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+        
     }
     .main-container {
         padding-left: 380px;
@@ -227,11 +252,12 @@ blockquote {
     margin: 0 0 $line-height-computed;
     border: none;
     .page-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-}
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding-right: 24px;
+    }
 }
 
 .page-title {
@@ -276,9 +302,9 @@ blockquote {
 }
 .spectacle-events-title {
     //letter-spacing: 1px;
-    //color: #fff;
+    color: $brand-primary;
     text-transform: uppercase;
-    border-bottom: 20px solid $text-color;
+    border-bottom: 20px solid $brand-primary;
 }
 .list-calendar,
 .spectacle-events {
