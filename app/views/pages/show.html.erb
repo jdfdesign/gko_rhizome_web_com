@@ -3,5 +3,7 @@
 <%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
 </div>
 <% end if resource.images.any? %>
-<h1><%= resource.title %></h1>
-<%= render_html_text(resource.body) %>
+<%= content_for :page_header do %>
+ <%= page_title(resource.title) %>
+<% end %>
+<%= render_html_text(resource.body) || "coming soon" %>

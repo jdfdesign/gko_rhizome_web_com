@@ -3,13 +3,16 @@
 <%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
 </div>
 <% end if resource.images.any? %>
+<%= content_for :page_header do %>
+ <%= page_title(resource.title) %>
+<% end %>
 <%# resource_cache(resource) do %>
 	<article class="article-spectacle">
 		
 		<div class="row">
 			<div class="col-xs-12">
 				
-				<%= page_title(resource.title) %>
+				
 				<p class="spectacle-links">
 					<%= link_to resource.file_press.url do %>
 						<% "<i class='fa fa-file'></i><span class='label'>Dossier de presse</span>".html_safe %>
@@ -26,7 +29,7 @@
 					
 				</p>
 
-				<div class="h3">
+				<div class="page-lead">
 					<%= render_html_text(resource.body) %>
 				</div>
 

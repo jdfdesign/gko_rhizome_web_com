@@ -48,7 +48,7 @@ blockquote {
     font-style: italic;
     padding-top: 0;
     padding-bottom: 0;
-    margin: 0 0 12.5px 30px;
+    margin: 0 0 $line-height-computed 30px;
 }
 
 //
@@ -196,15 +196,15 @@ blockquote {
     left: 0px;
     width: 100%;
     height: 100%;
-    background-size: contain !important;
+    background-size: cover !important;
     z-index: 0;
     background-repeat: no-repeat;
-    background-position: left top !important;
+    background-position: center !important;
     //background-attachment: fixed;
 
 }
 
-.background-image-holder-cover {
+.background-image-holder-home {
     //position: absolute;
     bottom: 0px;
     left: 0px;
@@ -213,25 +213,58 @@ blockquote {
     background-size: cover !important;
     z-index: 0;
     background-repeat: no-repeat;
-    background-position: center !important;
+    background-position: 50% 50%;
     //background-attachment: fixed;
-
+    background-color: #fff;
 }
 //
 // Spectacle
 // --------------------------------------------------
 
+.page-header {
+    position: relative;
+    padding: 0;
+    margin: 0 0 $line-height-computed;
+    border: none;
+    .page-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+}
+
+.page-title {
+    text-transform: uppercase;
+    color: $brand-primary;
+    margin-bottom: $line-height-computed;
+    margin: 0;
+    border-bottom: 20px solid $brand-primary;
+}
+
+.page-lead {
+    @extend .h3;
+    //font-size: 31px;
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: $line-height-computed;
+}
+
+.spectacle-links {
+    margin-bottom: $line-height-computed;
+}
 .spectacle-team {
     //font-size: 14px;
     //padding: 32px;
     //background-color: lighten(#c1c1c1, 10%);
-    margin-top: $line-height-computed;
+    margin: $line-height-computed 0 $line-height-computed 30px;
 
     h5 {
         margin-bottom: 0;
         font-size: $font-size-base;
         text-transform: uppercase;
-        font-weight: 700;
+        //font-weight: 700;
+        color: $brand-primary;
     }
 }
 .spectacle-links > a {
@@ -244,6 +277,7 @@ blockquote {
 .spectacle-events-title {
     //letter-spacing: 1px;
     //color: #fff;
+    text-transform: uppercase;
     border-bottom: 20px solid $text-color;
 }
 .list-calendar,

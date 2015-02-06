@@ -8,18 +8,20 @@
   <%= render 'navbar' %>
   <!-- WRAPPER
   ================================================== -->
-  
-  <%= yield :home %>
+
   <div class="main-container">
-    <%= yield :header %>
-    <div class="container">
+    <header class="page-header">
+      <%= yield :header if content_for? :header %>
+      <%= yield :page_header if content_for? :page_header %>
+    </header>
+      <div class="container">
         <div class="row">
           <div class="col-md-12 main-content">
             <%= yield %>
           </div>
         </div>
       </div>
-    <%= render 'footer' %>
+  <%= render 'footer' %>
   </div>
   
 

@@ -1,6 +1,5 @@
 //= require jquery.magnific-popup.js
 
-
 $(document).ready(function($) {
 
     "use strict";
@@ -32,72 +31,43 @@ $(document).ready(function($) {
         $offcanvas_container = $(".th-offcanvas-container:first"),
         $sidebar_toggle = $(".th-offcanvas-toggle:first");
 
-    
-
 
     $('.open-gallery-link').click(function() {
-        
-  var items = [];
-  $( $(this).attr('href') ).find('.slide').each(function() {
-    items.push( {
-      src: $(this) 
-    } );
-  });
-  
-  $.magnificPopup.open({
-    items:items,
-    gallery: {
-      enabled: true 
-    }
-  });
-});   
-
-    jQuery(window).load(function () {
-
-        // Page Loading Gif
-        jQuery(".loadstack").fadeOut();
-        jQuery(".preloader").delay(1000).fadeOut("slow");
+      var items = [];
+      $( $(this).attr('href') ).find('.slide').each(function() {
+        items.push( {
+          src: $(this) 
+        } );
+      });
+      
+      $.magnificPopup.open({
+        items:items,
+        gallery: {
+          enabled: true 
+        }
+      });
+    });   
 
 
-    });
-
-    // Append .background-image-holder <img>'s as CSS backgrounds
-    jQuery(function ($) {
+    $(window).resize(function(){
+            // Append .background-image-holder <img>'s as CSS backgrounds
         $('.background-image-holder').each(function(){
             var imgSrc= $(this).children('img').attr('src');
             $(this).css('background-image', 'url("' + imgSrc + '")');
             $(this).children('img').hide();
-            $(this).css('background-position', '50% 0%');
+            //$(this).css('background-position', '50% 0%');
             $(this).css('height', $(window).height()*.8);
         });
-    });
 
-    jQuery(function ($) {
-        $('.background-image-holder-cover').each(function(){
+        $('.background-image-holder-home').each(function(){
             var imgSrc= $(this).children('img').attr('src');
             $(this).css('background-image', 'url("' + imgSrc + '")');
             $(this).children('img').hide();
-            $(this).css('background-position', '50% 0%');
+            //$(this).css('background-position', '50% 0%');
             $(this).css('height', $(window).height());
         });
     });
 
-    // Home hero fade effect
-    jQuery(function ($) {
-        
-        var divs = $('.th-herofade');
-
-        if($(window).height() > divs.height()) {
-            $(window).on('scroll', function () {
-                var st = $(this).scrollTop();
-                divs.css({
-                    'margin-top': -(st / 0) + "px",
-                    'opacity': 1 - st / 600
-                });
-            });
-        }
-        
-    });
-
+    $(window).trigger("resize");
 
 });

@@ -394,7 +394,7 @@ html {
 /* line 27, ../../app/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #242424;
   background-color: #cfcfcf;
@@ -471,8 +471,8 @@ img {
 
 /* line 113, ../../app/assets/stylesheets/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   border: 0;
   border-top: 1px solid #eeeeee;
 }
@@ -501,7 +501,7 @@ hr {
 
 /* line 10, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .page-lead, .h4, .h5, .h6 {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   line-height: 1.1;
@@ -517,8 +517,9 @@ h5 .small, h6 small,
 h6 .small,
 .h1 small,
 .h1 .small, .h2 small,
-.h2 .small, .h3 small,
-.h3 .small, .h4 small,
+.h2 .small, .h3 small, .page-lead small,
+.h3 .small,
+.page-lead .small, .h4 small,
 .h4 .small, .h5 small,
 .h5 .small, .h6 small,
 .h6 .small {
@@ -530,9 +531,9 @@ h6 .small,
 /* line 26, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1,
 h2, .h2,
-h3, .h3 {
-  margin-top: 25px;
-  margin-bottom: 12.5px;
+h3, .h3, .page-lead {
+  margin-top: 22px;
+  margin-bottom: 11px;
 }
 /* line 31, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
@@ -542,8 +543,9 @@ h2 small,
 h2 .small, .h2 small,
 .h2 .small,
 h3 small,
-h3 .small, .h3 small,
-.h3 .small {
+h3 .small, .h3 small, .page-lead small,
+.h3 .small,
+.page-lead .small {
   font-size: 65%;
 }
 
@@ -551,8 +553,8 @@ h3 .small, .h3 small,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 /* line 42, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h4 small,
@@ -569,57 +571,57 @@ h6 .small, .h6 small,
 
 /* line 47, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1 {
-  font-size: 46px;
+  font-size: 41px;
 }
 
 /* line 48, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h2, .h2 {
-  font-size: 38px;
+  font-size: 34px;
 }
 
 /* line 49, ../../app/assets/stylesheets/bootstrap/_type.scss */
-h3, .h3 {
-  font-size: 31px;
+h3, .h3, .page-lead {
+  font-size: 28px;
 }
 
 /* line 50, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h4, .h4 {
-  font-size: 23px;
+  font-size: 20px;
 }
 
 /* line 51, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h5, .h5 {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* line 52, ../../app/assets/stylesheets/bootstrap/_type.scss */
 h6, .h6 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* line 58, ../../app/assets/stylesheets/bootstrap/_type.scss */
 p {
-  margin: 0 0 12.5px;
+  margin: 0 0 11px;
 }
 
 /* line 62, ../../app/assets/stylesheets/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 22px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   /* line 62, ../../app/assets/stylesheets/bootstrap/_type.scss */
   .lead {
-    font-size: 27px;
+    font-size: 24px;
   }
 }
 
 /* line 79, ../../app/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small {
-  font-size: 88%;
+  font-size: 87%;
 }
 
 /* line 84, ../../app/assets/stylesheets/bootstrap/_type.scss */
@@ -781,8 +783,8 @@ a.bg-danger:hover {
 
 /* line 138, ../../app/assets/stylesheets/bootstrap/_type.scss */
 .page-header {
-  padding-bottom: 11.5px;
-  margin: 50px 0 25px;
+  padding-bottom: 10px;
+  margin: 44px 0 22px;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -790,7 +792,7 @@ a.bg-danger:hover {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 12.5px;
+  margin-bottom: 11px;
 }
 /* line 154, ../../app/assets/stylesheets/bootstrap/_type.scss */
 ul ul,
@@ -822,7 +824,7 @@ ol ol {
 /* line 185, ../../app/assets/stylesheets/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 /* line 190, ../../app/assets/stylesheets/bootstrap/_type.scss */
@@ -882,9 +884,9 @@ abbr[data-original-title] {
 
 /* line 241, ../../app/assets/stylesheets/bootstrap/_type.scss */
 blockquote {
-  padding: 12.5px 25px;
-  margin: 0 0 25px;
-  font-size: 22.5px;
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
   border-left: 5px solid #eeeeee;
 }
 /* line 250, ../../app/assets/stylesheets/bootstrap/_type.scss */
@@ -939,7 +941,7 @@ blockquote.pull-right .small:after {
 
 /* line 294, ../../app/assets/stylesheets/bootstrap/_type.scss */
 address {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-style: normal;
   line-height: 1.42857;
 }
@@ -981,9 +983,9 @@ kbd kbd {
 /* line 41, ../../app/assets/stylesheets/bootstrap/_code.scss */
 pre {
   display: block;
-  padding: 12px;
-  margin: 0 0 12.5px;
-  font-size: 17px;
+  padding: 10.5px;
+  margin: 0 0 11px;
+  font-size: 15px;
   line-height: 1.42857;
   word-break: break-all;
   word-wrap: break-word;
@@ -2148,7 +2150,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 /* line 32, ../../app/assets/stylesheets/bootstrap/_tables.scss */
 .table > thead > tr > th,
@@ -2348,7 +2350,7 @@ table th[class*="col-"] {
   /* line 171, ../../app/assets/stylesheets/bootstrap/_tables.scss */
   .table-responsive {
     width: 100%;
-    margin-bottom: 18.75px;
+    margin-bottom: 16.5px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #dddddd;
@@ -2410,8 +2412,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 25px;
-  font-size: 27px;
+  margin-bottom: 22px;
+  font-size: 24px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -2471,7 +2473,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #555555;
 }
@@ -2480,9 +2482,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 39px;
+  height: 36px;
   padding: 6px 12px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #555555;
   background-color: white;
@@ -2538,7 +2540,7 @@ input[type="search"] {
   input[type="time"],
   input[type="datetime-local"],
   input[type="month"] {
-    line-height: 39px;
+    line-height: 36px;
   }
 
   /* line 187, ../../app/assets/stylesheets/bootstrap/_forms.scss */
@@ -2557,7 +2559,7 @@ input[type="search"] {
   .input-group-sm > input[type="month"].form-control,
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn {
-    line-height: 36px;
+    line-height: 33px;
   }
 
   /* line 193, ../../app/assets/stylesheets/bootstrap/_forms.scss */
@@ -2576,7 +2578,7 @@ input[type="search"] {
   .input-group-lg > input[type="month"].form-control,
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn {
-    line-height: 53px;
+    line-height: 49px;
   }
 }
 /* line 204, ../../app/assets/stylesheets/bootstrap/_forms.scss */
@@ -2595,7 +2597,7 @@ input[type="search"] {
 /* line 220, ../../app/assets/stylesheets/bootstrap/_forms.scss */
 .radio label,
 .checkbox label {
-  min-height: 25px;
+  min-height: 22px;
   padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
@@ -2681,9 +2683,9 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .spectacle-links.input-group-btn > a {
-  height: 36px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -2692,8 +2694,8 @@ input[type="checkbox"] {
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
-  height: 36px;
-  line-height: 36px;
+  height: 33px;
+  line-height: 33px;
 }
 
 /* line 85, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2709,17 +2711,17 @@ select[multiple].input-sm,
 
 /* line 71, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .form-group-sm .form-control {
-  height: 36px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px;
 }
 
 /* line 79, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
 select.form-group-sm .form-control {
-  height: 36px;
-  line-height: 36px;
+  height: 33px;
+  line-height: 33px;
 }
 
 /* line 85, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2733,9 +2735,9 @@ select[multiple].form-group-sm .form-control {
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .spectacle-links.input-group-btn > a {
-  height: 53px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -2744,8 +2746,8 @@ select[multiple].form-group-sm .form-control {
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
-  height: 53px;
-  line-height: 53px;
+  height: 49px;
+  line-height: 49px;
 }
 
 /* line 85, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2761,17 +2763,17 @@ select[multiple].input-lg,
 
 /* line 71, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .form-group-lg .form-control {
-  height: 53px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 6px;
 }
 
 /* line 79, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
 select.form-group-lg .form-control {
-  height: 53px;
-  line-height: 53px;
+  height: 49px;
+  line-height: 49px;
 }
 
 /* line 85, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2786,7 +2788,7 @@ select[multiple].form-group-lg .form-control {
 }
 /* line 331, ../../app/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback .form-control {
-  padding-right: 48.75px;
+  padding-right: 45px;
 }
 
 /* line 336, ../../app/assets/stylesheets/bootstrap/_forms.scss */
@@ -2796,9 +2798,9 @@ select[multiple].form-group-lg .form-control {
   right: 0;
   z-index: 2;
   display: block;
-  width: 39px;
-  height: 39px;
-  line-height: 39px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
   pointer-events: none;
 }
@@ -2808,9 +2810,9 @@ select[multiple].form-group-lg .form-control {
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .spectacle-links.input-group-btn > a + .form-control-feedback {
-  width: 53px;
-  height: 53px;
-  line-height: 53px;
+  width: 49px;
+  height: 49px;
+  line-height: 49px;
 }
 
 /* line 353, ../../app/assets/stylesheets/bootstrap/_forms.scss */
@@ -2818,9 +2820,9 @@ select[multiple].form-group-lg .form-control {
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .spectacle-links.input-group-btn > a + .form-control-feedback {
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
 }
 
 /* line 17, ../../app/assets/stylesheets/bootstrap/mixins/_forms.scss */
@@ -2921,7 +2923,7 @@ select[multiple].form-group-lg .form-control {
 
 /* line 373, ../../app/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label ~ .form-control-feedback {
-  top: 30px;
+  top: 27px;
 }
 /* line 376, ../../app/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label.sr-only ~ .form-control-feedback {
@@ -3010,7 +3012,7 @@ select[multiple].form-group-lg .form-control {
 /* line 505, ../../app/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 32px;
+  min-height: 29px;
 }
 /* line 510, ../../app/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .form-group {
@@ -3064,7 +3066,7 @@ select[multiple].form-group-lg .form-control {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42857;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -3293,7 +3295,7 @@ select[multiple].form-group-lg .form-control {
 /* line 127, ../../app/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn, .spectacle-links.btn-group-lg > a {
   padding: 10px 16px;
-  font-size: 23px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -3301,7 +3303,7 @@ select[multiple].form-group-lg .form-control {
 /* line 131, ../../app/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-sm, .btn-group-sm > .btn, .spectacle-links.btn-group-sm > a {
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -3309,7 +3311,7 @@ select[multiple].form-group-lg .form-control {
 /* line 135, ../../app/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-xs, .btn-group-xs > .btn, .spectacle-links.btn-group-xs > a {
   padding: 1px 5px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -3412,7 +3414,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 18px;
+  font-size: 16px;
   text-align: left;
   background-color: white;
   border: 1px solid #cccccc;
@@ -3430,7 +3432,7 @@ tbody.collapse.in {
 /* line 58, ../../app/assets/stylesheets/bootstrap/_dropdowns.scss */
 .dropdown-menu .divider {
   height: 1px;
-  margin: 11.5px 0;
+  margin: 10px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -3498,7 +3500,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.42857;
   color: #777777;
   white-space: nowrap;
@@ -3849,7 +3851,7 @@ tbody.collapse.in {
 /* line 73, ../../app/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1;
   color: #555555;
@@ -3864,7 +3866,7 @@ tbody.collapse.in {
 .input-group-sm > .input-group-btn > .input-group-addon.btn,
 .input-group-sm > .spectacle-links.input-group-btn > a.input-group-addon {
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 3px;
 }
 /* line 90, ../../app/assets/stylesheets/bootstrap/_input-groups.scss */
@@ -3873,7 +3875,7 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > .input-group-addon.btn,
 .input-group-lg > .spectacle-links.input-group-btn > a.input-group-addon {
   padding: 10px 16px;
-  font-size: 23px;
+  font-size: 20px;
   border-radius: 6px;
 }
 /* line 98, ../../app/assets/stylesheets/bootstrap/_input-groups.scss */
@@ -4003,7 +4005,7 @@ tbody.collapse.in {
 /* line 59, ../../app/assets/stylesheets/bootstrap/_navs.scss */
 .nav .nav-divider {
   height: 1px;
-  margin: 11.5px 0;
+  margin: 10px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -4318,8 +4320,8 @@ tbody.collapse.in {
 .navbar-brand {
   float: left;
   padding: 0 15px;
-  font-size: 23px;
-  line-height: 25px;
+  font-size: 20px;
+  line-height: 22px;
   height: 50px;
 }
 /* line 172, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4380,7 +4382,7 @@ tbody.collapse.in {
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 25px;
+  line-height: 22px;
 }
 @media (max-width: 991px) {
   /* line 244, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4400,7 +4402,7 @@ tbody.collapse.in {
   }
   /* line 256, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 25px;
+    line-height: 22px;
   }
   /* line 259, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -4433,8 +4435,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 5.5px;
-  margin-bottom: 5.5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 @media (min-width: 768px) {
   /* line 412, ../../app/assets/stylesheets/bootstrap/_forms.scss */
@@ -4538,13 +4540,13 @@ tbody.collapse.in {
 
 /* line 343, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 5.5px;
-  margin-bottom: 5.5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 /* line 346, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .spectacle-links.btn-group-sm > a.navbar-btn {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 8.5px;
+  margin-bottom: 8.5px;
 }
 /* line 349, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .spectacle-links.btn-group-xs > a.navbar-btn {
@@ -4554,8 +4556,8 @@ tbody.collapse.in {
 
 /* line 359, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 @media (min-width: 992px) {
   /* line 359, ../../app/assets/stylesheets/bootstrap/_navbar.scss */
@@ -4795,7 +4797,7 @@ tbody.collapse.in {
 /* line 6, ../../app/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   list-style: none;
   background-color: whitesmoke;
   border-radius: 4px;
@@ -4819,7 +4821,7 @@ tbody.collapse.in {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 25px 0;
+  margin: 22px 0;
   border-radius: 4px;
 }
 /* line 10, ../../app/assets/stylesheets/bootstrap/_pagination.scss */
@@ -4888,7 +4890,7 @@ tbody.collapse.in {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 23px;
+  font-size: 20px;
 }
 /* line 12, ../../app/assets/stylesheets/bootstrap/mixins/_pagination.scss */
 .pagination-lg > li:first-child > a,
@@ -4907,7 +4909,7 @@ tbody.collapse.in {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
 }
 /* line 12, ../../app/assets/stylesheets/bootstrap/mixins/_pagination.scss */
 .pagination-sm > li:first-child > a,
@@ -4925,7 +4927,7 @@ tbody.collapse.in {
 /* line 6, ../../app/assets/stylesheets/bootstrap/_pager.scss */
 .pager {
   padding-left: 0;
-  margin: 25px 0;
+  margin: 22px 0;
   list-style: none;
   text-align: center;
 }
@@ -5066,7 +5068,7 @@ a.label:hover, a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: white;
   line-height: 1;
@@ -5130,7 +5132,7 @@ a.badge:hover, a.badge:focus {
 /* line 16, ../../app/assets/stylesheets/bootstrap/_jumbotron.scss */
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 27px;
+  font-size: 24px;
   font-weight: 200;
 }
 /* line 22, ../../app/assets/stylesheets/bootstrap/_jumbotron.scss */
@@ -5158,7 +5160,7 @@ a.badge:hover, a.badge:focus {
   /* line 45, ../../app/assets/stylesheets/bootstrap/_jumbotron.scss */
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 81px;
+    font-size: 72px;
   }
 }
 
@@ -5166,7 +5168,7 @@ a.badge:hover, a.badge:focus {
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   line-height: 1.42857;
   background-color: #cfcfcf;
   border: 1px solid #dddddd;
@@ -5200,7 +5202,7 @@ a.thumbnail.active {
 /* line 9, ../../app/assets/stylesheets/bootstrap/_alerts.scss */
 .alert {
   padding: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -5324,8 +5326,8 @@ a.thumbnail.active {
 /* line 26, ../../app/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress {
   overflow: hidden;
-  height: 25px;
-  margin-bottom: 25px;
+  height: 22px;
+  margin-bottom: 22px;
   background-color: whitesmoke;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5337,8 +5339,8 @@ a.thumbnail.active {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 14px;
+  line-height: 22px;
   color: white;
   text-align: center;
   background-color: #ef662f;
@@ -5657,7 +5659,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 7, ../../app/assets/stylesheets/bootstrap/_panels.scss */
 .panel {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   background-color: white;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -5695,7 +5697,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 21px;
+  font-size: 18px;
   color: inherit;
 }
 /* line 39, ../../app/assets/stylesheets/bootstrap/_panels.scss */
@@ -5910,7 +5912,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 
 /* line 212, ../../app/assets/stylesheets/bootstrap/_panels.scss */
 .panel-group {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 /* line 216, ../../app/assets/stylesheets/bootstrap/_panels.scss */
 .panel-group .panel {
@@ -6146,7 +6148,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 /* line 6, ../../app/assets/stylesheets/bootstrap/_close.scss */
 .close {
   float: right;
-  font-size: 27px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1;
   color: black;
@@ -6347,7 +6349,7 @@ button.close {
   display: block;
   visibility: visible;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 1.4;
   opacity: 0;
@@ -6474,7 +6476,7 @@ button.close {
   max-width: 276px;
   padding: 1px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1.42857;
   text-align: left;
@@ -6508,7 +6510,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
@@ -7276,12 +7278,12 @@ input {
 /* line 33, ../../app/assets/stylesheets/theme/_form.scss */
 input[type="text"] {
   margin-bottom: 15px;
-  height: 53px;
+  height: 49px;
 }
 
 /* line 37, ../../app/assets/stylesheets/theme/_form.scss */
 textarea.form-control {
-  height: 106px;
+  height: 98px;
   resize: none;
 }
 
@@ -7294,10 +7296,10 @@ span.error, span.valid {
 
 /* line 47, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   background-position: center center;
-  background-size: 25px;
+  background-size: 22px;
   background-repeat: no-repeat;
 }
 
@@ -7888,11 +7890,11 @@ img {
 
 /* line 47, ../../app/assets/stylesheets/public.css.scss */
 blockquote {
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   padding-top: 0;
   padding-bottom: 0;
-  margin: 0 0 12.5px 30px;
+  margin: 0 0 22px 30px;
 }
 
 /* line 59, ../../app/assets/stylesheets/public.css.scss */
@@ -7971,11 +7973,11 @@ blockquote {
   .navbar > .container-fluid .navbar-brand,
   .navbar > .container .navbar-brand {
     margin-left: 0;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     height: auto;
     max-width: 220px;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    margin-bottom: 22px;
+    margin-top: 22px;
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -8035,14 +8037,14 @@ blockquote {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-size: contain !important;
+  background-size: cover !important;
   z-index: 0;
   background-repeat: no-repeat;
-  background-position: left top !important;
+  background-position: center !important;
 }
 
 /* line 208, ../../app/assets/stylesheets/public.css.scss */
-.background-image-holder-cover {
+.background-image-holder-home {
   bottom: 0px;
   left: 0px;
   width: 100%;
@@ -8050,40 +8052,78 @@ blockquote {
   background-size: cover !important;
   z-index: 0;
   background-repeat: no-repeat;
-  background-position: center !important;
+  background-position: 50% 50%;
+  background-color: #fff;
 }
 
 /* line 225, ../../app/assets/stylesheets/public.css.scss */
-.spectacle-team {
-  margin-top: 25px;
+.page-header {
+  position: relative;
+  padding: 0;
+  margin: 0 0 22px;
+  border: none;
 }
-/* line 231, ../../app/assets/stylesheets/public.css.scss */
-.spectacle-team h5 {
-  margin-bottom: 0;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 700;
+/* line 230, ../../app/assets/stylesheets/public.css.scss */
+.page-header .page-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
 }
 
 /* line 238, ../../app/assets/stylesheets/public.css.scss */
+.page-title {
+  text-transform: uppercase;
+  color: #ef662f;
+  margin-bottom: 22px;
+  margin: 0;
+  border-bottom: 20px solid #ef662f;
+}
+
+/* line 246, ../../app/assets/stylesheets/public.css.scss */
+.page-lead {
+  font-size: 27px;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+/* line 254, ../../app/assets/stylesheets/public.css.scss */
+.spectacle-links {
+  margin-bottom: 22px;
+}
+
+/* line 257, ../../app/assets/stylesheets/public.css.scss */
+.spectacle-team {
+  margin: 22px 0 22px 30px;
+}
+/* line 263, ../../app/assets/stylesheets/public.css.scss */
+.spectacle-team h5 {
+  margin-bottom: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ef662f;
+}
+
+/* line 271, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 245, ../../app/assets/stylesheets/public.css.scss */
+/* line 278, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-events-title {
+  text-transform: uppercase;
   border-bottom: 20px solid #242424;
 }
 
-/* line 253, ../../app/assets/stylesheets/public.css.scss */
+/* line 287, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar > li,
 .spectacle-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 257, ../../app/assets/stylesheets/public.css.scss */
+/* line 291, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
   text-transform: uppercase;

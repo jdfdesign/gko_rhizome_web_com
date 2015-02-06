@@ -1,7 +1,11 @@
 <%# collection_row_cache(spectacle_event) do %>
 	<li>
 		<span class="date"><%= format_spectacle_event_date(spectacle_event) %></span>
-     	<br><strong class="title"><%= link_to spectacle_event.attachable.title, spectacle_event.attachable.public_url %></strong>
+     	<br>
+      <strong class="title">
+        <% kind = (spectacle_event.attachable.is_a? Spectacle) ? "Spectacle " : "Formation " %>
+      <%= link_to(kind + spectacle_event.attachable.title, spectacle_event.attachable.public_url) %>
+      </strong>
      	<% if spectacle_event.location %>
       	<br><span class="location"><%= spectacle_event.location %></span>
      	<% end %>
