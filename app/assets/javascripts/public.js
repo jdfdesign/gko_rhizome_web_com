@@ -1,4 +1,6 @@
+//= require jquery_ujs
 //= require jquery.magnific-popup.js
+//= require remote_form
 
 $(document).ready(function($) {
 

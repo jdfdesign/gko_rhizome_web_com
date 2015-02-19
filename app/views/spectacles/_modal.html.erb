@@ -2,7 +2,7 @@
 <div id="gallery" class="mfp-hide">
   <% images.each_with_index do |img, index| %>
   <div class="slide">
-    <%= image_fu(img, "1400x900#") %>
+    <%= image_fu(img, "x900", :class => "img-responsive") %>
   </div>
   <% end %>
 </div>

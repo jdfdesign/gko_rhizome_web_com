@@ -88,6 +88,7 @@ blockquote {
     //margin-top: $line-height-computed;
     max-height: $navbar-height - 8px;
     margin-top: 4px;
+    @include opacity(.8);
     > img,
     > .img-responsive {
         height: 100%;
@@ -100,36 +101,21 @@ blockquote {
     margin: $line-height-computed 0;
     > li {
         float: none;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         > a {
             @include transition(all 0.5s ease);
             position: relative;
-            //padding: 0 0 0 56px;
             padding: 0;
-            // &:before {
-            //     content: "";
-            //     position: absolute;
-            //     top: 2px;
-            //     bottom: 2px;
-            //     left: 0;
-            //     width: 50px;
-            //     background-color: $navbar-default-bg;
-            // }
-            // &:hover {
-            //     &:before {
-            //         background-color: $brand-primary;
-            //     }
-            // }
         }
         > ul {
             list-style: none;
-            margin-top: 6px;
+            margin-top: 10px;
             margin-left: 0 !important;
             padding-left: 0 !important;
         }
 
         > ul > li {
-            margin-bottom: 6px;
+            margin-bottom: 10px;
         }
         > ul > li > a {
             display: block;
@@ -186,14 +172,6 @@ blockquote {
 
     .navbar-nav {
         float: right;
-        > li > a {
-            //padding-left: 0;
-            //padding-right: 0;
-
-        }
-
-
-        
     }
     .main-container {
         padding-left: 380px;
@@ -269,30 +247,54 @@ blockquote {
 }
 
 .page-lead {
-    @extend .h3;
     //font-size: 31px;
-    font-size: 27px;
+    font-family: $headings-font-family;
+    font-size: 20px;
     line-height: 1.2;
     margin-bottom: $line-height-computed;
 }
-
+.spectacle-intro {
+  position: relative;
+  i {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: $line-height-computed;
+    z-index: 1;
+  }
+  blockquote {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-left: 0;
+    margin-right: 0;
+    border-left: 0;
+    margin-left: 50px;
+    p {
+      
+    }
+  }
+}
 .spectacle-links {
     margin-bottom: $line-height-computed;
 }
-.spectacle-team {
-    //font-size: 14px;
-    //padding: 32px;
-    //background-color: lighten(#c1c1c1, 10%);
+.spectacle-chapter {
     margin: $line-height-computed 0 $line-height-computed 30px;
-
-    h5 {
-        margin-bottom: 0;
-        font-size: $font-size-base;
-        text-transform: uppercase;
-        //font-weight: 700;
-        color: $brand-primary;
+    ul {
+      @include list-unstyled;
+      > li {
+        &:before {
+          content: "_ ";
+        }
+      }
     }
 }
+.spectacle-chapter-title {
+  margin-bottom: 0;
+  font-size: $font-size-base;
+  text-transform: uppercase;
+  color: $brand-primary;
+}
+
 .spectacle-links > a {
     @extend .btn;
     @extend .btn-primary;
@@ -300,6 +302,7 @@ blockquote {
     font-size: 16px;
     letter-spacing: 1px;
 }
+
 .spectacle-events-title {
     //letter-spacing: 1px;
     color: $brand-primary;

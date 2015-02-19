@@ -18,7 +18,7 @@ group :production do
    gem 'gko_image_bank'
    gem 'gko_categories'
  end
- gem 'gko_spectacles', '= 0.1.1',  :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
+ gem 'gko_spectacles', '= 0.1.2',  :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
 end
 
 # group :development do
@@ -28,7 +28,7 @@ end
 #   gem "gko_albums", :path => '~/Github/gko_cms3/gko_albums'
 #   gem "gko_inquiries", :path => '~/Github/gko_cms3/gko_inquiries'
 #   gem "gko_spectacles", :path => '~/Github/gko/gko_spectacles'
-#   gem "gko_features", :path => '~/Github/gko_cms3/gko_features' 
-#   gem "gko_image_bank", :path => '~/Github/gko_cms3/gko_image_bank'
+ #  gem "gko_features", :path => '~/Github/gko_cms3/gko_features' 
+ #  gem "gko_image_bank", :path => '~/Github/gko_cms3/gko_image_bank'
 #   gem "gko_categories", :path => '~/Github/gko_cms3/gko_categories'
 # end    
