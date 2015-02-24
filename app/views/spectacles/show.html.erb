@@ -59,6 +59,13 @@
 						<%= render_html_text(resource.sponsor) %>
 					</div>
 				<% end %>
+        
+				<% if resource.subtitle? %>
+					<div class="spectacle-chapter spectacle-subtitle">
+						<%= render_html_text(resource.subtitle) %>
+					</div>
+				<% end %>
+        
 	
 				<% if parent.display_events_in_spectacle && resource.spectacle_events.upcoming.try(:any?) %>
 				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>

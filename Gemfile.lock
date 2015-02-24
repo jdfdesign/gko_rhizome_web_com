@@ -145,7 +145,7 @@ GEM
     execjs (2.0.2)
     faker (1.2.0)
       i18n (~> 0.5)
-    filters_spam (0.4)
+    filters_spam (0.5)
     gem-patching (0.0.3)
     gherkin (2.9.3)
       json (>= 1.4.6)
