@@ -1,4 +1,11 @@
-<%= page_title(resource.title) %>
+<% content_for :header do %>
+<div class="background-image-holder">
+<%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
+</div>
+<% end if resource.images.any? %>
+<%= content_for :page_header do %>
+ <%= page_title(resource.title) %>
+<% end %>
 <%= render_html_text(resource.body) || "coming soon" %>
 <% spectacle_events = site.spectacle_events.where(:category => "Formation") %>
 <h3 class="spectacle-events-title">Prochaines formations</h3>

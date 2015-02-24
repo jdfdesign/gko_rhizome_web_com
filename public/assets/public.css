@@ -8111,8 +8111,9 @@ blockquote {
   top: 0;
   left: 20px;
   z-index: 1;
+  color: #fff;
 }
-/* line 266, ../../app/assets/stylesheets/public.css.scss */
+/* line 267, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro blockquote {
   font-size: 17px;
   line-height: 1.3;
@@ -8122,26 +8123,26 @@ blockquote {
   margin-left: 50px;
 }
 
-/* line 278, ../../app/assets/stylesheets/public.css.scss */
+/* line 279, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links {
   margin-bottom: 20px;
 }
 
-/* line 281, ../../app/assets/stylesheets/public.css.scss */
+/* line 282, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter {
   margin: 20px 0 20px 30px;
 }
-/* line 283, ../../app/assets/stylesheets/public.css.scss */
+/* line 284, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter ul {
   padding-left: 0;
   list-style: none;
 }
-/* line 286, ../../app/assets/stylesheets/public.css.scss */
+/* line 287, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter ul > li:before {
   content: "_ ";
 }
 
-/* line 292, ../../app/assets/stylesheets/public.css.scss */
+/* line 293, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter-title {
   margin-bottom: 0;
   font-size: 14px;
@@ -8149,38 +8150,38 @@ blockquote {
   color: #ef662f;
 }
 
-/* line 299, ../../app/assets/stylesheets/public.css.scss */
+/* line 300, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 307, ../../app/assets/stylesheets/public.css.scss */
+/* line 308, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-events-title {
   color: #ef662f;
   text-transform: uppercase;
   border-bottom: 20px solid #ef662f;
 }
 
-/* line 316, ../../app/assets/stylesheets/public.css.scss */
+/* line 317, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar > li,
 .spectacle-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 320, ../../app/assets/stylesheets/public.css.scss */
+/* line 321, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
   text-transform: normal;
 }
 
-/* line 326, ../../app/assets/stylesheets/public.css.scss */
+/* line 327, ../../app/assets/stylesheets/public.css.scss */
 .learning-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 330, ../../app/assets/stylesheets/public.css.scss */
+/* line 331, ../../app/assets/stylesheets/public.css.scss */
 .learning-events .dates {
   text-transform: normal;
   font-weight: 700;
