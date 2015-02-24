@@ -1,0 +1,23 @@
+<%= page_title(resource.title) %>
+<%= render_html_text(resource.body) || "coming soon" %>
+<% spectacle_events = site.spectacle_events.where(:category => "Formation") %>
+<h3 class="spectacle-events-title">Prochaines formations</h3>
+<ul class="list-unstyled learning-events">
+  <% spectacle_events.each do |event| %>
+  	<li>
+      <span class="dates"><%= format_spectacle_event_date(event) %></span>
+       	<% if event.description %>
+        	<br><span class="description"><%= event.description %></span>
+       	<% end %>
+       	<% if event.location %>
+        	<span class="location"><%= event.location %></span>
+       	<% end %>
+       	<% if event.place %>
+         	<span class="place">
+          <%= event.more_info_url.present? ? link_to(event.place, event.more_info_url, :target => :blank) : event.place %>
+  		</span>
+  		<% end %>
+  	</li>
+  <% end %>
+</ul>
+

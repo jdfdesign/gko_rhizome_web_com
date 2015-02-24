@@ -1,0 +1,21 @@
+<% rand_id = "carousel_#{rand(10000)}" %>
+<div class="carousel" id="<%= rand_id %>">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+  <% spectacles.each_with_index do |spectacle, index| %>
+    <% if image = spectacle.thumbnail %>
+    <div class="item <%= 'active' if index == 0 %>">
+      <%= image_tag(image.thumbnail(site.preferred_features_image_size).url) %> 
+      <div class="carousel-caption"><p>
+        <strong class="entry-title"><%= spectacle.title %></strong>
+        <%= link_to(t("features.view_more"), spectacle.public_url, :class => 'btn inline features') %>
+</p>
+      </div> 
+    </div>
+    <% end %>
+  <% end %>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#<%= rand_id %>" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#<%= rand_id %>" data-slide="next">&rsaquo;</a>
+</div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150219105612) do
+ActiveRecord::Schema.define(:version => 20150224133827) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -490,7 +490,7 @@ ActiveRecord::Schema.define(:version => 20150219105612) do
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
 
   create_table "spectacle_events", :force => true do |t|
-    t.integer  "attachable_id"
+    t.integer  "spectacle_id"
     t.integer  "section_id"
     t.integer  "site_id"
     t.datetime "start_date"
@@ -501,12 +501,14 @@ ActiveRecord::Schema.define(:version => 20150219105612) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "place"
-    t.string   "attachable_type"
+    t.string   "custom_title"
+    t.text     "description"
+    t.string   "category"
   end
 
-  add_index "spectacle_events", ["attachable_id", "attachable_type"], :name => "index_spectacle_events_on_attachable_id_and_attachable_type"
   add_index "spectacle_events", ["section_id"], :name => "index_spectacle_events_on_section_id"
   add_index "spectacle_events", ["site_id"], :name => "index_spectacle_events_on_site_id"
+  add_index "spectacle_events", ["spectacle_id"], :name => "index_spectacle_events_on_attachable_id_and_attachable_type"
 
   create_table "spectacle_option_translations", :force => true do |t|
     t.integer  "spectacle_option_id"
@@ -538,7 +540,7 @@ ActiveRecord::Schema.define(:version => 20150219105612) do
     t.text     "co_prod"
     t.text     "sponsor"
     t.string   "video_url"
-    t.string   "video_uid"
+    t.string   "video_hd_uid"
   end
 
   add_index "spectacle_options", ["spectacle_id"], :name => "index_spectacle_options_on_spectacle_id"

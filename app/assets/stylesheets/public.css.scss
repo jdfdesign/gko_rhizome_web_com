@@ -317,6 +317,17 @@ blockquote {
         padding: 12px 0;
     }
     .date {
-        text-transform: uppercase;
+        text-transform: normal;
     }
+}
+
+.learning-events {
+  > li {
+      border-bottom: 1px dotted $text-color;
+      padding: 12px 0;
+  }
+  .dates {
+      text-transform: normal;
+      font-weight: 700;
+  }
 }

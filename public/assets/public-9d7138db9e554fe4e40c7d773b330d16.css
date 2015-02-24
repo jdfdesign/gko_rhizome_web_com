@@ -8172,5 +8172,16 @@ blockquote {
 /* line 320, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
-  text-transform: uppercase;
+  text-transform: normal;
+}
+
+/* line 326, ../../app/assets/stylesheets/public.css.scss */
+.learning-events > li {
+  border-bottom: 1px dotted #242424;
+  padding: 12px 0;
+}
+/* line 330, ../../app/assets/stylesheets/public.css.scss */
+.learning-events .dates {
+  text-transform: normal;
+  font-weight: 700;
 }
