@@ -194,7 +194,6 @@ blockquote {
 // --------------------------------------------------
 
 .background-image-holder {
-    //position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -203,12 +202,9 @@ blockquote {
     z-index: 0;
     background-repeat: no-repeat;
     background-position: center !important;
-    //background-attachment: fixed;
-
 }
 
 .background-image-holder-home {
-    //position: absolute;
     bottom: 0px;
     left: 0px;
     width: 100%;
@@ -217,13 +213,22 @@ blockquote {
     z-index: 0;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    //background-attachment: fixed;
     background-color: #fff;
 }
+.html-text {
+  ul {
+    @include list-unstyled;
+    > li {
+      &:before {
+        content: "_ ";
+      }
+    }
+  }
+}
+
 //
 // Spectacle
 // --------------------------------------------------
-
 .page-header {
     position: relative;
     padding: 0;
@@ -249,7 +254,7 @@ blockquote {
 .page-lead {
     //font-size: 31px;
     font-family: $headings-font-family;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.2;
     margin-bottom: $line-height-computed;
 }
@@ -280,14 +285,6 @@ blockquote {
 }
 .spectacle-chapter {
     margin: $line-height-computed 0 $line-height-computed 30px;
-    ul {
-      @include list-unstyled;
-      > li {
-        &:before {
-          content: "_ ";
-        }
-      }
-    }
 }
 .spectacle-chapter-title {
   margin-bottom: 0;
@@ -319,6 +316,9 @@ blockquote {
     }
     .date {
         text-transform: normal;
+    }
+    .location {
+      font-weight: 700;
     }
 }
 

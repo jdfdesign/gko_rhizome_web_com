@@ -67,10 +67,10 @@
 				<% end %>
         
 	
-				<% if parent.display_events_in_spectacle && resource.spectacle_events.upcoming.try(:any?) %>
+				<% if resource.spectacle_events.try(:any?) %>
 				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
 					<ul class="list-unstyled spectacle-events">
-						<% resource.spectacle_events.upcoming.each do |e| %>
+						<% resource.spectacle_events.each do |e| %>
 				  			<%= render "event", :spectacle_event => e %>
 				  		<% end %>
 					</ul>

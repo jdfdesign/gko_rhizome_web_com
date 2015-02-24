@@ -5,8 +5,8 @@
         <% if spectacle_event.spectacle %>
           <%= link_to(spectacle_event.spectacle.title,     
                         spectacle_event.spectacle.public_url) %>
-        <% else %>
-          <%= link_to("Formation", "#") %>
+        <% elsif spectacle_event.category %>
+          <%= link_to(spectacle_event.category, "#") %>
         <% end %>
       </strong>
      	<% if spectacle_event.location %>

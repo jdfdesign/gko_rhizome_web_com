@@ -8054,7 +8054,7 @@ blockquote {
   background-position: center !important;
 }
 
-/* line 211, ../../app/assets/stylesheets/public.css.scss */
+/* line 208, ../../app/assets/stylesheets/public.css.scss */
 .background-image-holder-home {
   bottom: 0px;
   left: 0px;
@@ -8067,14 +8067,24 @@ blockquote {
   background-color: #fff;
 }
 
-/* line 228, ../../app/assets/stylesheets/public.css.scss */
+/* line 220, ../../app/assets/stylesheets/public.css.scss */
+.html-text ul {
+  padding-left: 0;
+  list-style: none;
+}
+/* line 223, ../../app/assets/stylesheets/public.css.scss */
+.html-text ul > li:before {
+  content: "_ ";
+}
+
+/* line 233, ../../app/assets/stylesheets/public.css.scss */
 .page-header {
   position: relative;
   padding: 0;
   margin: 0 0 20px;
   border: none;
 }
-/* line 233, ../../app/assets/stylesheets/public.css.scss */
+/* line 238, ../../app/assets/stylesheets/public.css.scss */
 .page-header .page-title {
   position: absolute;
   bottom: 0;
@@ -8083,7 +8093,7 @@ blockquote {
   padding-right: 24px;
 }
 
-/* line 242, ../../app/assets/stylesheets/public.css.scss */
+/* line 247, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   text-transform: uppercase;
   color: #ef662f;
@@ -8092,19 +8102,19 @@ blockquote {
   border-bottom: 20px solid #ef662f;
 }
 
-/* line 250, ../../app/assets/stylesheets/public.css.scss */
+/* line 255, ../../app/assets/stylesheets/public.css.scss */
 .page-lead {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
-/* line 257, ../../app/assets/stylesheets/public.css.scss */
+/* line 262, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro {
   position: relative;
 }
-/* line 259, ../../app/assets/stylesheets/public.css.scss */
+/* line 264, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro i {
   font-size: 40px;
   position: absolute;
@@ -8113,7 +8123,7 @@ blockquote {
   z-index: 1;
   color: #fff;
 }
-/* line 267, ../../app/assets/stylesheets/public.css.scss */
+/* line 272, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro blockquote {
   font-size: 17px;
   line-height: 1.3;
@@ -8123,26 +8133,17 @@ blockquote {
   margin-left: 50px;
 }
 
-/* line 279, ../../app/assets/stylesheets/public.css.scss */
+/* line 284, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links {
   margin-bottom: 20px;
 }
 
-/* line 282, ../../app/assets/stylesheets/public.css.scss */
+/* line 287, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter {
   margin: 20px 0 20px 30px;
 }
-/* line 284, ../../app/assets/stylesheets/public.css.scss */
-.spectacle-chapter ul {
-  padding-left: 0;
-  list-style: none;
-}
-/* line 287, ../../app/assets/stylesheets/public.css.scss */
-.spectacle-chapter ul > li:before {
-  content: "_ ";
-}
 
-/* line 293, ../../app/assets/stylesheets/public.css.scss */
+/* line 290, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter-title {
   margin-bottom: 0;
   font-size: 14px;
@@ -8150,30 +8151,35 @@ blockquote {
   color: #ef662f;
 }
 
-/* line 300, ../../app/assets/stylesheets/public.css.scss */
+/* line 297, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 308, ../../app/assets/stylesheets/public.css.scss */
+/* line 305, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-events-title {
   color: #ef662f;
   text-transform: uppercase;
   border-bottom: 20px solid #ef662f;
 }
 
-/* line 317, ../../app/assets/stylesheets/public.css.scss */
+/* line 314, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar > li,
 .spectacle-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 321, ../../app/assets/stylesheets/public.css.scss */
+/* line 318, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
   text-transform: normal;
+}
+/* line 321, ../../app/assets/stylesheets/public.css.scss */
+.list-calendar .location,
+.spectacle-events .location {
+  font-weight: 700;
 }
 
 /* line 327, ../../app/assets/stylesheets/public.css.scss */
