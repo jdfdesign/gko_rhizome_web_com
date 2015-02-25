@@ -1,5 +1,5 @@
 <%= page_title(resource.title) %>
-<%= render_html_text(resource.body) || "coming soon" %>
+<%= render_html_text(resource.body) %>
 <% site.spectacles.all.each do |spectacle| %>
   <div>
     <h3><%= spectacle.title %></h3>
@@ -7,18 +7,22 @@
 			<%= link_to spectacle.file_press.url do %>
 				<% "<i class='fa fa-file'></i><span class='label'>Dossier de presse</span>".html_safe %>
 			<% end if spectacle.file_press? %>
-			<%= link_to spectacle.file_doc.url do %>
+			
+      <%= link_to spectacle.file_doc.url do %>
 				<% "<i class='fa fa-file'></i><span class='label'>Fiche de présentation</span>".html_safe %>
 			<% end if spectacle.file_doc? %>
-			<%= link_to spectacle.file_tech.url do %>
+			
+      <%= link_to spectacle.file_tech.url do %>
 				<% "<i class='fa fa-file'></i><span class='label'>Fiche technique</span>".html_safe %>
 			<% end if spectacle.file_tech? %>
-			<%= link_to spectacle.video_hd.url do %>
+			
+      <%= link_to spectacle.video_hd.url do %>
 				<% "<i class='fa fa-video'></i><span class='label'>Vidéo HD</span>".html_safe %>
-			<% end if spectacle.video_hd? %>
-			<%= link_to "#gallery", :class => "open-gallery-link" do %>
+      <% end if spectacle.video_hd? %>
+			
+      <%= link_to spectacle.images_hd.url do %>
 				<% "<i class='fa fa-image'></i><span class='label'>Images</span>".html_safe %>					
-			<% end if spectacle.images.any? %>
+			<% end if spectacle.images_hd? %>
 		</p>
     <hr>
   </div>
