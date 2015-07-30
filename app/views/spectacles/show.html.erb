@@ -18,12 +18,15 @@
 			<div class="col-xs-12">
 
 				<p class="spectacle-links">
-					<%= link_to resource.video_url, :class => "open-video-link" do %>
+					<%= link_to resource.video_url, :class => "open-video-link", :target => "_blank" do %>
 						<% "<i class='fa fa-video-camera'></i><span class='label'>Video</span>".html_safe %>					
 					<% end if resource.video_url? %>
 					<%= link_to "#gallery", :class => "open-gallery-link" do %>
 						<% "<i class='fa fa-image'></i><span class='label'>Images</span>".html_safe %>					
 					<% end if resource.images.any? %>
+    			<%= link_to resource.file_press.url do %>
+    				<% "<i class='fa fa-file'></i><span class='label'>Presse</span>".html_safe %>
+    			<% end if resource.file_press? %>
 				</p>
 
 				<div class="page-lead">
