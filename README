@@ -17,12 +17,8 @@ rvm use 1.8.7 --default
 cd ~/Github/gko_rhizome_web_com
 bundle exec rake assets:precompile
 
-
-
-
 bundle exec rake db:bootstrap
 
- 
 bundle exec rake db:admin:create
 bundle exec rake db:load_default 
 bundle exec rake db:load_sample  

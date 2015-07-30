@@ -4,6 +4,7 @@
 @import "bootstrap/bootstrap";
 @import "theme/form";
 @import "theme/popup";
+
 //
 // Global
 // --------------------------------------------------
@@ -79,20 +80,17 @@ blockquote {
 // --------------------------------------------------
 
 .navbar {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .navbar-brand {
-    //display: block;
-    //margin-bottom: $line-height-computed;
-    //margin-top: $line-height-computed;
-    max-height: $navbar-height - 8px;
-    margin-top: 4px;
-    @include opacity(.8);
-    > img,
-    > .img-responsive {
-        height: 100%;
-    }
+  max-height: $navbar-height - 8px;
+  margin-top: 4px;
+  @include opacity(.8);
+  > img,
+  > .img-responsive {
+    height: 100%;
+  }
 }
 
 .navbar-nav {
@@ -101,7 +99,9 @@ blockquote {
     margin: $line-height-computed 0;
     > li {
         float: none;
-        margin-bottom: 10px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+
         > a {
             @include transition(all 0.5s ease);
             position: relative;
@@ -135,10 +135,12 @@ blockquote {
 
 @media (min-width: $grid-float-breakpoint) {
     .navbar {
-        width: 380px;
+        max-width: 280px;
+        padding-left: 25px;
+        padding-right: 25px;
         min-height: 100%;
         height: 100%;
-        float: right;
+        float: left;
         font-size: 16px;
         display: block;
         position: fixed;
@@ -148,45 +150,40 @@ blockquote {
 
         > .container .navbar-brand, 
         > .container-fluid .navbar-brand {
-            margin-left: 0;
-            margin-bottom: $line-height-computed;
             height: auto;
-            max-width: 220px;
-            margin-bottom: $line-height-computed;
+            width: 200px;
+            margin-bottom: $line-height-computed * 2;
             margin-top: $line-height-computed;
-            
-            margin-left: auto;
-            margin-right: auto;
-            float: none;
+            margin-left: 0;
+            float: left;
             display: block;
+            padding-left: 0;
+            padding-right: 0;
             > img,
             > .img-responsive {
                 height: auto;
             }
         }
     }
-
+    .navbar-collapse {
+      padding: 0;
+    }
     .navbar-header {
         width: 100%;
     }
-
     .navbar-nav {
-        float: right;
+        float: left;
+        li {
+          border: none;
+        }
     }
     .main-container {
-        padding-left: 380px;
+        padding-left: 280px;
         background-color: $body-bg;
     }
     .main-content {
-        //margin-top: -60px;
         max-width: 800px;
         padding-bottom: 60px;
-        //@include center-block;
-        //display: block;
-    }
-
-    @media (min-width: $grid-float-breakpoint) {
-        float: right;
     }
 }
 //
@@ -227,7 +224,48 @@ blockquote {
 }
 
 //
-// Spectacle
+// Spectacle List
+// --------------------------------------------------
+.thumbnail {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background-color: #fff;
+  display: block;
+  overflow: hidden;
+  > img, a > img {
+    margin-right: 24px;
+    margin-left: 0;
+    position: relative;
+    overflow: hidden;
+    float: none;
+    width: 100%;
+    //display: inline-block
+  }
+  .caption {
+    padding: 8px;
+    h3 {
+      text-transform: uppercase;
+      //color: $brand-primary;
+    }
+  }
+  &:hover {
+    .caption {
+      h3 {
+        color: $brand-primary;
+      }
+    }
+  }
+  @media (min-width: 600px) {
+    > img, a > img {
+      float: left;
+      width: 60%;
+    }
+  }
+}
+
+//
+// Spectacle Show
 // --------------------------------------------------
 .page-header {
     position: relative;
@@ -240,6 +278,16 @@ blockquote {
         left: 0;
         margin: 0;
         padding-right: 24px;
+    }
+    
+    .spectacle-subtitle {
+      font-style: italic;
+      color: $brand-primary;
+      margin-bottom: $line-height-computed;
+      position: absolute;
+      bottom: 60px;
+      right: 15px;
+      max-width: 160px;
     }
 }
 
@@ -307,9 +355,16 @@ blockquote {
     text-transform: uppercase;
     border-bottom: 20px solid $brand-primary;
 }
+
+.category-title {
+  text-transform: uppercase;
+  color: $brand-primary;
+}
 .list-calendar,
 .spectacle-events {
-
+  ul {
+    margin-bottom: $line-height-computed * 2;
+  }
     > li {
         border-bottom: 1px dotted $text-color;
         padding: 12px 0;

@@ -8,7 +8,7 @@ group :assets do
 end
 
 group :production do
-  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.14.4" do
+  git "git@github.com:jdfdesign/gko_cms3.git", :tag => "v0.8.19" do
    gem 'gko_core'
    gem 'gko_auth'
    gem 'gko_inquiries'
@@ -18,7 +18,7 @@ group :production do
    gem 'gko_image_bank'
    gem 'gko_categories'
  end
- gem 'gko_spectacles', '= 0.1.8', :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
+ gem 'gko_spectacles', '= 0.1.9', :git => 'git@github.com:jdfdesign/gko_spectacles.git' 
 end
 
 #group :development do

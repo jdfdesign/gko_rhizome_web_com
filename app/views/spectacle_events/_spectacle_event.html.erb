@@ -1,14 +1,14 @@
 <%# collection_row_cache(spectacle_event) do %>
 	<li>
-		  <span class="dates"><%= format_spectacle_event_date(spectacle_event) %></span>
+    <span class="dates"><%= format_spectacle_event_date(spectacle_event) %></span>
       <strong class="title">
         <% if spectacle_event.spectacle %>
-          <%= link_to(spectacle_event.spectacle.title,     
-                        spectacle_event.spectacle.public_url) %>
-        <% elsif spectacle_event.category %>
-          <%= link_to(spectacle_event.category, "#") %>
+          <%= link_to(spectacle_event.spectacle.title, spectacle_event.spectacle.public_url) %>
+        <% elsif spectacle_event.custom_title %>
+          <%= spectacle_event.custom_title %>
         <% end %>
       </strong>
+      <%= raw " / " %>
      	<% if spectacle_event.location %>
       	<span class="location"><%= spectacle_event.location %></span>
      	<% end %>

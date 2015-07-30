@@ -4,7 +4,7 @@
       <%
         has_children = section.children.in_menu.try(:any?)
         #specific to laurentbenoit.com
-        show_contents = section.content_type #&& section.display_contents_in_menu 
+        show_contents = section.content_type && section.display_contents_in_menu 
         contents = Content.with_section(section.id).live.order('contents.position') if show_contents
         has_contents = show_contents && contents.try(:any?)
         #end specific to laurentbenoit.com 

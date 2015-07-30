@@ -1,10 +1,17 @@
-<%= page_title(parent.title) %>
+<%= page_title(parent.title) if parent.show_title_in_page %>
+<% parent.categories.nested_set.each do |c| %>
+<h3 class="category-title"><%= c.title %></h3>
 <ul class="list-unstyled list-calendar">
-<%= render collection %>
+  <% c.categorizations.each do |i| %>
+    <%= render i.categorizable %>
+  <% end %>
 </ul>
+<% end %>
 
 <div class="row">
   <div class="col-md-12">
+    <%= link_to "Calendrier 2015", "/assets/Calendrier-2015.pdf", 
+      :target => "_blank", :class => "btn btn-primary" %>
     <%= link_to "Calendrier 2014", "/assets/Calendrier-2014.pdf", 
       :target => "_blank", :class => "btn btn-primary" %>
     <%= link_to "Calendrier 2013", "/assets/Calendrier-2013.pdf", 

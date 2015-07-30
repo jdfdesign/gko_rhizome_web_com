@@ -1,2 +1,2 @@
-<h1><%= parent.title %></h1>
+<%= page_title(parent.title) if parent.show_title_in_page %>
 <%= render collection %>

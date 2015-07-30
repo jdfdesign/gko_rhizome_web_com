@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150224180206) do
+ActiveRecord::Schema.define(:version => 20150729134125) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -504,6 +504,7 @@ ActiveRecord::Schema.define(:version => 20150224180206) do
     t.string   "custom_title"
     t.text     "description"
     t.string   "category"
+    t.string   "custom_date"
   end
 
   add_index "spectacle_events", ["section_id"], :name => "index_spectacle_events_on_section_id"
@@ -520,6 +521,7 @@ ActiveRecord::Schema.define(:version => 20150224180206) do
     t.text     "intro"
     t.text     "co_prod"
     t.text     "sponsor"
+    t.text     "extra"
     t.text     "subtitle"
   end
 
@@ -533,7 +535,7 @@ ActiveRecord::Schema.define(:version => 20150224180206) do
     t.string   "file_press_uid"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.text     "subtitle"
+    t.text     "extra"
     t.text     "team"
     t.text     "prod"
     t.text     "intro"
@@ -542,6 +544,7 @@ ActiveRecord::Schema.define(:version => 20150224180206) do
     t.string   "video_url"
     t.string   "video_hd_uid"
     t.string   "images_hd_uid"
+    t.text     "subtitle"
   end
 
   add_index "spectacle_options", ["spectacle_id"], :name => "index_spectacle_options_on_spectacle_id"

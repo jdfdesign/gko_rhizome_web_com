@@ -1,10 +1,15 @@
 <% content_for :header do %>
-<div class="background-image-holder">
-<%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
-</div>
+  <div class="background-image-holder">
+    <%= image_tag(resource.images.first.thumbnail("1400x900#").url, :alt => "")  %>
+  </div>
 <% end if resource.images.any? %>
 <%= content_for :page_header do %>
- <%= page_title(resource.title) %>
+  <%= page_title(resource.title) %>
+	<% if resource.subtitle? %>
+		<div class="spectacle-subtitle">
+			<%= render_html_text(resource.subtitle) %>
+		</div>
+	<% end %>
 <% end %>
 <%# resource_cache(resource) do %>
 	<article class="article-spectacle">
@@ -13,7 +18,7 @@
 			<div class="col-xs-12">
 
 				<p class="spectacle-links">
-					<%= link_to "#video", :class => "open-video-link" do %>
+					<%= link_to resource.video_url, :class => "open-video-link" do %>
 						<% "<i class='fa fa-video-camera'></i><span class='label'>Video</span>".html_safe %>					
 					<% end if resource.video_url? %>
 					<%= link_to "#gallery", :class => "open-gallery-link" do %>
@@ -48,7 +53,7 @@
 
 				<% if resource.co_prod? %>
 				<div class="spectacle-chapter spectacle-coprod">
-					<h5 class="spectacle-chapter-title">Coproduction</h5>
+					<h5 class="spectacle-chapter-title">Coproductions</h5>
 					<%= render_html_text(resource.co_prod) %>
 				</div>
 				<% end %>
@@ -60,12 +65,11 @@
 					</div>
 				<% end %>
         
-				<% if resource.subtitle? %>
-					<div class="spectacle-chapter spectacle-subtitle">
-						<%= render_html_text(resource.subtitle) %>
-					</div>
-				<% end %>
-        
+      	<% if resource.extra? %>
+      		<div class="spectacle-extra">
+      			<%= render_html_text(resource.extra) %>
+      		</div>
+      	<% end %>
 	
 				<% if resource.spectacle_events.try(:any?) %>
 				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
