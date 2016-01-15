@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150729134125) do
+ActiveRecord::Schema.define(:version => 20160115112832) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -545,6 +545,9 @@ ActiveRecord::Schema.define(:version => 20150729134125) do
     t.string   "video_hd_uid"
     t.string   "images_hd_uid"
     t.text     "subtitle"
+    t.string   "file_doc_en"
+    t.string   "file_press_en"
+    t.string   "file_tech_en"
   end
 
   add_index "spectacle_options", ["spectacle_id"], :name => "index_spectacle_options_on_spectacle_id"

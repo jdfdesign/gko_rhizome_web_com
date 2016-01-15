@@ -4,24 +4,37 @@
   <div>
     <h3><%= spectacle.title %></h3>
 		<p class="spectacle-links">
-			<%= link_to spectacle.file_press.url do %>
-				<% "<i class='fa fa-file'></i><span class='label'>Presse</span>".html_safe %>
-			<% end if spectacle.file_press? %>
+      <% if current_locale?(:fr) %>
+  			<%= link_to spectacle.file_press.url do %>
+  				<% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.press")}</span>".html_safe %>
+  			<% end if spectacle.file_press? %>
 			
-      <%= link_to spectacle.file_doc.url do %>
-				<% "<i class='fa fa-file'></i><span class='label'>Dossier</span>".html_safe %>
-			<% end if spectacle.file_doc? %>
+        <%= link_to spectacle.file_doc.url do %>
+  				<% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.folder")}</span>".html_safe %>
+  			<% end if spectacle.file_doc? %>
 			
-      <%= link_to spectacle.file_tech.url do %>
-				<% "<i class='fa fa-file'></i><span class='label'>Technique</span>".html_safe %>
-			<% end if spectacle.file_tech? %>
+        <%= link_to spectacle.file_tech.url do %>
+  				<% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.technical")}</span>".html_safe %>
+  			<% end if spectacle.file_tech? %>
+			<% else %>
+  			<%= link_to spectacle.file_press_en.url do %>
+  				<% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.press")}</span>".html_safe %>
+  			<% end if spectacle.file_press_en? %>
 			
+        <%= link_to spectacle.file_doc_en.url do %>
+  				<% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.folder")}</span>".html_safe %>
+  			<% end if spectacle.file_doc_en? %>
+			
+        <%= link_to spectacle.file_tech_en.url do %>
+  				<% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.technical")}</span>".html_safe %>
+  			<% end if spectacle.file_tech_en? %>
+      <% end %>
       <%= link_to spectacle.images_hd.url do %>
-				<% "<i class='fa fa-image'></i><span class='label'>Images</span>".html_safe %>					
+				<% "<i class='fa fa-image'></i><span class='label'>#{t(:"spectacles.images")}</span>".html_safe %>					
 			<% end if spectacle.images_hd? %>
       
       <%= link_to spectacle.video_hd.url do %>
-				<% "<i class='fa fa-video'></i><span class='label'>Vidéo</span>".html_safe %>
+				<% "<i class='fa fa-video'></i><span class='label'>#{t(:"spectacles.video")}</span>".html_safe %>
       <% end if spectacle.video_hd? %>
 		</p>
     <hr>

@@ -1,0 +1,14 @@
+fr:
+  date:
+    formats:
+      short: "%b %d"
+      long: "%B %d %Y"
+  spectacles:
+    upcoming_dates: Prochaines représentation
+    video: Vidéo
+    images: Images
+    press: Presse
+    calendar: Calendrier
+    supports: Supports
+    folder: Dossier
+    technical: Technique

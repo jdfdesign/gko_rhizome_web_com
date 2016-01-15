@@ -19,14 +19,20 @@
 
 				<p class="spectacle-links">
 					<%= link_to resource.video_url, :class => "open-video-link", :target => "_blank" do %>
-						<% "<i class='fa fa-video-camera'></i><span class='label'>Video</span>".html_safe %>					
+						<% "<i class='fa fa-video-camera'></i><span class='label'>#{t(:"spectacles.video")}</span>".html_safe %>					
 					<% end if resource.video_url? %>
 					<%= link_to "#gallery", :class => "open-gallery-link" do %>
-						<% "<i class='fa fa-image'></i><span class='label'>Images</span>".html_safe %>					
+						<% "<i class='fa fa-image'></i><span class='label'>#{t(:"spectacles.images")}</span>".html_safe %>					
 					<% end if resource.images.any? %>
-    			<%= link_to resource.file_press.url do %>
-    				<% "<i class='fa fa-file'></i><span class='label'>Presse</span>".html_safe %>
-    			<% end if resource.file_press? %>
+          <% if current_locale?(:fr) %>
+    			  <%= link_to resource.file_press.url do %>
+    				  <% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.press")}</span>".html_safe %>
+    			  <% end if resource.file_press? %>
+          <% else %>
+    			  <%= link_to resource.file_press_en.url do %>
+    				  <% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.press")}</span>".html_safe %>
+    			  <% end if resource.file_press_en? %>
+          <% end %>
 				</p>
 
 				<div class="page-lead">
@@ -63,7 +69,7 @@
 				
 				<% if resource.sponsor? %>
 					<div class="spectacle-chapter spectacle-sponsors">
-						<h5 class="spectacle-chapter-title">Soutiens</h5>
+						<h5 class="spectacle-chapter-title"><%= t(:"spectacles.supports") %></h5>
 						<%= render_html_text(resource.sponsor) %>
 					</div>
 				<% end %>
