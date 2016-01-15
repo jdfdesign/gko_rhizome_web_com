@@ -12,10 +12,19 @@
     </div>
     <nav class="collapse navbar-collapse">
       <%= render 'menu', :sections => site.primary_menu, :menu_name => 'nav navbar-nav' %>
-      <div class="navbar-right">
-        <%= render "locales_select" %>
-      </div>
+
     </nav>
+    <% if site.frontend_translated? %>
+
+      <ul id='locales' class="nav nav-locales hidden-print">
+        <% site.available_locales.each do |language| %>
+          <% unless current_locale?(language.code) %>
+            <li><%= link_to(language.presentation, root_url(:locale => language.code), :class => [language.code.to_s, 'navbar-link']) %></li>
+          <% end %>
+        <% end %>
+      </ul>
+
+    <% end %>
   </div>
 </div>
 <%# end %>

@@ -7930,18 +7930,21 @@ blockquote {
 }
 
 /* line 97, ../../app/assets/stylesheets/public.css.scss */
+.nav-locales,
 .navbar-nav {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   margin: 20px 0;
 }
 /* line 101, ../../app/assets/stylesheets/public.css.scss */
+.nav-locales > li,
 .navbar-nav > li {
   float: none;
   padding-bottom: 6px;
   padding-top: 6px;
 }
 /* line 106, ../../app/assets/stylesheets/public.css.scss */
+.nav-locales > li > a,
 .navbar-nav > li > a {
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -7950,6 +7953,7 @@ blockquote {
   padding: 0;
 }
 /* line 111, ../../app/assets/stylesheets/public.css.scss */
+.nav-locales > li > ul,
 .navbar-nav > li > ul {
   list-style: none;
   margin-top: 10px;
@@ -7957,10 +7961,12 @@ blockquote {
   padding-left: 0 !important;
 }
 /* line 118, ../../app/assets/stylesheets/public.css.scss */
+.nav-locales > li > ul > li,
 .navbar-nav > li > ul > li {
   margin-bottom: 10px;
 }
 /* line 121, ../../app/assets/stylesheets/public.css.scss */
+.nav-locales > li > ul > li > a,
 .navbar-nav > li > ul > li > a {
   display: block;
   padding-left: 32px;
@@ -7971,7 +7977,9 @@ blockquote {
   transition: all 0.5s ease;
 }
 /* line 129, ../../app/assets/stylesheets/public.css.scss */
-.navbar-nav > li > ul > li > a:hover, .navbar-nav > li > ul > li > a:focus {
+.nav-locales > li > ul > li > a:hover, .nav-locales > li > ul > li > a:focus,
+.navbar-nav > li > ul > li > a:hover,
+.navbar-nav > li > ul > li > a:focus {
   color: #ef662f;
   text-decoration: none;
 }
