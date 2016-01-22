@@ -1,4 +1,6 @@
 en:
+  date_from: From
+  date_from_to: till
   date:
     formats:
       short: "%b %d"

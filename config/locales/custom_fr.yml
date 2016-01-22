@@ -1,4 +1,6 @@
 fr:
+  date_from: Du
+  date_from_to: au
   date:
     formats:
       short: "%b %d"
@@ -9,6 +11,6 @@ fr:
     images: Images
     press: Presse
     calendar: Calendrier
-    supports: Supports
+    supports: Sponsors
     folder: Dossier
     technical: Technique
