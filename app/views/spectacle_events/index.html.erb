@@ -1,11 +1,11 @@
 <%= page_title(parent.title) if parent.show_title_in_page %>
-<% parent.categories.nested_set.each do |c| %>
-<h3 class="category-title"><%= c.title %></h3>
-<ul class="list-unstyled list-calendar">
-  <% c.categorizations.each do |i| %>
-    <%= render i.categorizable %>
+<% current_site.spectacle_event_categories.each do | c | %>
+  <h3 class="category-title"><%= c.title %></h3>
+  <ul class="list-unstyled list-calendar">
+  <% c.spectacle_events.each do | e | %>
+    <%= render e %>
   <% end %>
-</ul>
+  </ul>
 <% end %>
 
 <div class="row">

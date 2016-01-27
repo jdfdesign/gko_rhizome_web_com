@@ -63,9 +63,9 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_spectacles.git
-  revision: e439c7f5fe21d293427671c480839443729adc9e
+  revision: 46cf108f01f0f854c7039ebd9508b523ff18e25d
   specs:
-    gko_spectacles (0.2.1)
+    gko_spectacles (0.2.2)
       gko_categories
       gko_core
 
@@ -282,7 +282,7 @@ DEPENDENCIES
   gko_features!
   gko_image_bank!
   gko_inquiries!
-  gko_spectacles (= 0.2.1)!
+  gko_spectacles (= 0.2.2)!
   sass (= 3.2.14)
   sass-rails (~> 3.2.6)
   uglifier (~> 2.4.0)

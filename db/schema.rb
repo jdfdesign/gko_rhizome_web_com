@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160115112832) do
+ActiveRecord::Schema.define(:version => 20160127114052) do
 
   create_table "assets", :force => true do |t|
     t.integer  "site_id"
@@ -489,6 +489,37 @@ ActiveRecord::Schema.define(:version => 20160115112832) do
 
   add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
 
+  create_table "spectacle_event_categories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "site_id"
+  end
+
+  add_index "spectacle_event_categories", ["site_id"], :name => "index_spectacle_event_categories_on_site_id"
+
+  create_table "spectacle_event_category_translations", :force => true do |t|
+    t.integer  "spectacle_event_category_id"
+    t.string   "locale",                      :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.string   "title"
+  end
+
+  add_index "spectacle_event_category_translations", ["locale"], :name => "index_spectacle_event_category_translations_on_locale"
+  add_index "spectacle_event_category_translations", ["spectacle_event_category_id"], :name => "index_58eca8e941f8e5572e567fdb6ff42ff0082d0eb8"
+
+  create_table "spectacle_event_translations", :force => true do |t|
+    t.integer  "spectacle_event_id"
+    t.string   "locale",             :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "custom_title"
+  end
+
+  add_index "spectacle_event_translations", ["locale"], :name => "index_spectacle_event_translations_on_locale"
+  add_index "spectacle_event_translations", ["spectacle_event_id"], :name => "index_spectacle_event_translations_on_spectacle_event_id"
+
   create_table "spectacle_events", :force => true do |t|
     t.integer  "spectacle_id"
     t.integer  "section_id"
@@ -503,10 +534,11 @@ ActiveRecord::Schema.define(:version => 20160115112832) do
     t.string   "place"
     t.string   "custom_title"
     t.text     "description"
-    t.string   "category"
     t.string   "custom_date"
+    t.integer  "category_id"
   end
 
+  add_index "spectacle_events", ["category_id"], :name => "index_spectacle_events_on_category_id"
   add_index "spectacle_events", ["section_id"], :name => "index_spectacle_events_on_section_id"
   add_index "spectacle_events", ["site_id"], :name => "index_spectacle_events_on_site_id"
   add_index "spectacle_events", ["spectacle_id"], :name => "index_spectacle_events_on_attachable_id_and_attachable_type"
@@ -533,8 +565,8 @@ ActiveRecord::Schema.define(:version => 20160115112832) do
     t.string   "file_doc_uid"
     t.string   "file_tech_uid"
     t.string   "file_press_uid"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.text     "extra"
     t.text     "team"
     t.text     "prod"
@@ -545,9 +577,9 @@ ActiveRecord::Schema.define(:version => 20160115112832) do
     t.string   "video_hd_uid"
     t.string   "images_hd_uid"
     t.text     "subtitle"
-    t.string   "file_doc_en"
-    t.string   "file_press_en"
-    t.string   "file_tech_en"
+    t.string   "file_doc_en_uid"
+    t.string   "file_press_en_uid"
+    t.string   "file_tech_en_uid"
   end
 
   add_index "spectacle_options", ["spectacle_id"], :name => "index_spectacle_options_on_spectacle_id"
