@@ -6,7 +6,7 @@ fr:
       short: "%b %d"
       long: "%B %d %Y"
   spectacles:
-    upcoming_dates: Prochaines représentation
+    upcoming_dates: Prochaines représentations
     video: Vidéo
     images: Images
     press: Presse

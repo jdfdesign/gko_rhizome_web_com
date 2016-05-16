@@ -63,9 +63,9 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_spectacles.git
-  revision: 46cf108f01f0f854c7039ebd9508b523ff18e25d
+  revision: c570acf8c745518299dcbfa6f6d87619e27acca7
   specs:
-    gko_spectacles (0.2.2)
+    gko_spectacles (0.2.3)
       gko_categories
       gko_core
 
@@ -119,7 +119,7 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    codemirror-rails (5.6)
+    codemirror-rails (5.11)
       railties (>= 3.0, < 5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -240,7 +240,7 @@ GEM
     simple_form (2.1.3)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    spreadsheet (1.1.1)
+    spreadsheet (1.1.2)
       ruby-ole (>= 1.0)
     sprockets (2.2.3)
       hike (~> 1.2)
@@ -259,13 +259,13 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.5)
-    tzinfo (0.3.46)
+    tzinfo (0.3.49)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     uuid (2.3.8)
       macaddr (~> 1.0)
-    warden (1.2.4)
+    warden (1.2.6)
       rack (>= 1.0)
     will_paginate (3.0.7)
 
@@ -273,6 +273,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.10)
   coffee-rails (~> 3.2.2)
   gko_albums!
   gko_auth!
@@ -282,7 +283,8 @@ DEPENDENCIES
   gko_features!
   gko_image_bank!
   gko_inquiries!
-  gko_spectacles (= 0.2.2)!
+  gko_spectacles (= 0.2.3)!
+  mysql2 (= 0.3.20)
   sass (= 3.2.14)
   sass-rails (~> 3.2.6)
   uglifier (~> 2.4.0)
