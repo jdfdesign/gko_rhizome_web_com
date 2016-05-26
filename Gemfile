@@ -21,7 +21,7 @@ group :production do
    gem 'gko_image_bank'
    gem 'gko_categories'
  end
- gem 'gko_spectacles', '= 0.2.3', :git => 'git@github.com:jdfdesign/gko_spectacles.git'
+ gem 'gko_spectacles', '= 0.2.4', :git => 'git@github.com:jdfdesign/gko_spectacles.git'
 end
 
 # group :development do

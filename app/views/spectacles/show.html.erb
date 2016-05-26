@@ -13,17 +13,26 @@
 <% end %>
 <%# resource_cache(resource) do %>
 	<article class="article-spectacle">
-		
+
 		<div class="row">
 			<div class="col-xs-12">
 
 				<p class="spectacle-links">
 					<%= link_to resource.video_url, :class => "open-video-link", :target => "_blank" do %>
-						<% "<i class='fa fa-video-camera'></i><span class='label'>#{t(:"spectacles.video")}</span>".html_safe %>					
+						<% "<i class='fa fa-video-camera'></i><span class='label'>#{t(:"spectacles.video")}</span>".html_safe %>
 					<% end if resource.video_url? %>
 					<%= link_to "#gallery", :class => "open-gallery-link" do %>
-						<% "<i class='fa fa-image'></i><span class='label'>#{t(:"spectacles.images")}</span>".html_safe %>					
+						<% "<i class='fa fa-image'></i><span class='label'>#{t(:"spectacles.images")}</span>".html_safe %>
 					<% end if resource.images.any? %>
+          <% if current_locale?(:fr) %>
+    			  <%= link_to resource.file_doc.url do %>
+    				  <% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.folder")}</span>".html_safe %>
+    			  <% end if resource.file_doc? %>
+          <% else %>
+    			  <%= link_to resource.file_doc_en.url do %>
+    				  <% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.folder")}</span>".html_safe %>
+    			  <% end if resource.file_doc_en? %>
+          <% end %>
           <% if current_locale?(:fr) %>
     			  <%= link_to resource.file_press.url do %>
     				  <% "<i class='fa fa-file'></i><span class='label'>#{t(:"spectacles.press")}</span>".html_safe %>
@@ -52,7 +61,7 @@
 					<%= render_html_text(resource.team) %>
 				</div>
 				<% end %>
-		
+
 				<% if resource.prod? %>
 				<div class="spectacle-chapter spectacle-prod">
 					<h5 class="spectacle-chapter-title">Production</h5>
@@ -66,20 +75,20 @@
 					<%= render_html_text(resource.co_prod) %>
 				</div>
 				<% end %>
-				
+
 				<% if resource.sponsor? %>
 					<div class="spectacle-chapter spectacle-sponsors">
 						<h5 class="spectacle-chapter-title"><%= t(:"spectacles.supports") %></h5>
 						<%= render_html_text(resource.sponsor) %>
 					</div>
 				<% end %>
-        
+
       	<% if resource.extra? %>
       		<div class="spectacle-extra">
       			<%= render_html_text(resource.extra) %>
       		</div>
       	<% end %>
-	
+
 				<% if resource.spectacle_events.try(:any?) %>
 				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
 					<ul class="list-unstyled spectacle-events">
