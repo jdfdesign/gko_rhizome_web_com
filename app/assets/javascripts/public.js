@@ -51,9 +51,9 @@ $(document).ready(function($) {
     });
 
     $("#form_newsletter").on("ajax:success", function(evt, data, status, xhr) {
-      alert(xhr.responseText);
+      alert("Votre demande a été enregistrée.");
     }).on("ajax:error", function(evt, xhr, status, error) {
-      alert("error");
+      alert("OK");
     });
 
     $(window).resize(function(){

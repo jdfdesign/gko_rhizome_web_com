@@ -5,7 +5,7 @@ class NewslettersController < BaseController
 
   def create
     begin
-      @newsletter_form = NewsletterForm.new(params[:newsletter_form])
+      @newsletter_form = NewsletterForm.new(params[:newsletter])
       @newsletter_form.request = request
       if @newsletter_form.deliver
         flash.now[:notice] = 'Thank you for your message!'

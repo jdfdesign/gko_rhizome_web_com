@@ -17,7 +17,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png"> -->
   
   <meta content="authenticity_token" name="csrf-param" />
-<meta content="xDxJ+nklULKZPKMWnBQ/BhiBi1Hhqr6VJFnroWGKI/U=" name="csrf-token" />  
+<meta content="EUWpHLHl90jVFi35ISk3MhEvgWkTAkwMXbEjdSHsZlI=" name="csrf-token" />  
 
 </head>
 
@@ -59,7 +59,7 @@
     </nav>
     <ul id='locales' class="nav nav-locales hidden-print">
           <li><a href="http://0.0.0.0:3000/en" class="en navbar-link">English</a></li>
-    <!-- <li><a class="navbar-link text-primary" type="button" data-toggle="modal" href="#modal_newsletter">Newsletter</a></li> -->
+    <li><a class="navbar-link text-primary" type="button" data-toggle="modal" href="#modal_newsletter">Newsletter</a></li>
     </ul>
   </div>
 </div>
@@ -295,7 +295,7 @@
           <h4 class="modal-title" id="myModalLabel">Souscrire à la newsletter</h4>
         </div>
         <div class="modal-body">
-          <form id="form_newsletter" action="newsletters/subscription" method="post" data-remote="true" role="form">
+          <form id="form_newsletter" action="/newsletters" method="post" role="form">
               <div class="form-group">
                 <label class="sr-only" for="fieldFirstName">Nom</label>
                 <input type="text" class="form-control" name="newsletter[firstname]"
