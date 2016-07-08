@@ -1,4 +1,4 @@
-jQuery(document).ready(function() { 
+jQuery(document).ready(function() {
 
   /* Validation Form with AJAX while typing for inputs */
   jQuery('input').bind('input propertychange', function() {

@@ -3,6 +3,11 @@
   <% images.each_with_index do |img, index| %>
   <div class="slide">
     <%= image_fu(img, "x900", :class => "img-responsive") %>
+    <% if img.author.present? %>
+    <div class="mfp-bottom-bar">
+      <div class="mfp-title"><%= "©#{img.author}" %></div>
+    </div>
+    <% end %>
   </div>
   <% end %>
 </div>

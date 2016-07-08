@@ -1,14 +1,14 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 4dc8d68c9df69107a0555d979b8526605c50aa4d
-  tag: v0.8.31
+  revision: ecd8d7cbf29e4ae5aeaf4c26ddadfe59fccbaf62
+  tag: v0.8.40
   specs:
-    gko_albums (0.8.31)
-    gko_auth (0.8.31)
+    gko_albums (0.8.40)
+    gko_auth (0.8.40)
       cancan (~> 1.6.10)
       devise (~> 2.2.3)
-    gko_categories (0.8.31)
-    gko_core (0.8.31)
+    gko_categories (0.8.40)
+    gko_core (0.8.40)
       activesupport-slices (= 0.0.2)
       acts_as_indexed (~> 0.7.7)
       addressable (= 2.3.8)
@@ -47,25 +47,26 @@ GIT
       rubyzip (= 0.9.6.1)
       sass-rails (~> 3.2.6)
       simple_form (~> 2.1.1)
+      summernote-rails (~> 0.7.1.0)
       tins (= 1.6.0)
       to_xls (~> 1.5.1)
       truncate_html (= 0.5.5)
       uglifier (~> 2.4.0)
       uuid (~> 2.3.7)
       will_paginate (~> 3.0.2)
-    gko_documents (0.8.31)
+    gko_documents (0.8.40)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-    gko_features (0.8.31)
-    gko_image_bank (0.8.31)
-    gko_inquiries (0.8.31)
+    gko_features (0.8.40)
+    gko_image_bank (0.8.40)
+    gko_inquiries (0.8.40)
       filters_spam (~> 0.2)
 
 GIT
   remote: git@github.com:jdfdesign/gko_spectacles.git
-  revision: 5a149e93dc306de33312ac43152ab494cabc6ef4
+  revision: f7108d90134f835ed245cdcbbd91de1ce0d73b72
   specs:
-    gko_spectacles (0.2.4)
+    gko_spectacles (0.2.5)
       gko_categories
       gko_core
 
@@ -109,7 +110,7 @@ GEM
       bcrypt (>= 3.1.3)
     builder (3.0.4)
     cancan (1.6.10)
-    capistrano (2.15.7)
+    capistrano (2.15.9)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -119,8 +120,8 @@ GEM
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
-    codemirror-rails (5.11)
-      railties (>= 3.0, < 5)
+    codemirror-rails (5.16.0)
+      railties (>= 3.0, < 6.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -247,6 +248,8 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    summernote-rails (0.7.1.0)
+      railties (>= 3.1)
     systemu (2.6.5)
     term-ansicolor (1.3.2)
       tins (~> 1.0)
@@ -259,7 +262,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.5.5)
-    tzinfo (0.3.49)
+    tzinfo (0.3.51)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
@@ -283,7 +286,7 @@ DEPENDENCIES
   gko_features!
   gko_image_bank!
   gko_inquiries!
-  gko_spectacles (= 0.2.4)!
+  gko_spectacles (= 0.2.5)!
   mysql2 (= 0.3.20)
   sass (= 3.2.14)
   sass-rails (~> 3.2.6)

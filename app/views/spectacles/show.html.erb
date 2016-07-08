@@ -84,18 +84,22 @@
 				<% end %>
 
       	<% if resource.extra? %>
-      		<div class="spectacle-extra">
+      		<div class="spectacle-chapter spectacle-extra">
       			<%= render_html_text(resource.extra) %>
       		</div>
       	<% end %>
 
 				<% if resource.spectacle_events.try(:any?) %>
-				  <h3 class="spectacle-events-title"><%= t(:"spectacles.upcoming_dates") %></h3>
-					<ul class="list-unstyled spectacle-events">
-						<% resource.spectacle_events.each do |e| %>
-				  			<%= render "event", :spectacle_event => e %>
-				  		<% end %>
-					</ul>
+        <table class="table">
+          <tbody>
+            <tr><td colspan="3">
+              <h3 class="category-title"><%= t(:"spectacles.upcoming_dates") %></h3>
+            </td></tr>
+						<% resource.spectacle_events.reverse.each do |e| %>
+              <%= render "event", :spectacle_event => e %>
+            <% end %>
+          </tbody>
+        </table>
 				<% end %>
 			</div>
 		</div>

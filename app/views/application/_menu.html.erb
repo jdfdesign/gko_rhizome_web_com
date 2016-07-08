@@ -1,32 +1,13 @@
 <ul class="nav nav-menu <%= menu_name if local_assigns.key?(:menu_name) %>">
   <% sections.each do |section| %>
-    <% if section %>
       <%
-        has_children = section.children.in_menu.try(:any?)
-        #specific to laurentbenoit.com
-        show_contents = section.content_type && section.display_contents_in_menu 
-        contents = Content.with_section(section.id).live.order('contents.position') if show_contents
-        has_contents = show_contents && contents.try(:any?)
-        #end specific to laurentbenoit.com 
-        has_dropdown = has_children || has_contents
+        has_dropdown = section.children.in_menu.try(:any?)
         li_classes = []
-       # li_classes << "active" if !section.is_a?(Redirect) and active_url?(section.public_url)
-        #li_classes << "dropdown" if has_dropdown
         li_classes << section.menu_css_class if section.menu_css_class.present?
         li_classes = li_classes.join(" ")
       %>
 <li id="<%= dom_id(section) %>" class="<%= li_classes unless li_classes.blank? %>">
-  <%= menu_link(section, :dropdown => false) -%> 
-  <%# specific to laurentbenoit.com %> 
-  <% if has_contents %>
-    <ul>
-    <% contents.each do |content| %>
-      <li><%= link_to("_ #{content.title}", content.public_url) %></li>
-    <% end %>
-  </ul>
-  <% end %>
+  <%= menu_link(section, :dropdown => false) -%>
 </li>
- <% end %>
   <% end %>
 </ul>
-

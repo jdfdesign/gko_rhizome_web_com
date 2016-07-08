@@ -38,18 +38,23 @@ $(document).ready(function($) {
       var items = [];
       $( $(this).attr('href') ).find('.slide').each(function() {
         items.push( {
-          src: $(this) 
+          src: $(this)
         } );
       });
-      
+
       $.magnificPopup.open({
         items:items,
         gallery: {
-          enabled: true 
+          enabled: true
         }
       });
-    });   
+    });
 
+    $("#form_newsletter").on("ajax:success", function(evt, data, status, xhr) {
+      alert(xhr.responseText);
+    }).on("ajax:error", function(evt, xhr, status, error) {
+      alert("error");
+    });
 
     $(window).resize(function(){
             // Append .background-image-holder <img>'s as CSS backgrounds

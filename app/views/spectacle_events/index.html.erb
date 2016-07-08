@@ -1,24 +1,31 @@
 <%= page_title(parent.title) if parent.show_title_in_page %>
+<table class="table">
+  <tbody>
 <% current_site.spectacle_event_categories.each do | c | %>
-  <h3 class="category-title"><%= c.title %></h3>
-  <ul class="list-unstyled list-calendar">
-  <% c.spectacle_events.each do | e | %>
-    <%= render e %>
+  <% if c.spectacle_events.any? %>
+  <tr><td colspan="4">
+    <h3 class="category-title"><%= c.title %></h3>
+  </td></tr>
+  <% c.spectacle_events.group_by { |e| e.start_date.year }.reverse_each do |year, events| %>
+    <tr><td colspan="4"><h4><%= year %></h4></td></tr>
+    <%= render events.reverse %>
   <% end %>
-  </ul>
 <% end %>
 
+<% end %>
+</tbody>
+</table
 <div class="row">
   <div class="col-md-12">
-    <%= link_to "#{t(:"spectacles.calendar")} 2015", "/assets/Calendrier-2015.pdf", 
+    <%= link_to "#{t(:"spectacles.calendar")} 2015", "/assets/Calendrier-2015.pdf",
       :target => "_blank", :class => "btn btn-primary" %>
-    <%= link_to "#{t(:"spectacles.calendar")} 2014", "/assets/Calendrier-2014.pdf", 
+    <%= link_to "#{t(:"spectacles.calendar")} 2014", "/assets/Calendrier-2014.pdf",
       :target => "_blank", :class => "btn btn-primary" %>
-    <%= link_to "#{t(:"spectacles.calendar")} 2013", "/assets/Calendrier-2013.pdf", 
+    <%= link_to "#{t(:"spectacles.calendar")} 2013", "/assets/Calendrier-2013.pdf",
       :target => "_blank", :class => "btn btn-primary" %>
-    <%= link_to "#{t(:"spectacles.calendar")} 2012", "/assets/Calendrier-2012.pdf", 
+    <%= link_to "#{t(:"spectacles.calendar")} 2012", "/assets/Calendrier-2012.pdf",
       :target => "_blank", :class => "btn btn-primary" %>
-    <%= link_to "#{t(:"spectacles.calendar")} 2011", "/assets/Calendrier-2011.pdf", 
+    <%= link_to "#{t(:"spectacles.calendar")} 2011", "/assets/Calendrier-2011.pdf",
       :target => "_blank", :class => "btn btn-primary" %>
   </div>
 </div>

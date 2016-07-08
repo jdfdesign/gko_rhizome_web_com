@@ -17,7 +17,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-touch-icon-114x114.png"> -->
   
   <meta content="authenticity_token" name="csrf-param" />
-<meta content="PhTdL6x1GGGDffej8XlJKcCph+fUcG3yryZdyzYzWUY=" name="csrf-token" />  
+<meta content="xDxJ+nklULKZPKMWnBQ/BhiBi1Hhqr6VJFnroWGKI/U=" name="csrf-token" />  
 
 </head>
 
@@ -56,13 +56,11 @@
 </ul>
 
 
-
     </nav>
-
-      <ul id='locales' class="nav nav-locales hidden-print">
-            <li><a href="http://0.0.0.0:3000/en" class="en navbar-link">English</a></li>
-      </ul>
-
+    <ul id='locales' class="nav nav-locales hidden-print">
+          <li><a href="http://0.0.0.0:3000/en" class="en navbar-link">English</a></li>
+    <li><a class="navbar-link text-primary" type="button" data-toggle="modal" href="#modal_newsletter">Newsletter</a></li>
+    </ul>
   </div>
 </div>
 
@@ -156,7 +154,40 @@
         </div>
       </div>
   </div>
-  
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal_newsletter" tabindex="-1" role="dialog" aria-labelledby="newsletterSubscriptionModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Souscrire à la newsletter</h4>
+        </div>
+        <div class="modal-body">
+          <form id="form_newsletter" action="newsletters/subscription" method="post" data-remote="true" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="fieldFirstName">Nom</label>
+                <input type="text" class="form-control" name="newsletter[firstname]"
+                       id="newsletter_firstname" placeholder="Prénom">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="fieldName">Nom</label>
+                <input type="text" class="form-control" name="newsletter[lastname]"
+                       id="newsletter_lastname" placeholder="Nom">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="fieldEmail">Email</label>
+                <input class="form-control" name="newsletter[email]"
+                       id="newsletter_email" placeholder="Email" type="email" required >
+              </div>
+              <div class="form-group">
+              <button id="submit_newsletter" type="submit" class="btn btn-primary">Envoyer</button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>

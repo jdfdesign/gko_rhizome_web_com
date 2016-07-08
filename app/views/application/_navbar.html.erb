@@ -14,17 +14,16 @@
       <%= render 'menu', :sections => site.primary_menu, :menu_name => 'nav navbar-nav' %>
 
     </nav>
+    <ul id='locales' class="nav nav-locales hidden-print">
     <% if site.frontend_translated? %>
-
-      <ul id='locales' class="nav nav-locales hidden-print">
-        <% site.available_locales.each do |language| %>
-          <% unless current_locale?(language.code) %>
-            <li><%= link_to(language.presentation, root_url(:locale => language.code), :class => [language.code.to_s, 'navbar-link']) %></li>
-          <% end %>
+      <% site.available_locales.each do |language| %>
+        <% unless current_locale?(language.code) %>
+          <li><%= link_to(language.presentation, root_url(:locale => language.code), :class => [language.code.to_s, 'navbar-link']) %></li>
         <% end %>
-      </ul>
-
+      <% end %>
     <% end %>
+    <!-- <li><a class="navbar-link text-primary" type="button" data-toggle="modal" href="#modal_newsletter">Newsletter</a></li> -->
+    </ul>
   </div>
 </div>
 <%# end %>

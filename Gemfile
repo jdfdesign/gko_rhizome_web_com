@@ -11,7 +11,7 @@ gem 'bcrypt', '= 3.1.10'
 gem 'mysql2', '= 0.3.20'
 
 group :production do
-  git 'git@github.com:jdfdesign/gko_cms3.git', :tag => 'v0.8.31' do
+  git 'git@github.com:jdfdesign/gko_cms3.git', :tag => 'v0.8.40' do
    gem 'gko_core'
    gem 'gko_auth'
    gem 'gko_inquiries'
@@ -21,7 +21,7 @@ group :production do
    gem 'gko_image_bank'
    gem 'gko_categories'
  end
- gem 'gko_spectacles', '= 0.2.4', :git => 'git@github.com:jdfdesign/gko_spectacles.git'
+ gem 'gko_spectacles', '= 0.2.5', :git => 'git@github.com:jdfdesign/gko_spectacles.git'
 end
 
 # group :development do

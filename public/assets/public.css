@@ -7273,26 +7273,27 @@ input {
   font-weight: normal;
 }
 
-/* line 33, ../../app/assets/stylesheets/theme/_form.scss */
-input[type="text"] {
+/* line 34, ../../app/assets/stylesheets/theme/_form.scss */
+input[type="text"],
+input[type="email"] {
   margin-bottom: 15px;
   height: 46px;
 }
 
-/* line 37, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 38, ../../app/assets/stylesheets/theme/_form.scss */
 textarea.form-control {
   height: 92px;
   resize: none;
 }
 
-/* line 42, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 43, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
   position: absolute;
   top: 0;
   right: 1em;
 }
 
-/* line 47, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 48, ../../app/assets/stylesheets/theme/_form.scss */
 span.error, span.valid {
   width: 40px;
   height: 40px;
@@ -7301,17 +7302,17 @@ span.error, span.valid {
   background-repeat: no-repeat;
 }
 
-/* line 54, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 55, ../../app/assets/stylesheets/theme/_form.scss */
 span.error {
   background-image: "/assets/notifications/error.svg";
 }
 
-/* line 57, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 58, ../../app/assets/stylesheets/theme/_form.scss */
 span.valid {
   background-image: "/assets/notifications/valid.svg";
 }
 
-/* line 61, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 62, ../../app/assets/stylesheets/theme/_form.scss */
 .alert {
   display: none;
   border: 0;
@@ -7320,7 +7321,7 @@ span.valid {
   color: #fff;
 }
 
-/* line 68, ../../app/assets/stylesheets/theme/_form.scss */
+/* line 69, ../../app/assets/stylesheets/theme/_form.scss */
 .alert-success {
   background-color: #22b573;
   color: #fff;
@@ -8111,34 +8112,34 @@ blockquote {
   float: none;
   width: 100%;
 }
-/* line 246, ../../app/assets/stylesheets/public.css.scss */
+/* line 245, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail .caption {
   padding: 8px;
 }
-/* line 248, ../../app/assets/stylesheets/public.css.scss */
+/* line 247, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail .caption h3 {
   text-transform: uppercase;
 }
-/* line 255, ../../app/assets/stylesheets/public.css.scss */
+/* line 253, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail:hover .caption h3 {
   color: #ef662f;
 }
 @media (min-width: 600px) {
-  /* line 261, ../../app/assets/stylesheets/public.css.scss */
+  /* line 259, ../../app/assets/stylesheets/public.css.scss */
   .thumbnail > img, .thumbnail a > img {
     float: left;
     width: 60%;
   }
 }
 
-/* line 271, ../../app/assets/stylesheets/public.css.scss */
+/* line 269, ../../app/assets/stylesheets/public.css.scss */
 .page-header {
   position: relative;
   padding: 0;
   margin: 0 0 20px;
   border: none;
 }
-/* line 276, ../../app/assets/stylesheets/public.css.scss */
+/* line 274, ../../app/assets/stylesheets/public.css.scss */
 .page-header .page-title {
   position: absolute;
   bottom: 0;
@@ -8146,7 +8147,7 @@ blockquote {
   margin: 0;
   padding-right: 24px;
 }
-/* line 284, ../../app/assets/stylesheets/public.css.scss */
+/* line 282, ../../app/assets/stylesheets/public.css.scss */
 .page-header .spectacle-subtitle {
   font-style: italic;
   color: #ef662f;
@@ -8157,7 +8158,7 @@ blockquote {
   max-width: 160px;
 }
 
-/* line 295, ../../app/assets/stylesheets/public.css.scss */
+/* line 293, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   text-transform: uppercase;
   color: #ef662f;
@@ -8166,7 +8167,7 @@ blockquote {
   border-bottom: 20px solid #ef662f;
 }
 
-/* line 303, ../../app/assets/stylesheets/public.css.scss */
+/* line 301, ../../app/assets/stylesheets/public.css.scss */
 .page-lead {
   font-family: "Oswald", sans-serif;
   font-size: 18px;
@@ -8174,11 +8175,11 @@ blockquote {
   margin-bottom: 20px;
 }
 
-/* line 310, ../../app/assets/stylesheets/public.css.scss */
+/* line 308, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro {
   position: relative;
 }
-/* line 312, ../../app/assets/stylesheets/public.css.scss */
+/* line 310, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro i {
   font-size: 40px;
   position: absolute;
@@ -8187,7 +8188,7 @@ blockquote {
   z-index: 1;
   color: #fff;
 }
-/* line 320, ../../app/assets/stylesheets/public.css.scss */
+/* line 318, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-intro blockquote {
   font-size: 17px;
   line-height: 1.3;
@@ -8197,17 +8198,17 @@ blockquote {
   margin-left: 50px;
 }
 
-/* line 332, ../../app/assets/stylesheets/public.css.scss */
+/* line 330, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links {
   margin-bottom: 20px;
 }
 
-/* line 335, ../../app/assets/stylesheets/public.css.scss */
+/* line 333, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter {
   margin: 20px 0 20px 30px;
 }
 
-/* line 338, ../../app/assets/stylesheets/public.css.scss */
+/* line 336, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-chapter-title {
   margin-bottom: 0;
   font-size: 14px;
@@ -8215,55 +8216,65 @@ blockquote {
   color: #ef662f;
 }
 
-/* line 345, ../../app/assets/stylesheets/public.css.scss */
+/* line 343, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-links > a {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-/* line 353, ../../app/assets/stylesheets/public.css.scss */
+/* line 351, ../../app/assets/stylesheets/public.css.scss */
 .spectacle-events-title {
   color: #ef662f;
   text-transform: uppercase;
   border-bottom: 20px solid #ef662f;
 }
 
-/* line 360, ../../app/assets/stylesheets/public.css.scss */
+/* line 358, ../../app/assets/stylesheets/public.css.scss */
 .category-title {
   text-transform: uppercase;
   color: #ef662f;
 }
 
-/* line 366, ../../app/assets/stylesheets/public.css.scss */
+/* line 364, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar ul,
 .spectacle-events ul {
   margin-bottom: 40px;
 }
-/* line 369, ../../app/assets/stylesheets/public.css.scss */
+/* line 367, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar > li,
 .spectacle-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 373, ../../app/assets/stylesheets/public.css.scss */
+/* line 371, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .date,
 .spectacle-events .date {
   text-transform: normal;
 }
-/* line 376, ../../app/assets/stylesheets/public.css.scss */
+/* line 374, ../../app/assets/stylesheets/public.css.scss */
 .list-calendar .location,
 .spectacle-events .location {
   font-weight: 700;
 }
 
-/* line 382, ../../app/assets/stylesheets/public.css.scss */
+/* line 380, ../../app/assets/stylesheets/public.css.scss */
 .learning-events > li {
   border-bottom: 1px dotted #242424;
   padding: 12px 0;
 }
-/* line 386, ../../app/assets/stylesheets/public.css.scss */
+/* line 384, ../../app/assets/stylesheets/public.css.scss */
 .learning-events .dates {
   text-transform: normal;
   font-weight: 700;
+}
+
+/* line 390, ../../app/assets/stylesheets/public.css.scss */
+.mfp-title {
+  text-align: center !important;
+  line-height: 18px;
+  color: #f3f3f3;
+  word-wrap: break-word;
+  padding-right: 0 !important;
+  font-weight: normal;
 }

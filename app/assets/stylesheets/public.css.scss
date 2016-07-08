@@ -148,7 +148,7 @@ blockquote {
         left: 0;
         z-index: 1;
 
-        > .container .navbar-brand, 
+        > .container .navbar-brand,
         > .container-fluid .navbar-brand {
             height: auto;
             width: 200px;
@@ -240,13 +240,11 @@ blockquote {
     overflow: hidden;
     float: none;
     width: 100%;
-    //display: inline-block
   }
   .caption {
     padding: 8px;
     h3 {
       text-transform: uppercase;
-      //color: $brand-primary;
     }
   }
   &:hover {
@@ -279,7 +277,7 @@ blockquote {
         margin: 0;
         padding-right: 24px;
     }
-    
+
     .spectacle-subtitle {
       font-style: italic;
       color: $brand-primary;
@@ -324,7 +322,7 @@ blockquote {
     border-left: 0;
     margin-left: 50px;
     p {
-      
+
     }
   }
 }
@@ -386,4 +384,13 @@ blockquote {
       text-transform: normal;
       font-weight: 700;
   }
+}
+
+.mfp-title {
+    text-align: center !important;
+    line-height: 18px;
+    color: #f3f3f3;
+    word-wrap: break-word;
+    padding-right: 0 !important;
+    font-weight: normal;
 }

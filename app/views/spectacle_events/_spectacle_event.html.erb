@@ -1,21 +1,22 @@
 <%# collection_row_cache(spectacle_event) do %>
-	<li>
-    <span class="dates"><%= format_spectacle_event_date(spectacle_event) %></span>
-      <strong class="title">
-        <% if spectacle_event.spectacle %>
-          <%= link_to(spectacle_event.spectacle.title, spectacle_event.spectacle.public_url) %>
-        <% elsif spectacle_event.custom_title %>
-          <%= spectacle_event.custom_title %>
-        <% end %>
-      </strong>
-      <%= raw " / " %>
-     	<% if spectacle_event.location %>
-      	<span class="location"><%= spectacle_event.location %></span>
-     	<% end %>
-     	<% if spectacle_event.place %>
-       	<span class="place">
-        <%= spectacle_event.more_info_url.present? ? link_to(spectacle_event.place, spectacle_event.more_info_url, :target => :blank) : spectacle_event.place %>
-		</span>
+<tr><td>
+	<strong>
+		<% if spectacle_event.spectacle %>
+		<%= link_to(spectacle_event.spectacle.title, spectacle_event.spectacle.public_url) %>
+		<% elsif spectacle_event.custom_title %>
+		<%= spectacle_event.custom_title %>
 		<% end %>
-	</li>
+	</strong>
+</td>
+<td><%= format_spectacle_event_date(spectacle_event) %></td>
+<td>
+	<% if spectacle_event.location %>
+	<strong><%= spectacle_event.location %></strong>
+	<% end %>
+</td>
+<td>
+	<% if spectacle_event.place %>
+		<%= spectacle_event.more_info_url.present? ? link_to(spectacle_event.place, spectacle_event.more_info_url, :target => :blank) : spectacle_event.place %>
+	<% end %>
+</td></tr>
 <%# end if spectacle_event %>
