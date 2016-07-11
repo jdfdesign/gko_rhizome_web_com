@@ -1,5 +1,5 @@
 <% if parent.name == "partners" %>
-  <%= page_title(parent.title) %>
+  <%= page_title(parent.title) if parent.show_title_in_page %>
   <br>
 
   <% parent.categories.each do |category| %>
