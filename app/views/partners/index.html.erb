@@ -1,4 +1,23 @@
-<%= page_title(parent.title) %>
-<ul class="list-unstyled">
-<%= render collection %>
-</ul>
+<% if parent.name == "partners" %>
+  <%= page_title(parent.title) %>
+  <br>
+  <ul class="list-unstyled list-partners">
+    <% collection.each do |partner| %>
+      <% if partner.image.present? %>
+      <li class="col-sm-3">
+        <% if partner.link.present? -%>
+          <%= link_to(image_tag(partner.thumbnail.url, :class => "img-responsive", :alt => parent.title),
+              partner.link, :target => :blank, :rel => 'external') %>
+        <% else -%>
+          <%= image_tag(partner.thumbnail.url, :alt => parent.title) %>
+        <% end -%>
+      <% end -%>
+    </li>
+    <% end -%>
+  </ul>
+<% else %>
+  <%= page_title(parent.title) %>
+  <ul class="list-unstyled">
+    <%= render collection %>
+  </ul>
+<% end %>

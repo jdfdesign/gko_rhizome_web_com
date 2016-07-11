@@ -8269,7 +8269,23 @@ blockquote {
   font-weight: 700;
 }
 
-/* line 390, ../../app/assets/stylesheets/public.css.scss */
+/* line 391, ../../app/assets/stylesheets/public.css.scss */
+.list-partners [class*="col-"] {
+  float: none;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -4px;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  /* line 391, ../../app/assets/stylesheets/public.css.scss */
+  .list-partners [class*="col-"] {
+    margin-bottom: 0;
+  }
+}
+
+/* line 404, ../../app/assets/stylesheets/public.css.scss */
 .mfp-title {
   text-align: center !important;
   line-height: 18px;

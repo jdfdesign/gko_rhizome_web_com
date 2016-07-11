@@ -385,6 +385,20 @@ blockquote {
       font-weight: 700;
   }
 }
+.list-partners {
+
+  [class*="col-"] {
+    float:none;
+    text-align: center;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:-4px;
+    margin-bottom: 20px;
+    @media (min-width: $grid-float-breakpoint) {
+      margin-bottom: 0;
+    }
+  }
+}
 
 .mfp-title {
     text-align: center !important;
