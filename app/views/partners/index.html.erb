@@ -3,6 +3,7 @@
   <br>
 
   <% parent.categories.each do |category| %>
+    <% if category.categorizations.any? %>
     <div class="row">
       <div class="col-xs-12">
         <h1 class="partners-section-title"><%= category.title %></h1>
@@ -23,6 +24,7 @@
             <% end -%>
           <% end -%>
     </div>
+  <% end %>
   <% end %>
 <% else %>
   <%= page_title(parent.title) %>
