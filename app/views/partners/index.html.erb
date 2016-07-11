@@ -1,20 +1,29 @@
 <% if parent.name == "partners" %>
   <%= page_title(parent.title) %>
   <br>
-  <ul class="list-unstyled list-partners">
-    <% collection.each do |partner| %>
-      <% if partner.image.present? %>
-      <li class="col-sm-3">
-        <% if partner.link.present? -%>
-          <%= link_to(image_tag(partner.thumbnail.url, :class => "img-responsive", :alt => parent.title),
-              partner.link, :target => :blank, :rel => 'external') %>
-        <% else -%>
-          <%= image_tag(partner.thumbnail.url, :alt => parent.title) %>
-        <% end -%>
-      <% end -%>
-    </li>
-    <% end -%>
-  </ul>
+
+  <% parent.categories.each do |category| %>
+    <div class="row">
+      <div class="col-xs-12">
+        <h1 class="partners-section-title"><%= category.title %></h1>
+      </div>
+    </div>
+    <div class="row list-partners">
+          <% category.categorizations.each do |categorization| %>
+            <% partner = categorization.categorizable %>
+            <% if partner.image.present? %>
+            <div class="col-sm-3">
+              <% if partner.link.present? -%>
+                <%= link_to(image_tag(partner.thumbnail.url, :class => "img-responsive", :alt => parent.title),
+                    partner.link, :target => :blank, :rel => 'external') %>
+              <% else -%>
+                <%= image_tag(partner.thumbnail.url, :alt => parent.title) %>
+              <% end -%>
+            </div>
+            <% end -%>
+          <% end -%>
+    </div>
+  <% end %>
 <% else %>
   <%= page_title(parent.title) %>
   <ul class="list-unstyled">

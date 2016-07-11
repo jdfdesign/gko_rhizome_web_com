@@ -8286,6 +8286,15 @@ blockquote {
 }
 
 /* line 404, ../../app/assets/stylesheets/public.css.scss */
+.partners-section-title {
+  margin: 20px 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ef662f;
+  border-bottom: 16px solid #ef662f;
+}
+
+/* line 411, ../../app/assets/stylesheets/public.css.scss */
 .mfp-title {
   text-align: center !important;
   line-height: 18px;
